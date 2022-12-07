@@ -1,0 +1,177 @@
+
+
+
+
+.demarrer {
+    width: 100%;
+    padding-top: 10rem;
+
+}
+.position{
+    display: flex;
+    gap: 2rem;
+}
+
+.cinquante-text{
+    width: 50%;
+    padding: 2rem;
+}
+.contrelamontre{
+    padding: 3rem;
+}
+.jeux{
+    padding: 5rem;
+}
+
+.btn-user{
+    border-radius: 50%;
+    height: 10rem;
+    width: 10rem;
+    background-image: url('./assets/photos/user.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.btn-amis{
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    padding: 5rem;
+
+}
+.btn{
+    box-shadow: 10px 5px 5px rgb(47, 121, 173);
+    background-color: rgb(97, 160, 211);
+    color: white;
+    height: 5rem;
+    width: 10rem;
+    border-radius: 5%;
+    font-size: 30px;
+    border-color: white;
+}
+.li{
+    padding: 1rem;
+    font-size: 20px;
+    font-weight: 700 ;
+    
+}
+h1{
+   
+    text-shadow: 2px 2px 4px rgb(10, 60, 130);
+    text-align: center;
+    font-size: 20px;
+   
+}
+.a{
+    text-decoration: none;
+}
+.img-films{
+    background-image: url('./assets/photos/Films.webp');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 300px;
+    width: 500px;
+    border-radius: 50px / 50px;
+    width: 50%;
+   
+}
+.img-series{
+    background-image: url('./assets/photos/series.webp');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 300px;
+    width: 500px;
+    border-radius: 50px / 50px;
+    width: 50%;
+    
+}
+.img-dessinsAnimes{
+    background-image: url('./assets/photos/DessinsAnimes.jpeg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    height: 300px;
+    width: 500px;
+    border-radius: 50px / 50px;
+    width: 50%;
+   
+
+}
+.img-animes{
+    background-image: url('./assets/photos/animes.jpeg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 300px;
+    width: 500px;
+    border-radius: 50px / 50px;
+    width: 50%;
+    
+}
+.img-jeuxVideo{
+    background-image: url('./assets/photos/Jeuxvideo2.jpeg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 300px;
+    width: 500px;
+    border-radius: 50px / 50px;
+    width: 50%;
+    
+}
+.img-culture{
+    background-image: url('./assets/photos/CulturreMusicale.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 300px;
+    width: 500px;
+    border-radius: 50px / 50px;
+    width: 50%;
+    
+}
+.pagination{
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 2rem;
+    margin: 5rem;
+    font-size: 10px;
+    /* width: 25%; */
+
+}
+.card-jeux{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    gap: 3rem;
+    width: 400px;
+    height: 300px;
+    
+}
+.img-go{
+    background-image: url('./assets/photos/avosmarque/avosmarque.png');
+    width: 90%;
+    height: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+   
+    ;
+}
+.img-time{
+    background-image: url('./assets/photos/avosmarque/sablier.png');
+    width: 90%;
+    height: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.img-friends{
+    background-image: url('./assets/photos/avosmarque/Amis\ \(1\).png');
+    width: 90%;
+    height: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
