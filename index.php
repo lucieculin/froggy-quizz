@@ -78,7 +78,7 @@
         <div class="underline">Jouer</div>
         <ul class="drop">
           <li>Themes</li>
-          <li>Mode de jeu</li>
+          <li><a href="./defie_tes_amis.php">Mode de jeu</a> </li>
           <li>Partie rapide</li>
         </ul>
       </div>
@@ -128,7 +128,7 @@
       </div>
 
       <div class="indicator" id="indicator">
-        <div class="under-indicator"></div>
+        <!-- <div class="under-indicator"></div> -->
         <div id="indicator-sousmenu">
         </div>
     </ul>
