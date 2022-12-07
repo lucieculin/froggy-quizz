@@ -2,7 +2,7 @@
       <div class="colomn1 colomns">
         <h3>QUIZZ FROG</h3>
         <ul>
-          <li><a href="#">Accueil</a></li>
+          <li><a href="../index.php">Accueil</a></li>
           <li><a href="#">A Propos</a></li>
           <li><a href="#">Nous Joindre</a></li>
           <li><a href="#">Devenir Partenaire</a></li>
