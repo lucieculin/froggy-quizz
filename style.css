@@ -246,6 +246,7 @@ a {
     justify-content: center;
     align-items: center;
     height: 40px;
+    font-family: var(--font3);
 }
 
 .nav:hover .nav a {
@@ -588,6 +589,8 @@ h3 {
 }
 
 .main {
-
+padding-top: 120px;
     height: 1000px;
 }
+
+

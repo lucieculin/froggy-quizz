@@ -125,3 +125,4 @@ dark.addEventListener("mouseout", () =>{
   indicatorSousmenu.style.background = "#e9eff4";
   light.style.color = "black";
 })
+
