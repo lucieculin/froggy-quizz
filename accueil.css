@@ -27,7 +27,8 @@ body {
 
     margin: 0;
     padding: 0;
-    background: url(./assets/images/background-white-pattoune.png);
+    /* background: url(./assets/images/background-dark-pattoune.png); */
+    background: white;
     background-size: 40%;
     background-repeat: repeat;
 }
@@ -343,6 +344,8 @@ border-radius: 50%;
     left: -1200px;
     transition: .2s ease-out;
     z-index: 2;
+    border: 5px solid white;
+    border-top: 0;
 }
 
 
@@ -790,7 +793,7 @@ section span {
     display: flex;
     justify-content: center;
     position: absolute;
-
+border-bottom: 15px solid white;
 
 }
 .cloud-nav{

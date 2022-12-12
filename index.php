@@ -139,7 +139,7 @@
 
   <div class="container-body quiz-vedette">
                 <div class="container-margin">
-                    <h2>Les quiz en vedette</h2>
+                    <h2>NOS BEST OF</h2>
                     <div class="cards">
 
 
