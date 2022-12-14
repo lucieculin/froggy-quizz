@@ -66,7 +66,7 @@
         </div>
       </div>
     </div>
-    <span id="span1">Bienvenu sur</span>
+    <span id="span1">Bienvenue sur</span>
     <span id="span2">Le meilleur quiz du monde</span>
     <img src="./assets/images/cloud-mid.png" id="cloud" class="clouds" alt="" />
     <img src="./assets/images/cloud-contact.png" id="cloud-contact" class="clouds" alt="" />
