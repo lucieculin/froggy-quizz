@@ -1,4 +1,9 @@
-<div class="jeux">
+<?php
+include('./partials/header.php');
+?>
+<link rel="stylesheet" href="./style_demarrer_le-jeux.css" />
+
+<div class="lesjeux">
             <button class="btn" href="#">FILMS</button>
             <div class="position">
                 <div class="cinquante-text">
@@ -79,3 +84,7 @@
 
         </div>
     </div>
+
+    <?php
+    include('./partials/footer.php');
+    ?>

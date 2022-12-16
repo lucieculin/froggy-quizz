@@ -1,11 +1,10 @@
 <?php
 include('./partials/header.php');
-include('./partials/nav.php');
 ?>
 <link rel="stylesheet" href="./style_demarrer_le-jeux.css" />
 
 
-<div class="amis">
+<div class="lesjeux">
         <h1>DEFIE TES AMIS</h1>
         <div class="btn-amis">
         <div>
