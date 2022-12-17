@@ -1,7 +1,10 @@
 
 .lesjeux{
     padding-top: 10rem;
-    width: 100%;
+
+    margin-left: 5rem;
+    margin-bottom: 10rem;
+
 }
 
 
@@ -30,12 +33,13 @@
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
+
 }
 .btn-amis{
     display: flex;
     justify-content: space-between;
     gap: 3rem;
-    padding: 5rem;
+    padding: 3rem;
 
 }
 .btn{
@@ -57,6 +61,7 @@
 
     
 }
+
 .ul {
 
     display: flex;
@@ -104,7 +109,7 @@ h2 a{
     background-repeat: no-repeat;
     background-position: center;
     height: 400px;
-    margin-right: 30rem;
+    margin-right: 10rem;
     width: 600px;
     border-radius: 50px / 50px;
 
@@ -170,8 +175,25 @@ h2 a{
 
 }
 
+.online {
+    background-color: greenyellow;
+    border-radius: 50%;
+    border: 1px solid black;
+
+}
+.ofline {
+    background-color: red;
+    border-radius: 50%;
+    border: 1px solid black;
+
+}
+.span-user{
+    display: flex;
+    align-items: flex-end;
+}
+
 /*
-/-----VERSION mobile------/
+/-----VERSION mobile------/*/
 
 @media screen and (max-width : 920px){
 
@@ -210,13 +232,31 @@ h2 a{
         display: flex;
         flex-direction: column;
     }
+    .position{
+        width: 80%;
+        display: flex;
+
+    }
+    .cinquante-text{
+        width: 100%;
+        padding: 2rem;
+        margin: 1rem;
+    }
+
+    .btn-amis{
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        padding: 5rem;
+
+    }
 
 }
 
 /*
 /-----VERSION TABLETTE------/
  */
-/*@media screen and (max-width : 1200px) and ( min-width : 920px){
+@media screen and (max-width : 1200px) and ( min-width : 920px) {
 
     .btn {
         height: 5rem;
@@ -234,16 +274,14 @@ h2 a{
     }
 
 
-
-
-    .img{
+    .img {
         width: 50%;
         border-radius: 25%;
         display: initial;
 
     }
 
-    .img-animes, .img-culture, .img-dessinsAnimes, .img-films, .img-jeuxVideo, .img-series{
+    .img-animes, .img-culture, .img-dessinsAnimes, .img-films, .img-jeuxVideo, .img-series {
         display: none;
 
     }
@@ -255,28 +293,31 @@ h2 a{
 
     }
 
-    .cinquante-text{
+    .cinquante-text {
         width: 100%;
         padding: 1rem;
         margin: 1rem;
     }
 
-    .lesjeux{
+    .lesjeux {
         padding-top: 10rem;
 
 
     }
-
-    /*
-    /-----VERSION PC------/
-     */
-    /*@media screen and (min-width : 1200px) {
-       .img {
-           display: none;
-       }
-
+    .tab {
+        display: flex;
+        flex-direction: row;
+    }
+    .btn-amis{
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        padding: 5rem;
 
     }
+}
+
+
 
 
 

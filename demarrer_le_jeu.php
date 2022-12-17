@@ -1,7 +1,7 @@
 <?php
 include('./partials/header.php');
 ?>
-<link rel="stylesheet" href="./style_demarrer_le-jeux.css" />
+<link rel="stylesheet" href="style_demarrer_le-jeu.css" />
 
 <div class="lesjeux">
             <button class="btn" href="#">FILMS</button>
@@ -67,6 +67,7 @@ include('./partials/header.php');
                     </ul>
                 </div>
                 <div class="img-series" alt="imgSeries">
+
 
                 </div>
             </div>

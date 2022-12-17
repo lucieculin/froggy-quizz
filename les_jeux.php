@@ -1,7 +1,7 @@
 <?php
 include('./partials/header.php');
 ?>
-<link rel="stylesheet" href="./style_demarrer_le-jeux.css" />
+<link rel="stylesheet" href="style_demarrer_le-jeu.css" />
 
 
 <div class="lesjeux">
