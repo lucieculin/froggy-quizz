@@ -1,0 +1,21 @@
+.main-identity{
+    padding-top: 10rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-bottom: 5rem;
+    display: flex;
+   justify-content:  center;
+
+}
+
+.carte-identity{
+    background-image: linear-gradient(to right, orange,yellow,greenyellow);
+    border: 4mm ridge green;
+    border-radius: 30%;
+    height: 700px;
+    width: 1200px;
+
+}
+.trombine{
+
+}
