@@ -137,83 +137,145 @@
 
 
 
-  <div class="container-body quiz-vedette">
-    <div class="container-margin">
-      <h2 class="h2-best-of">Nos Best OF</h2>
-      <div class="cards">
+  <!-- /*******************page******************************/ -->
 
 
-        <div class="card">
-          <div class="front-face fnb ff1">
-            <h3>Film</h3>
+
+
+
+
+
+  <div class="container-home-page">
+
+
+    <div class=" quiz-vedette">
+      <div class="container-margin">
+        <h2 class="h2-title-section">Nos Best OF</h2>
+        <div class="cards">
+
+
+          <div class="card">
+            <div class="front-face fnb ff1">
+              <h3>Film</h3>
+            </div>
+            <div class="back-face fnb bf1">
+
+              <a class="buttonbtn bbtn1" href="/harry-potter.html">Harry Potter</a>
+            </div>
           </div>
-          <div class="back-face fnb bf1">
 
-            <a class="buttonbtn bbtn1" href="/harry-potter.html">Harry Potter</a>
+
+          <div class="card">
+            <div class="front-face fnb ff2">
+              <h3>Histoire</h3>
+            </div>
+            <div class="back-face fnb bf2">
+              <a class="buttonbtn bbtn2" href="/game-of-thrones.html">Les grandes dates</a>
+            </div>
+          </div>
+
+
+          <div class="card">
+            <div class="front-face fnb ff3">
+              <h3>Série</h3>
+            </div>
+            <div class="back-face fnb bf3">
+              <a class="buttonbtn bbtn3" href="/kaamelott.html">Kaamelott</a>
+            </div>
+          </div>
+
+
+          <div class="card">
+            <div class="front-face fnb ff4 ">
+              <h3>Animés</h3>
+            </div>
+            <div class="back-face fnb bf4">
+              <a class="buttonbtn bbtn4" href="/harry-potter.html">One piece</a>
+            </div>
+          </div>
+
+
+          <div class="card">
+            <div class="front-face fnb ff5">
+              <h3>Géographie</h3>
+            </div>
+            <div class="back-face fnb bf5">
+              <a class="buttonbtn bbtn5" href="/harry-potter.html">Les capitales</a>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+    <div class="container-home-grid">
+      <div class="container-home-left">
+
+        <div class="wrapper-theme">
+          <h2 class="h2-title-section">Nos thèmes</h2>
+          <div class="theme-container">
+            <div class="all-theme">
+              <div class="theme-icon"><img src="./assets/images/film.png" alt="logo film"></div>
+              <div class="theme-icon"><img src="./assets/images/serie.png" alt="logo serie"></div>
+              <div class="theme-icon"><img src="./assets/images/dessin-anime.png" alt="logo dessin animé"></div>
+              <div class="theme-icon"><img src="./assets/images/anime.png" alt="logo animé"></div>
+              <div class="theme-icon"><img src="./assets/images/jeux-video.png" alt="logo jeux vidéos"></div>
+              <div class="theme-icon"><img src="./assets/images/culture.png" alt="logo culture"></div>
+            </div>
           </div>
         </div>
 
+        <div class="container-quiz-by-theme">
+          <h2 class="h2-title-section">Nos Quiz</h2>
 
-        <div class="card">
-          <div class="front-face fnb ff2">
-            <h3>Histoire</h3>
+          <div class="container-quiz-by-theme">
+            <h3 class="title-quiz-by-theme">Film</h3>
+            <div class="container-quiz-quiz-by-theme"></div>
           </div>
-          <div class="back-face fnb bf2">
-            <a class="buttonbtn bbtn2" href="/game-of-thrones.html">Les grandes dates</a>
+
+
+          <div class="container-quiz-by-theme">
+            <h3 class="title-quiz-by-theme">Série</h3>
+            <div class="container-quiz-quiz-by-theme"></div>
           </div>
-        </div>
 
-
-        <div class="card">
-          <div class="front-face fnb ff3">
-            <h3>Série</h3>
+          <div class="container-quiz-by-theme">
+            <h3 class="title-quiz-by-theme">Déssins animés</h3>
+            <div class="container-quiz-quiz-by-theme"></div>
           </div>
-          <div class="back-face fnb bf3">
-            <a class="buttonbtn bbtn3" href="/kaamelott.html">Kaamelott</a>
+
+
+          <div class="container-quiz-by-theme">
+            <h3 class="title-quiz-by-theme">Animé</h3>
+            <div class="container-quiz-quiz-by-theme"></div>
           </div>
-        </div>
 
 
-        <div class="card">
-          <div class="front-face fnb ff4 ">
-            <h3>Animés</h3>
+          <div class="container-quiz-by-theme">
+            <h3 class="title-quiz-by-theme">Jeux videos</h3>
+            <div class="container-quiz-quiz-by-theme"></div>
           </div>
-          <div class="back-face fnb bf4">
-            <a class="buttonbtn bbtn4" href="/harry-potter.html">One piece</a>
+
+
+          <div class="container-quiz-by-theme">
+            <h3 class="title-quiz-by-theme">Culture</h3>
+            <div class="container-quiz-quiz-by-theme"></div>
           </div>
-        </div>
-
-
-        <div class="card">
-          <div class="front-face fnb ff5">
-            <h3>Géographie</h3>
-          </div>
-          <div class="back-face fnb bf5">
-            <a class="buttonbtn bbtn5" href="/harry-potter.html">Les capitales</a>
-          </div>
-        </div>
-
-
 
       </div>
     </div>
-  </div>
-  <div class="wrapper-theme">
-    <h2 class="h2-theme">Nos thèmes</h2>
-    <div class="theme-container">
-      <div class="all-theme">
-        <div class="theme-icon"><img src="./assets/images/film.png" alt="logo film"></div>
-        <div class="theme-icon"><img src="./assets/images/serie.png" alt="logo serie"></div>
-        <div class="theme-icon"><img src="./assets/images/dessin-anime.png" alt="logo dessin animé"></div>
-        <div class="theme-icon"><img src="./assets/images/anime.png" alt="logo animé"></div>
-        <div class="theme-icon"><img src="./assets/images/jeux-video.png" alt="logo jeux vidéos"></div>
-        <div class="theme-icon"><img src="./assets/images/culture.png" alt="logo culture"></div>
+    <div class="container-home-right">
+
+      <div class="container-podium">
+        <h2 class="h2-title-section">Le Podium</h2>
+        ici podium
       </div>
     </div>
   </div>
 
 
-
+  </div>
   <?php
   include('./partials/footer.php')
   ?>
