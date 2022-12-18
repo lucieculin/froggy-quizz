@@ -56,7 +56,7 @@ let transformOrigins={
 }
 
 class Theme {
-  scale = 0.7;
+  scale = 1;
   constructor(el) {
     this.root = el;
     this.icons = Array.from(el.children);
