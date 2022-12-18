@@ -156,7 +156,7 @@
 
           <div class="card">
             <div class="front-face fnb ff1">
-              <h3>Film</h3>
+              <h3 class="h3-card-front">Film</h3>
             </div>
             <div class="back-face fnb bf1">
 
@@ -167,7 +167,7 @@
 
           <div class="card">
             <div class="front-face fnb ff2">
-              <h3>Histoire</h3>
+              <h3 class="h3-card-front">Histoire</h3>
             </div>
             <div class="back-face fnb bf2">
               <a class="buttonbtn bbtn2" href="/game-of-thrones.html">Les grandes dates</a>
@@ -177,7 +177,7 @@
 
           <div class="card">
             <div class="front-face fnb ff3">
-              <h3>Série</h3>
+              <h3 class="h3-card-front">Série</h3>
             </div>
             <div class="back-face fnb bf3">
               <a class="buttonbtn bbtn3" href="/kaamelott.html">Kaamelott</a>
@@ -187,7 +187,7 @@
 
           <div class="card">
             <div class="front-face fnb ff4 ">
-              <h3>Animés</h3>
+              <h3 class="h3-card-front">Animés</h3>
             </div>
             <div class="back-face fnb bf4">
               <a class="buttonbtn bbtn4" href="/harry-potter.html">One piece</a>
@@ -197,7 +197,7 @@
 
           <div class="card">
             <div class="front-face fnb ff5">
-              <h3>Géographie</h3>
+              <h3 class="h3-card-front">Géographie</h3>
             </div>
             <div class="back-face fnb bf5">
               <a class="buttonbtn bbtn5" href="/harry-potter.html">Les capitales</a>
@@ -229,50 +229,128 @@
         <div class="container-quiz-by-theme">
           <h2 class="h2-title-section">Nos Quiz</h2>
 
-          <div class="container-quiz-by-theme">
+          <div class="container-by-theme-quiz-by-theme">
             <h3 class="title-quiz-by-theme">Film</h3>
-            <div class="container-quiz-quiz-by-theme"></div>
+            <div class="container-quiz-quiz-by-theme">
+              <div class="card-quiz-by-theme">
+                <h4 class="name-card-quiz-by-theme"><a href="">Harry Potter</a></h4>
+              </div>
+              <div class="card-quiz-by-theme">
+              <h4 class="name-card-quiz-by-theme"><a href="">Star wars</a></h4>
+              </div>
+              <div class="card-quiz-by-theme">
+              <h4 class="name-card-quiz-by-theme"><a href="">Matrix</a></h4>
+              </div>
+              <div class="card-quiz-by-theme">
+              <h4 class="name-card-quiz-by-theme"><a href="">Plus de films</a></h4>
+              </div>
+            </div>
           </div>
 
 
-          <div class="container-quiz-by-theme">
+          <div class="container-by-theme-quiz-by-theme">
             <h3 class="title-quiz-by-theme">Série</h3>
-            <div class="container-quiz-quiz-by-theme"></div>
+            <div class="container-quiz-quiz-by-theme">
+              <div class="card-quiz-by-theme">
+              <h4 class="name-card-quiz-by-theme"><a href="">Game of thrones</a></h4>
+              </div>
+              <div class="card-quiz-by-theme">
+              <h4 class="name-card-quiz-by-theme"><a href="">Kaamelott</a></h4>
+              </div>
+              <div class="card-quiz-by-theme">
+              <h4 class="name-card-quiz-by-theme"><a href="">Breaking bad</a></h4>
+              </div>
+              <div class="card-quiz-by-theme">
+              <h4 class="name-card-quiz-by-theme"><a href="">Plus de série</a></h4>
+              </div>
+            </div>
           </div>
 
-          <div class="container-quiz-by-theme">
+          <div class="container-by-theme-quiz-by-theme">
             <h3 class="title-quiz-by-theme">Déssins animés</h3>
-            <div class="container-quiz-quiz-by-theme"></div>
+            <div class="container-quiz-quiz-by-theme">
+              <div class="card-quiz-by-theme">
+              <h4 class="name-card-quiz-by-theme"><a href="">Le roi lion</a></h4>
+              </div>
+              <div class="card-quiz-by-theme">
+              <h4 class="name-card-quiz-by-theme"><a href="">Toy story</a></h4>
+              </div>
+              <div class="card-quiz-by-theme">
+              <h4 class="name-card-quiz-by-theme"><a href="">La reine des neiges</a></h4>
+              </div>
+              <div class="card-quiz-by-theme">
+              <h4 class="name-card-quiz-by-theme"><a href="">Plus de dessins animés</a></h4>
+              </div>
+            </div>
           </div>
 
 
-          <div class="container-quiz-by-theme">
+          <div class="container-by-theme-quiz-by-theme">
             <h3 class="title-quiz-by-theme">Animé</h3>
-            <div class="container-quiz-quiz-by-theme"></div>
+            <div class="container-quiz-quiz-by-theme">
+              <div class="card-quiz-by-theme">
+              <h4 class="name-card-quiz-by-theme"><a href="">One piece</a></h4>
+              </div>
+              <div class="card-quiz-by-theme">
+              <h4 class="name-card-quiz-by-theme"><a href="">Naruto</a></h4>
+              </div>
+              <div class="card-quiz-by-theme">
+              <h4 class="name-card-quiz-by-theme"><a href="">Jujutsu kaisen</a></h4>
+              </div>
+              <div class="card-quiz-by-theme">
+              <h4 class="name-card-quiz-by-theme"><a href="">Plus d'animé</a></h4>
+              </div>
+            </div>
           </div>
 
 
-          <div class="container-quiz-by-theme">
+          <div class="container-by-theme-quiz-by-theme">
             <h3 class="title-quiz-by-theme">Jeux videos</h3>
-            <div class="container-quiz-quiz-by-theme"></div>
+            <div class="container-quiz-quiz-by-theme">
+              <div class="card-quiz-by-theme">
+              <h4 class="name-card-quiz-by-theme"><a href="">Mario</a></h4>
+              </div>
+              <div class="card-quiz-by-theme">
+              <h4 class="name-card-quiz-by-theme"><a href="">World of warcraft</a></h4>
+              </div>
+              <div class="card-quiz-by-theme">
+              <h4 class="name-card-quiz-by-theme"><a href="">Call Of Duty</a></h4>
+              </div>
+              <div class="card-quiz-by-theme">
+              <h4 class="name-card-quiz-by-theme"><a href="">Plus de jeux videos</a></h4>
+              </div>
+            </div>
           </div>
 
 
-          <div class="container-quiz-by-theme">
+          <div class="container-by-theme-quiz-by-theme">
             <h3 class="title-quiz-by-theme">Culture</h3>
-            <div class="container-quiz-quiz-by-theme"></div>
+            <div class="container-quiz-quiz-by-theme">
+              <div class="card-quiz-by-theme">
+              <h4 class="name-card-quiz-by-theme"><a href="">Cuisine</a></h4>
+              </div>
+              <div class="card-quiz-by-theme">
+              <h4 class="name-card-quiz-by-theme"><a href="">Capitales d'europes</a></h4>
+              </div>
+              <div class="card-quiz-by-theme">
+              <h4 class="name-card-quiz-by-theme"><a href="">Mérovingiens</a></h4>
+              </div>
+              <div class="card-quiz-by-theme">
+              <h4 class="name-card-quiz-by-theme"><a href="">Plus de culture</a></h4>
+              </div>
+            </div>
           </div>
 
+        </div>
       </div>
-    </div>
-    <div class="container-home-right">
+      <div class="container-home-right">
 
-      <div class="container-podium">
-        <h2 class="h2-title-section">Le Podium</h2>
-        ici podium
+        <div class="container-podium">
+          <h2 class="h2-title-section">Le Podium</h2>
+          ici podium
+        </div>
       </div>
     </div>
-  </div>
 
 
   </div>

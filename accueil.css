@@ -569,7 +569,7 @@ border-radius: 50%;
 
 
 
-h3 {
+.h3-footer {
     margin-bottom: 40px;
     color: #262626;
     font-family: "applejuice";
@@ -959,7 +959,7 @@ margin: 0px auto;
 width: 100%;
 
 }
-h3{
+.h3-card-front{
     color: var(--color1);
     text-decoration: none;
     font-family: var(--font2);
@@ -1085,8 +1085,12 @@ width: 100%;
 
 .container-quiz-by-theme{
      width: 100%;
-     height: 100px;
+   
      background: red;
+     display: flex;
+    flex-direction: column;
+
+
 
  }
  .container-home-grid{
@@ -1105,4 +1109,40 @@ width: 100%;
         flex-direction: column;
         width: 30%;
         background: teal;
+    }
+.container-quiz-quiz-by-theme{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+}
+.title-quiz-by-theme{
+    font-family: var(--font2);
+    font-size: 2rem;
+}
+    .card-quiz-by-theme{
+        height: 100px;
+        width: 150px;
+        background: url(./assets/images/background-dark-pattoune.png);
+border-radius: 10px;   
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+border: 2px solid black;
+
+}
+.card-quiz-by-theme a {
+        color: white;
+        text-align: center;
+        font-family: var(--font3);
+    }
+
+    .card-quiz-by-theme:hover{
+        background: url(./assets/images/background-white-pattoune.png);
+    }
+
+    .card-quiz-by-theme:hover  a{
+        color:black;
     }

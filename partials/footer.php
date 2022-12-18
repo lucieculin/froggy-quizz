@@ -1,6 +1,6 @@
 <footer class="footer">
       <div class="colomn1 colomns">
-        <h3>QUIZZ FROG</h3>
+        <h3 class="h3-footer">QUIZZ FROG</h3>
         <ul>
           <li><a href="../index.php">Accueil</a></li>
           <li><a href="#">A Propos</a></li>
@@ -10,7 +10,7 @@
       </div>
 
       <div class="colomn2 colomns">
-        <h3>CATEGORIES</h3>
+        <h3 class="h3-footer">CATEGORIES</h3>
 
         <ul>
           <li><a href="#">Séries</a></li>
@@ -26,7 +26,7 @@
       </div>
 
       <div class="colomn4 colomns">
-        <h3>SUIVEZ NOUS</h3>
+        <h3 class="h3-footer">SUIVEZ NOUS</h3>
 
         <ul class="icons">
           <li>
