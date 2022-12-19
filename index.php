@@ -347,7 +347,16 @@
 
         <div class="container-podium">
           <h2 class="h2-title-section">Le Podium</h2>
-          creation du podium
+        <div class="container-ranking-podium">
+          <div class="card-ranking">
+            <img src="" alt="">
+            <div class="attribut-card-ranking">
+              <div class="name-ranking">DzG</div>
+              <div class="lvl-ranking">99</div>
+            </div>
+          </div>
+        </div>
+          
         
         </div>
       </div>
