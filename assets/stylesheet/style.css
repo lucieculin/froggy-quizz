@@ -1,6 +1,6 @@
 @font-face {
     font-family: "applejuice";
-    src: url(./assets/font/AppleJuiceRegular.ttf);
+    src: url(../../assets/font/AppleJuiceRegular.ttf);
 
 }
 
@@ -211,7 +211,7 @@ a {
 
 .connexion a {
     color: black;
-    background-image: url(./assets/images/cloud-nav-dark.png);
+    background-image: url(../../assets/images/cloud-nav-dark.png);
     background-size: 0rem;
     background-position: center;
     background-repeat: no-repeat;

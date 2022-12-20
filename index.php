@@ -5,12 +5,10 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <link rel="stylesheet" href="./accueil.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
-  <link href='https://fonts.googleapis.com/css?family=Indie Flower' rel='stylesheet'>
-  <script src="../script.js" defer></script>
-  <script src="./accueil.js" defer></script>
+  <?php
+    include('./partials/css.php');
+    include('./partials/script.php');
+    ?>
   <title></title>
 </head>
 
