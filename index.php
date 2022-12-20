@@ -6,9 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <?php
-    include('./partials/css.php');
-    include('./partials/script.php');
-    ?>
+  include('./partials/css.php');
+  include('./partials/script.php');
+  ?>
   <title></title>
 </head>
 
@@ -234,13 +234,13 @@
                 <h4 class="name-card-quiz-by-theme"><a href="">Harry Potter</a></h4>
               </div>
               <div class="card-quiz-by-theme">
-              <h4 class="name-card-quiz-by-theme"><a href="">Star wars</a></h4>
+                <h4 class="name-card-quiz-by-theme"><a href="">Star wars</a></h4>
               </div>
               <div class="card-quiz-by-theme">
-              <h4 class="name-card-quiz-by-theme"><a href="">Matrix</a></h4>
+                <h4 class="name-card-quiz-by-theme"><a href="">Matrix</a></h4>
               </div>
               <div class="card-quiz-by-theme">
-              <h4 class="name-card-quiz-by-theme"><a href="">Plus de films</a></h4>
+                <h4 class="name-card-quiz-by-theme"><a href="">Plus de films</a></h4>
               </div>
             </div>
           </div>
@@ -250,16 +250,16 @@
             <h3 class="title-quiz-by-theme">Série</h3>
             <div class="container-quiz-quiz-by-theme">
               <div class="card-quiz-by-theme">
-              <h4 class="name-card-quiz-by-theme"><a href="">Game of thrones</a></h4>
+                <h4 class="name-card-quiz-by-theme"><a href="">Game of thrones</a></h4>
               </div>
               <div class="card-quiz-by-theme">
-              <h4 class="name-card-quiz-by-theme"><a href="">Kaamelott</a></h4>
+                <h4 class="name-card-quiz-by-theme"><a href="">Kaamelott</a></h4>
               </div>
               <div class="card-quiz-by-theme">
-              <h4 class="name-card-quiz-by-theme"><a href="">Breaking bad</a></h4>
+                <h4 class="name-card-quiz-by-theme"><a href="">Breaking bad</a></h4>
               </div>
               <div class="card-quiz-by-theme">
-              <h4 class="name-card-quiz-by-theme"><a href="">Plus de série</a></h4>
+                <h4 class="name-card-quiz-by-theme"><a href="">Plus de série</a></h4>
               </div>
             </div>
           </div>
@@ -268,16 +268,16 @@
             <h3 class="title-quiz-by-theme">Déssins animés</h3>
             <div class="container-quiz-quiz-by-theme">
               <div class="card-quiz-by-theme">
-              <h4 class="name-card-quiz-by-theme"><a href="">Le roi lion</a></h4>
+                <h4 class="name-card-quiz-by-theme"><a href="">Le roi lion</a></h4>
               </div>
               <div class="card-quiz-by-theme">
-              <h4 class="name-card-quiz-by-theme"><a href="">Toy story</a></h4>
+                <h4 class="name-card-quiz-by-theme"><a href="">Toy story</a></h4>
               </div>
               <div class="card-quiz-by-theme">
-              <h4 class="name-card-quiz-by-theme"><a href="">La reine des neiges</a></h4>
+                <h4 class="name-card-quiz-by-theme"><a href="">La reine des neiges</a></h4>
               </div>
               <div class="card-quiz-by-theme">
-              <h4 class="name-card-quiz-by-theme"><a href="">Plus de dessins animés</a></h4>
+                <h4 class="name-card-quiz-by-theme"><a href="">Plus de dessins animés</a></h4>
               </div>
             </div>
           </div>
@@ -287,16 +287,16 @@
             <h3 class="title-quiz-by-theme">Animé</h3>
             <div class="container-quiz-quiz-by-theme">
               <div class="card-quiz-by-theme">
-              <h4 class="name-card-quiz-by-theme"><a href="">One piece</a></h4>
+                <h4 class="name-card-quiz-by-theme"><a href="">One piece</a></h4>
               </div>
               <div class="card-quiz-by-theme">
-              <h4 class="name-card-quiz-by-theme"><a href="">Naruto</a></h4>
+                <h4 class="name-card-quiz-by-theme"><a href="">Naruto</a></h4>
               </div>
               <div class="card-quiz-by-theme">
-              <h4 class="name-card-quiz-by-theme"><a href="">Jujutsu kaisen</a></h4>
+                <h4 class="name-card-quiz-by-theme"><a href="">Jujutsu kaisen</a></h4>
               </div>
               <div class="card-quiz-by-theme">
-              <h4 class="name-card-quiz-by-theme"><a href="">Plus d'animé</a></h4>
+                <h4 class="name-card-quiz-by-theme"><a href="">Plus d'animé</a></h4>
               </div>
             </div>
           </div>
@@ -306,16 +306,16 @@
             <h3 class="title-quiz-by-theme">Jeux videos</h3>
             <div class="container-quiz-quiz-by-theme">
               <div class="card-quiz-by-theme">
-              <h4 class="name-card-quiz-by-theme"><a href="">Mario</a></h4>
+                <h4 class="name-card-quiz-by-theme"><a href="">Mario</a></h4>
               </div>
               <div class="card-quiz-by-theme">
-              <h4 class="name-card-quiz-by-theme"><a href="">World of warcraft</a></h4>
+                <h4 class="name-card-quiz-by-theme"><a href="">World of warcraft</a></h4>
               </div>
               <div class="card-quiz-by-theme">
-              <h4 class="name-card-quiz-by-theme"><a href="">Call Of Duty</a></h4>
+                <h4 class="name-card-quiz-by-theme"><a href="">Call Of Duty</a></h4>
               </div>
               <div class="card-quiz-by-theme">
-              <h4 class="name-card-quiz-by-theme"><a href="">Plus de jeux videos</a></h4>
+                <h4 class="name-card-quiz-by-theme"><a href="">Plus de jeux videos</a></h4>
               </div>
             </div>
           </div>
@@ -325,16 +325,16 @@
             <h3 class="title-quiz-by-theme">Culture</h3>
             <div class="container-quiz-quiz-by-theme">
               <div class="card-quiz-by-theme">
-              <h4 class="name-card-quiz-by-theme"><a href="">Cuisine</a></h4>
+                <h4 class="name-card-quiz-by-theme"><a href="">Cuisine</a></h4>
               </div>
               <div class="card-quiz-by-theme">
-              <h4 class="name-card-quiz-by-theme"><a href="">Capitales d'europes</a></h4>
+                <h4 class="name-card-quiz-by-theme"><a href="">Capitales d'europes</a></h4>
               </div>
               <div class="card-quiz-by-theme">
-              <h4 class="name-card-quiz-by-theme"><a href="">Mérovingiens</a></h4>
+                <h4 class="name-card-quiz-by-theme"><a href="">Mérovingiens</a></h4>
               </div>
               <div class="card-quiz-by-theme">
-              <h4 class="name-card-quiz-by-theme"><a href="">Plus de culture</a></h4>
+                <h4 class="name-card-quiz-by-theme"><a href="">Plus de culture</a></h4>
               </div>
             </div>
           </div>
@@ -345,17 +345,55 @@
 
         <div class="container-podium">
           <h2 class="h2-title-section">Le Podium</h2>
-        <div class="container-ranking-podium">
-          <div class="card-ranking">
-            <img src="" alt="">
-            <div class="attribut-card-ranking">
-              <div class="name-ranking">DzG</div>
-              <div class="lvl-ranking">99</div>
+          <div class="container-ranking-podium">
+
+            <div class="card-ranking gold">
+              <img src="./assets/images/quigon.jpg" alt="quigon photo">
+              <div class="attribut-card-ranking">
+                <div class="name-ranking">Qui Gon Jinn</div>
+                <div class="lvl-ranking">Lvl 99</div>
+              </div>
+              <div class="place">1</div>
             </div>
+
+            <div class="card-ranking silver">
+              <img src="./assets/images/perceval.jpg" alt="quigon photo">
+              <div class="attribut-card-ranking">
+                <div class="name-ranking">Perceval de Galles</div>
+                <div class="lvl-ranking">Lvl 96</div>
+              </div>
+              <div class="place">2</div>
+            </div>
+
+            <div class="card-ranking bronze">
+              <img src="./assets/images/hermione.jpg" alt="quigon photo">
+              <div class="attribut-card-ranking">
+                <div class="name-ranking">Hermione Granger</div>
+                <div class="lvl-ranking">Lvl 93</div>
+              </div>
+              <div class="place">3</div>
+            </div>
+
+            <div class="card-ranking">
+              <img src="./assets/images/ziggy.jpg" alt="quigon photo">
+              <div class="attribut-card-ranking">
+                <div class="name-ranking">Al Calavicci</div>
+                <div class="lvl-ranking">Lvl 87</div>
+              </div>
+              <div class="place">4</div>
+            </div>
+
+            <div class="card-ranking">
+              <img src="./assets/images/snow.jpg" alt="quigon photo">
+              <div class="attribut-card-ranking">
+                <div class="name-ranking">Jon Snow</div>
+                <div class="lvl-ranking">Lvl 84</div>
+              </div>
+              <div class="place">5</div>
+            </div>
+
+
           </div>
-        </div>
-          
-        
         </div>
       </div>
     </div>

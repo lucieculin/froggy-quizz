@@ -1079,7 +1079,6 @@ width: 100%;
 
  .container-podium{
     width: 100%;
-    height: 100px;
     background: blue;
 }
 
@@ -1146,3 +1145,61 @@ border: 2px solid black;
     .card-quiz-by-theme:hover  a{
         color:black;
     }
+
+
+
+    
+/*****************Podium*******************/
+
+.container-ranking-podium{
+    padding: 30px 0;
+    gap: 20px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font3);
+}
+
+.card-ranking{
+height: 60px;
+width: 270px;
+display:flex;
+justify-content: left;
+align-items: center;
+background:url(../images/background-dark-pattoune.png);
+background-size: contain;
+border-radius: 20px;
+padding: 5px;
+gap: 10px;
+color: white;
+}
+.card-ranking img{
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+}
+.attribut-card-ranking{
+    width: 140px;
+}
+.place{
+    font-family: var(--font2);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.gold{
+    background: #EECE93;
+    box-shadow: 0px 0px 59px 2px #eece93e6;
+    color: black;
+}
+
+.silver{
+    background: silver;
+    color: black;
+}
+
+.bronze{
+    background: rgb(184, 64, 64);
+    color: black;
+}
