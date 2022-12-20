@@ -1057,7 +1057,6 @@ padding: 50px 0;
  }
  .wrapper-theme{
     width: 100%;
-padding:50px 0 ;
  }
 
  .h2-title-section{
@@ -1079,13 +1078,11 @@ width: 100%;
 
  .container-podium{
     width: 100%;
-    background: blue;
 }
 
 .container-quiz-by-theme{
      width: 100%;
    
-     background: red;
      display: flex;
     flex-direction: column;
 
@@ -1094,20 +1091,19 @@ width: 100%;
  }
  .container-home-grid{
     display:flex;
+    margin-bottom: 100px;
  }
 
  .container-home-left{
      display: flex;
      flex-direction: column;
      width: 70%;
-     background: orange;
     }
 
     .container-home-right{
         display: flex;
         flex-direction: column;
         width: 30%;
-        background: teal;
     }
 .container-quiz-quiz-by-theme{
     display:flex;
@@ -1162,18 +1158,23 @@ border: 2px solid black;
 }
 
 .card-ranking{
-height: 60px;
-width: 270px;
-display:flex;
-justify-content: left;
-align-items: center;
-background:url(../images/background-dark-pattoune.png);
-background-size: contain;
-border-radius: 20px;
-padding: 5px;
-gap: 10px;
-color: white;
+    height: 60px;
+    width: 270px;
+    display:flex;
+    justify-content: left;
+    align-items: center;
+    background:url(../images/background-dark-pattoune.png);
+    background-size: contain;
+    border-radius: 20px;
+    padding: 5px;
+    gap: 10px;
+    color: white;
+    transition: 0.2s linear;
 }
+.card-ranking:hover{
+    transform: scale(1.1);
+}
+
 .card-ranking img{
     border-radius: 50px;
     height: 50px;
@@ -1202,4 +1203,17 @@ color: white;
 .bronze{
     background: rgb(184, 64, 64);
     color: black;
+}
+
+
+.container-stats{
+    margin-top: 100px;
+}
+.paragraphe-stats{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 20px;
+    gap:10px;
+font-family: var(--font3);
 }

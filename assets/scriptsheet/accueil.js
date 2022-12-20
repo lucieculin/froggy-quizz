@@ -10,6 +10,7 @@ let justQ = document.querySelector("#just-q");
 let nav1 = document.querySelector("#nav1");
 let nav2 = document.querySelector("#nav2");
 let parallax = document.querySelector("#section");
+let stats = document.querySelector('#stats')
 
 document.addEventListener("scroll", () => {
   let value = window.scrollY;
@@ -32,6 +33,21 @@ document.addEventListener("scroll", () => {
   } else {
     nav2.style.position = "absolute";
     nav2.style.top = "";
+  }
+  if (value >=2043  ){
+    stats.style.position = "fixed";
+    stats.style.top = "10rem";
+  }else {
+    stats.style.position = "sticky";
+    stats.style.top = "";
+  }
+  if(value>=2600){
+    stats.style.marginTop = "550px";
+    stats.style.position = "sticky";
+    stats.style.top = "";
+  }else{
+    stats.style.marginTop ="0px";
+
   }
 
   astre.style.top = value * 1.1 - 400 + "px";

@@ -345,6 +345,7 @@
 
         <div class="container-podium">
           <h2 class="h2-title-section">Le Podium</h2>
+
           <div class="container-ranking-podium">
 
             <div class="card-ranking gold">
@@ -394,6 +395,19 @@
 
 
           </div>
+        </div>
+        <div id="stats" class="container-stats">
+          <h2 class="h2-title-section">Vos statistique</h2>
+          <div class="stats-wrapper">
+            <p class="paragraphe-stats">
+              <span>Niveau : 12</span>
+              <span>Nombres de parties joués : 21</span>
+              <span>Bonne réponse : 145</span>
+              <span>Pourcentage de bonne réponse : 82%</span>
+              <span>Votre classement : 897</span>
+            </p>
+          </div>
+
         </div>
       </div>
     </div>
