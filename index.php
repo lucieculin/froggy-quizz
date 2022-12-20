@@ -214,12 +214,13 @@
           <h2 class="h2-title-section">Nos thèmes</h2>
           <div class="theme-container">
             <div class="all-theme">
-              <div class="theme-icon"><img src="./assets/images/film.png" alt="logo film"></div>
-              <div class="theme-icon"><img src="./assets/images/serie.png" alt="logo serie"></div>
-              <div class="theme-icon"><img src="./assets/images/dessin-anime.png" alt="logo dessin animé"></div>
-              <div class="theme-icon"><img src="./assets/images/anime.png" alt="logo animé"></div>
-              <div class="theme-icon"><img src="./assets/images/jeux-video.png" alt="logo jeux vidéos"></div>
-              <div class="theme-icon"><img src="./assets/images/culture.png" alt="logo culture"></div>
+  
+              <a href="" class="theme-icon"><img src="./assets/images/film.png" alt="logo film"></a>
+              <a href="" class="theme-icon"><img src="./assets/images/serie.png" alt="logo serie"></a>
+              <a href="" class="theme-icon"><img src="./assets/images/dessin-anime.png" alt="logo dessin animé"></a>
+              <a href="" class="theme-icon"><img src="./assets/images/anime.png" alt="logo animé"></a>
+              <a href="" class="theme-icon"><img src="./assets/images/jeux-video.png" alt="logo jeux vidéos"></a>
+              <a href="" class="theme-icon"><img src="./assets/images/culture.png" alt="logo culture"></a>
             </div>
           </div>
         </div>

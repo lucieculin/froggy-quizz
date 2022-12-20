@@ -2,9 +2,15 @@
     font-family: "applejuice";
     src: url("../../assets/font/AppleJuiceRegular.ttf");
 }
+
 @font-face {
     font-family: 'cloud-font';
     src: url('../../assets/font/Turds-vppD.ttf');
+}
+
+::selection {
+    background-color: var(--color4);
+    color: white;
 }
 
 
@@ -15,9 +21,9 @@
     list-style: none;
 
     --color1: #f2f2f2;
-    --color2: #000000;
-    --color3: #e25421;
-    --color4: #262626;
+    --color2: #262626;
+    --color3: #f2f8fc;
+    --color4: #d0e2f0;
     --font1: 'applejuice', sans-serif;
     --font2: 'Indie Flower';
     --font3: 'Poppins', sans-serif;
@@ -33,8 +39,8 @@ body {
     background-repeat: repeat;
 }
 
-.container-home-page{
-    margin: 0 10% ;
+.container-home-page {
+    margin: 0 10%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -304,8 +310,9 @@ nav a {
     transition: .1s linear;
     transition-delay: .2s;
     z-index: 3;
-height:auto ;
-transform: scale(0);}
+    height: auto;
+    transform: scale(0);
+}
 
 .active {
     transform: scale(1);
@@ -327,16 +334,16 @@ transform: scale(0);}
 }
 
 
-.under-indicator{
-height: 200px;
-width: 200px;
-background: white;
-position: absolute;
-left : 50% ;
-top:-80%;
-z-index: -1;
-transform: translateX(-50%);
-border-radius: 50%;
+.under-indicator {
+    height: 200px;
+    width: 200px;
+    background: white;
+    position: absolute;
+    left: 50%;
+    top: -80%;
+    z-index: -1;
+    transform: translateX(-50%);
+    border-radius: 50%;
 }
 
 
@@ -623,7 +630,7 @@ border-radius: 50%;
 
 #section {
     width: 100%;
-    height:1100px;
+    height: 1100px;
     position: relative;
     display: flex;
     justify-content: center;
@@ -753,12 +760,12 @@ section span {
     white-space: nowrap;
     font-size: 5rem;
     font-family: cloud-font;
-    background-image:linear-gradient(180deg, rgba(242,248,252,1) 56%, rgba(208,226,240,1) 65%);
+    background-image: linear-gradient(180deg, rgba(242, 248, 252, 1) 56%, rgba(208, 226, 240, 1) 65%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 100%;
     -webkit-background-clip: text;
-  
+
 
 }
 
@@ -770,7 +777,7 @@ section span {
     font-family: cloud-font;
     white-space: nowrap;
     color: #f2f8fc;
-    background-image:linear-gradient(180deg, rgba(242,248,252,1) 56%, rgba(208,226,240,1) 65%);
+    background-image: linear-gradient(180deg, rgba(242, 248, 252, 1) 56%, rgba(208, 226, 240, 1) 65%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 100%;
@@ -802,13 +809,14 @@ section span {
 
 
 }
-.cloud-nav{
+
+.cloud-nav {
     width: 100%;
-    height:50px;
+    height: 50px;
     background: white;
-    background: linear-gradient(180deg, rgb(255, 255, 255) 30%, rgba(255,255,255,0) 100%);
+    background: linear-gradient(180deg, rgb(255, 255, 255) 30%, rgba(255, 255, 255, 0) 100%);
     position: absolute;
-    top:40px;
+    top: 40px;
     z-index: 1;
 }
 
@@ -834,21 +842,23 @@ section span {
 
 /************************* vip cards*******************************/
 
-.quiz-vedette{
+.quiz-vedette {
     border-radius: 10px;
-    margin:  60px 0 ;
+    margin: 60px 0;
     width: 100%;
 
 }
+
 .cards {
     display: flex;
-     justify-content: space-around;
+    justify-content: space-around;
     align-items: center;
     padding: 0;
     margin-top: 40px;
+    flex-wrap: wrap;
 }
 
-.card  {
+.card {
     position: relative;
     display: flex;
     min-width: 150px;
@@ -870,82 +880,95 @@ section span {
     width: 100%;
     height: 100%;
 
-transform-style: preserve-3d;
-backface-visibility: hidden;
-transition:1.7s;
-transform: perspective(500px) rotatey(0deg);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transition: 1.7s;
+    transform: perspective(500px) rotatey(0deg);
 
 }
-.front-face{
+
+.front-face {
     justify-content: center;
     align-items: center
 }
-.back-face{
+
+.back-face {
     justify-content: center;
-align-items: flex-start;
+    align-items: flex-start;
 }
 
-.front-face{
+.front-face {
     border: var(--color4) 1px solid;
     background: url(../../assets/images/background-dark-pattoune.png);
     background-size: contain;
- }
- .ff2{
+}
+
+.ff2 {
     background: url(../../assets/images/background-dark-pattoune.png);
     background-size: contain;
- }
- .ff3{
+}
+
+.ff3 {
     background: url(../../assets/images/background-dark-pattoune.png);
     background-size: contain;
- }
- .ff4{
+}
+
+.ff4 {
     background: url(../../assets/images/background-dark-pattoune.png);
     background-size: contain;
- }
- .ff5{
+}
+
+.ff5 {
     background: url(../../assets/images/background-dark-pattoune.png);
     background-size: contain;
- }
+}
+
 .card .fnb.back-face {
-    border:inset 2px  var(--color4);
+    border: inset 2px var(--color4);
 
     transform: perspective(500px) rotatey(180deg);
 }
 
-.bf1{
+.bf1 {
     background: url(../../assets/images/Harry-Potter-l-annonce-que-tous-les-fans-attendaient-avec-impatience.jpg);
     background-size: cover;
 }
-.bf2{
+
+.bf2 {
     background: url(../../assets/images/histoire.png);
     background-size: cover;
 
 
 }
-.bf3{
+
+.bf3 {
     background: url(../../assets/images/kaamelott.png);
     background-size: cover;
     background-position: center;
 
 }
-.bf4{
+
+.bf4 {
     background: url(../../assets/images/one-piece.png);
     background-size: cover;
     background-position: center;
 }
-.bf5{
+
+.bf5 {
     background: url(../../assets/images/capitale.png);
     background-size: cover;
-    background-position: center; 
+    background-position: center;
 }
 
 
-.card:hover .fnb.front-face{
+.card:hover .fnb.front-face {
     transform: perspective(500px) rotatey(180deg);
 }
-.card:hover .fnb.back-face{
+
+.card:hover .fnb.back-face {
     transform: perspective(500px) rotatey(360deg);
 }
+
 .card:hover .buttonbtn {
     transform: perspective(500px) translateZ(50px) translatex(30px);
 }
@@ -955,11 +978,12 @@ align-items: flex-start;
     text-decoration: none;
     font-family: var(--font2);
     font-size: 44px;
-margin: 0px auto;
-width: 100%;
+    margin: 0px auto;
+    width: 100%;
 
 }
-.h3-card-front{
+
+.h3-card-front {
     color: var(--color1);
     text-decoration: none;
     font-family: var(--font2);
@@ -969,201 +993,217 @@ width: 100%;
     margin: 0px;
 }
 
-.contraste{
-    background: #b3b96657 ;
+.contraste {
+    background: #b3b96657;
     border-radius: 3px;
     padding: 2px;
 }
- .buttonbtn{
+
+.buttonbtn {
     position: absolute;
     bottom: 30px;
-    right:30px;
-    width:auto;
+    right: 30px;
+    width: auto;
     padding: 10px;
     border-radius: 10px;
     background: url(../../assets/images/background-dark-pattoune.png);
     background-size: contain;
     border: none;
     transform: perspective(500px) translateZ(50px);
-transition: .4s ease-out;
-color: var(--color1);
-font-family: var(--poppins);
-font-size: .6rem;
-text-align: center;
-border:inset 1px  var(--color4);
- }
+    transition: .4s ease-out;
+    color: var(--color1);
+    font-family: var(--poppins);
+    font-size: .6rem;
+    text-align: center;
+    border: inset 1px var(--color4);
+}
 
- .bbtn2 {
+.bbtn2 {
     background: url(../../assets/images/background-dark-pattoune.png);
     background-size: contain;
     color: var(--color1);
- }
- .bbtn3 {
+}
+
+.bbtn3 {
     background: url(../../assets/images/background-dark-pattoune.png);
     background-size: contain;
     color: var(--color1);
- }
- .bbtn4 {
+}
+
+.bbtn4 {
     background: url(../../assets/images/background-dark-pattoune.png);
     background-size: contain;
     color: var(--color1);
- }
- .bbtn5 {
+}
+
+.bbtn5 {
     background: url(../../assets/images/background-dark-pattoune.png);
     background-size: contain;
     color: var(--color1);
- }
+}
 
- .buttonbtn:hover {
+.buttonbtn:hover {
 
-border:inset 1px  var(--color3);
-color: var(--color3);
+    border: inset 1px var(--color3);
+    color: var(--color3);
 
- }
-
-
-
-
- /*****************theme-menus***************/
+}
 
 
 
 
- .theme-container{
+/*****************theme-menus***************/
+
+
+
+
+.theme-container {
     display: flex;
     justify-content: center;
-width: 90%;
-padding: 50px 0;
+    width: 90%;
+    padding: 50px 0;
 
- }
+}
 
- .all-theme{
+.all-theme {
     display: flex;
- }
+}
 
- .theme-icon{
-    width:100px;
-    height:100px;
+.theme-icon {
+    width: 100px;
+    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     transform-origin: center bottom;
- }
 
- .all-theme.animated .theme-icon{
+}
+
+.all-theme.animated .theme-icon {
     transition: .1s;
     transition-property: transform, transform-origin;
 
- }
- .wrapper-theme{
-    width: 100%;
- }
+}
 
- .h2-title-section{
+.wrapper-theme {
+    width: 100%;
+}
+
+.h2-title-section {
     color: var(--color2);
     text-decoration: none;
     font-family: var(--font2);
     font-size: 44px;
     margin: 0px auto;
-width: 100%;
- 
- }
- .all-theme img{
+    width: 100%;
+
+}
+
+.all-theme img {
     width: 90%;
     height: 90%;
- }
+}
 
 
 
 
- .container-podium{
+.container-podium {
     width: 100%;
 }
 
-.container-quiz-by-theme{
-     width: 100%;
-   
-     display: flex;
+.container-quiz-by-theme {
+    width: 100%;
+
+    display: flex;
     flex-direction: column;
 
 
 
- }
- .container-home-grid{
-    display:flex;
+}
+
+.container-home-grid {
+    display: flex;
     margin-bottom: 100px;
- }
+}
 
- .container-home-left{
-     display: flex;
-     flex-direction: column;
-     width: 70%;
-    }
+.container-home-left {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
 
-    .container-home-right{
-        display: flex;
-        flex-direction: column;
-        width: 30%;
-    }
-.container-quiz-quiz-by-theme{
-    display:flex;
+.container-home-right {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.container-quiz-quiz-by-theme {
+    display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
     height: 150px;
 }
-.title-quiz-by-theme{
+
+.container-by-theme-quiz-by-theme {
+    padding: 0 20px;
+}
+
+.title-quiz-by-theme {
     font-family: var(--font2);
     font-size: 2rem;
 }
-    .card-quiz-by-theme{
-        height: 100px;
-        width: 150px;
-        background: url(../../assets/images/background-dark-pattoune.png);
-border-radius: 10px;   
-display: flex;
-justify-content: center;
-align-items: center;
-text-align: center;
-border: 2px solid black;
+
+.card-quiz-by-theme {
+    height: 100px;
+    width: 150px;
+    background: url(../../assets/images/background-dark-pattoune.png);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px solid black;
 
 }
+
 .card-quiz-by-theme a {
-        color: white;
-        text-align: center;
-        font-family: var(--font3);
-    }
+    color: white;
+    text-align: center;
+    font-family: var(--font3);
+}
 
-    .card-quiz-by-theme:hover{
-        background: url(../../assets/images/background-white-pattoune.png);
-    }
+.card-quiz-by-theme:hover {
+    background: url(../../assets/images/background-white-pattoune.png);
+}
 
-    .card-quiz-by-theme:hover  a{
-        color:black;
-    }
+.card-quiz-by-theme:hover a {
+    color: black;
+}
 
 
 
-    
+
 /*****************Podium*******************/
 
-.container-ranking-podium{
+.container-ranking-podium {
     padding: 30px 0;
     gap: 20px;
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: var(--font3);
 }
 
-.card-ranking{
+.card-ranking {
     height: 60px;
     width: 270px;
-    display:flex;
+    display: flex;
     justify-content: left;
     align-items: center;
-    background:url(../images/background-dark-pattoune.png);
+    background: url(../images/background-dark-pattoune.png);
     background-size: contain;
     border-radius: 20px;
     padding: 5px;
@@ -1171,49 +1211,53 @@ border: 2px solid black;
     color: white;
     transition: 0.2s linear;
 }
-.card-ranking:hover{
+
+.card-ranking:hover {
     transform: scale(1.1);
 }
 
-.card-ranking img{
+.card-ranking img {
     border-radius: 50px;
     height: 50px;
     width: 50px;
 }
-.attribut-card-ranking{
+
+.attribut-card-ranking {
     width: 140px;
 }
-.place{
+
+.place {
     font-family: var(--font2);
     font-size: 2rem;
     font-weight: bold;
 }
 
-.gold{
+.gold {
     background: #EECE93;
     box-shadow: 0px 0px 59px 2px #eece93e6;
     color: black;
 }
 
-.silver{
+.silver {
     background: silver;
     color: black;
 }
 
-.bronze{
+.bronze {
     background: rgb(184, 64, 64);
     color: black;
 }
 
 
-.container-stats{
+.container-stats {
     margin-top: 100px;
 }
-.paragraphe-stats{
+
+.paragraphe-stats {
     display: flex;
     flex-direction: column;
     padding: 20px;
     margin-top: 20px;
-    gap:10px;
-font-family: var(--font3);
+    gap: 10px;
+    font-family: var(--font3);
 }
