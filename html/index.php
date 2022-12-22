@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="stylesheet" href="./accueil.css">
+  <link rel="stylesheet" href="../styles/accueil.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
   <link href='https://fonts.googleapis.com/css?family=Indie Flower' rel='stylesheet'>
   <script src="../script.js" defer></script>
-  <script src="./accueil.js" defer></script>
+  <script src="../scripts/accueil.js" defer></script>
   <title></title>
 </head>
 
@@ -50,17 +50,17 @@
   </nav>
 
   <section id="section">
-    <img src="./assets/images/cloud-back2png.png" id="cloud-back" class="clouds" alt="" />
-    <img src="./assets/images/sun.png" id="astre" alt="" />
+    <img src="../assets/images/cloud-back2png.png" id="cloud-back" class="clouds" alt="" />
+    <img src="../assets/images/sun.png" id="astre" alt="" />
     <div id="title">
       <div class="img-fq" id="img-f">
-        <img src="./assets/images/F-logo-title.png" alt="" />
+        <img src="../assets/images/F-logo-title.png" alt="" />
       </div>
       <div class="title-d-span" id="tds1">
         <span class="tsp" id="tsp1">ROGGY</span>
       </div>
       <div class="img-fq" id="img-q">
-        <img id="just-q" src="./assets/images/q-logo-title.png" alt="" />
+        <img id="just-q" src="../assets/images/q-logo-title.png" alt="" />
         <div class="title-d-span" id="tds2">
           <span class="tsp" id="tsp2">UIZ</span>
         </div>
@@ -68,8 +68,8 @@
     </div>
     <span id="span1">Bienvenue sur</span>
     <span id="span2">Le meilleur quiz du monde</span>
-    <img src="./assets/images/cloud-mid.png" id="cloud" class="clouds" alt="" />
-    <img src="./assets/images/cloud-contact.png" id="cloud-contact" class="clouds" alt="" />
+    <img src="../assets/images/cloud-mid.png" id="cloud" class="clouds" alt="" />
+    <img src="../assets/images/cloud-contact.png" id="cloud-contact" class="clouds" alt="" />
   </section>
 
   <nav id="nav2" class="nav2">
@@ -203,5 +203,5 @@
 
 
   <?php
-  include('./partials/footer.php')
+  include('../partials/footer.php')
   ?>

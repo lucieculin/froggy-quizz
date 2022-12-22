@@ -29,7 +29,7 @@
     border-radius: 50%;
     height: 10rem;
     width: 10rem;
-    background-image: url('./assets/photos/user.png');
+    background-image: url('../assets/photos/user.png');
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -81,27 +81,27 @@ h2 a{
     text-decoration: none;
 }
 .img-films{
-    background-image: url("./assets/photos/Films.jpg");
+    background-image: url("../assets/photos/Films.jpg");
 
 }
 .img-series{
-    background-image: url("./assets/photos/series.jpg");
+    background-image: url("../assets/photos/series.jpg");
 
 }
 .img-dessinsAnimes{
-    background-image: url("./assets/photos/DessinsAnimes.jpg");
+    background-image: url("../assets/photos/DessinsAnimes.jpg");
 
 }
 .img-animes{
-    background-image: url("./assets/photos/animes.jpg");
+    background-image: url("../assets/photos/animes.jpg");
 
 }
 .img-jeuxVideo{
-    background-image: url("./assets/photos/Jeuxvideo2.jpg");
+    background-image: url("../assets/photos/Jeuxvideo2.jpg");
 
 }
 .img-culture{
-    background-image: url("./assets/photos/culture.jpg");
+    background-image: url("../assets/photos/culture.jpg");
 
 }
 .img-animes, .img-culture, .img-dessinsAnimes, .img-films, .img-jeuxVideo, .img-series{
@@ -140,7 +140,7 @@ h2 a{
     
 }
 .img-go{
-    background-image: url('./assets/photos/avosmarque/avosmarque.png');
+    background-image: url('../assets/photos/avosmarque/avosmarque.png');
     width: 90%;
     height: 80%;
     background-repeat: no-repeat;
@@ -149,7 +149,7 @@ h2 a{
     ;
 }
 .img-time{
-    background-image: url('./assets/photos/avosmarque/sablier.png');
+    background-image: url('../assets/photos/avosmarque/sablier.png');
     width: 90%;
     height: 80%;
     background-repeat: no-repeat;
@@ -164,7 +164,7 @@ h2 a{
 }
 
 #harry-potter:hover .img-films {
-    background-image: url('./assets/photos/HarryPotter.jpg');
+    background-image: url('../assets/photos/HarryPotter.jpg');
     background-repeat: no-repeat;
     background-position: center;
     height: 400px;

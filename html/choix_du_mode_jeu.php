@@ -1,7 +1,7 @@
 <?php
-include('./partials/header.php');
+include('../partials/header.php');
 ?>
-<link rel="stylesheet" href="./Choix_du_mode_jeux.css" />
+<link rel="stylesheet" href="../styles/Choix_du_mode_jeux.css" />
 
 
     <div class="modejeux">
@@ -10,17 +10,17 @@ include('./partials/header.php');
 
             <div class="carte">
                 <button class="btnchoixjeu" href="#">Top Départ</button>
-                <img class="img" src="./assets/photos/avosmarque.jpg" alt="top-depart">
+                <img class="img" src="../assets/photos/avosmarque.jpg" alt="top-depart">
             </div>
 
             <div class="carte">
                 <button class="btnchoixjeu" href="#">Contre la montre</button>
-                <img class="img" src="./assets/photos/sablier.jpg" alt="sablier">
+                <img class="img" src="../assets/photos/sablier.jpg" alt="sablier">
             </div>
 
             <div class="carte">
                 <button class="btnchoixjeu" href="#">Défie tes amis</button>
-                <img class="img" src="./assets/photos/Amis.jpg" alt="amis">
+                <img class="img" src="../assets/photos/Amis.jpg" alt="amis">
             </div>
 
 
@@ -32,5 +32,5 @@ include('./partials/header.php');
 
 
 <?php
-include('./partials/footer.php');
+include('../partials/footer.php');
 ?>
