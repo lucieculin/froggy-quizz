@@ -596,31 +596,4 @@ padding-top: 120px;
 
 /**************************************/
 
-#frog1{
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    top: -55px;
-    left: 200px;
-}
-#frog2{
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    top: 55px;
-    left: 600px;
-}
-#frog3{
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    top: -55px;
-    left: 400px;
-}
-#frog4{
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    top: 255px;
-    left: 200px;
-}
+

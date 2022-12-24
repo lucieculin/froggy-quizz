@@ -1274,7 +1274,51 @@ section span {
     bottom:0;
 
 }
+#frog1{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: -55px;
+    left: 200px;
+    animation: move-frog 25s ease-in-out infinite ;
+}
+#frog2{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 55px;
+    left: 600px;
+    animation: move-frog 10s ease-in-out infinite ;
+}
+#frog3{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: -55px;
+    right: 200px;
+    animation: move-frog 30s ease-in-out infinite ;
+}
+#frog4{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 255px;
+    left: 200px;
+    animation: move-frog 20s ease-in-out infinite ;
+}
 
 @keyframes move-frog {
-    
+    0% {
+		transform: translate(0px, 0px);
+	}
+	30% {
+		transform: translate(-20px, -10px);
+	}
+    70%{
+        
+        transform: translate(-25px, 5px);
+    }
+	100% {
+		transform: translate(0px, 0px);
+	}
 }
