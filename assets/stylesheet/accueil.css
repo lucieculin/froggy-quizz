@@ -309,7 +309,7 @@ nav a {
     width: 80px;
     transition: .1s linear;
     transition-delay: .2s;
-    z-index: 3;
+    z-index: 4;
     height: auto;
     transform: scale(0);
 }
@@ -356,7 +356,7 @@ nav a {
     border-radius: 0 0 10px 10px;
     left: -1200px;
     transition: .2s ease-out;
-    z-index: 2;
+    z-index: 3;
     border: 5px solid white;
     border-top: 0;
 }
@@ -682,7 +682,7 @@ section img {
     position: absolute;
     top:-200px;
     left: 20px;
-    animation: froggyfall 20s 5s ease-in-out  ;
+    animation: froggyfall 20s ease-in-out  ;
     
 }
 #froggy-fly-blue{
@@ -1208,6 +1208,7 @@ section span {
 .container-quiz-quiz-by-theme {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     align-items: center;
     width: 100%;
     height: 150px;
@@ -1382,4 +1383,21 @@ section span {
 	100% {
 		transform: translate(0px, 0px);
 	}
+}
+
+/*****************Tablette Mode**************************/
+
+@media screen and (max-width: 800px) {
+    .none-tab{
+        display: none !important;
+    }
+    #nav2{
+     position : fixed !important;
+      top: 4rem;
+    }
+    .container-home-grid{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }

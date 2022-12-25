@@ -47,7 +47,7 @@
     </div>
   </nav>
 
-  <section id="section">
+  <section id="section" class="none-tab">
     <img src="./assets/images/cloud-back2.png" id="cloud-back" class="clouds" alt="" />
     <img src="./assets/images/sun.png" id="astre" alt="" />
     <div id="title">
