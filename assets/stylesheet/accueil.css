@@ -555,7 +555,7 @@ nav a {
 .footer {
     display: flex;
     justify-content: space-between;
-    padding: 300px 80px 80px 80px;
+    padding: 200px 80px 80px 80px;
     background-color: #026d9b;
 
 }
@@ -676,8 +676,75 @@ section img {
     left: -150px;
 
 }
+/***********froggyfly***********/
+#froggy-fly{
+    width: 150px;
+    position: absolute;
+    top:-200px;
+    left: 20px;
+    animation: froggyfall 20s 5s ease-in-out  ;
+    
+}
+#froggy-fly-blue{
+    width: 150px;
+    position: absolute;
+    top:-200px;
+    left: 40%;
+    animation: froggyfall 25s 45s ease-in-out ;
+    
+}
+#froggy-fly-orange{
+    width: 150px;
+    position: absolute;
+    top:-200px;
+    left: 1200px;
+    animation: froggyfall 15s 25s ease-in-out ;
 
+}
+@keyframes froggyfall {
+0%{
+    top: -200px;
+}
+10%{
+transform: rotate(20deg);
+}
+20%{
+    transform: rotate(-20deg);
+}
+30%{
+    transform: rotate(20deg);
+    
+}
+40%{
+    transform: rotate(-20deg);
+    
+}
+50%{
+    transform: rotate(20deg);
+    
+}
+60%{
+    transform: rotate(-20deg);
+    
+}
+70%{
+    transform: rotate(20deg);
+    
+}
+80%{
+    transform: rotate(-20deg);
+    
+}
+90%{
+    transform: rotate(20deg);
+    
+}
 
+100%{
+    top:1500px;
+}
+
+}
 
 /* title */
 
@@ -817,7 +884,7 @@ section span {
     background: linear-gradient(180deg, rgb(255, 255, 255) 30%, rgba(255, 255, 255, 0) 100%);
     position: absolute;
     top: 40px;
-    z-index: 1;
+    z-index: 2;
 }
 
 
@@ -1278,7 +1345,7 @@ section span {
     position: absolute;
     width: 100px;
     height: 100px;
-    top: -55px;
+    top: -25px;
     left: 200px;
     animation: move-frog 25s ease-in-out infinite ;
 }
@@ -1298,14 +1365,8 @@ section span {
     right: 200px;
     animation: move-frog 30s ease-in-out infinite ;
 }
-#frog4{
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    top: 255px;
-    left: 200px;
-    animation: move-frog 20s ease-in-out infinite ;
-}
+
+
 
 @keyframes move-frog {
     0% {

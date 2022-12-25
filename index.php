@@ -66,6 +66,9 @@
     </div>
     <span id="span1">Bienvenue sur</span>
     <span id="span2">Le meilleur quiz du monde</span>
+    <img id="froggy-fly" src="./assets/images/froggy-fly.png" alt="">
+    <img id="froggy-fly-blue" src="./assets/images/froggy-fly-blue.png" alt="">
+    <img id="froggy-fly-orange" src="./assets/images/froggy-fly-orange.png" alt="">
     <img src="./assets/images/cloud-mid.png" id="cloud" class="clouds" alt="" />
     <img src="./assets/images/cloud-contact.png" id="cloud-contact" class="clouds" alt="" />
   </section>
@@ -419,7 +422,6 @@
   <img id="frog1" src="./assets/images/frog1.png" alt="">
   <img id="frog2" src="./assets/images/frog2.png" alt="">
   <img id="frog3" src="./assets/images/frog3.png" alt="">
-  <img id="frog4" src="./assets/images/frog4.png" alt="">
 </div>
   <?php
   include('./partials/footer.php')
