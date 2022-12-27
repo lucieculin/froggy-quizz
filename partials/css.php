@@ -4,4 +4,4 @@
 
 
 <link rel="stylesheet" href="../assets/stylesheet/style.css" />
-
+<?php include('./partials/isCss.php'); ?>

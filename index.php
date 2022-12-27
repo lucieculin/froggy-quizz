@@ -1,3 +1,5 @@
+<?php $isCss="home";?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -14,6 +16,7 @@
 
 <body>
   <nav class="nav1" id="nav1">
+
     <div class="container">
       <div class="logoContainer">
         <a class="imgLogo1">

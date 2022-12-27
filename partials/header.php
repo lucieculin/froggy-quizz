@@ -12,13 +12,13 @@ $isCss="home";
   <?php
     include('./partials/css.php');
     include('./partials/script.php');
+    
     ?>
 
-<title></title>
+<title>Froggy quiz</title>
 </head>
 
 <body>
-  <?php include('../partials/isCss.php'); ?>
   <nav class="nav1">
     <div class="container">
       <div class="logoContainer">
