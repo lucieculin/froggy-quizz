@@ -1,3 +1,7 @@
+<?php   
+$isCss="home";
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -10,10 +14,11 @@
     include('./partials/script.php');
     ?>
 
-  <title></title>
+<title></title>
 </head>
 
 <body>
+  <?php include('../partials/isCss.php'); ?>
   <nav class="nav1">
     <div class="container">
       <div class="logoContainer">
