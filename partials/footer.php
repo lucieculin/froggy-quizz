@@ -9,7 +9,7 @@
         </ul>
       </div>
 
-      <div class="colomn2 colomns">
+      <div class="responsive colomn2 colomns">
         <h3 class="h3-footer">CATEGORIES</h3>
 
         <ul>
