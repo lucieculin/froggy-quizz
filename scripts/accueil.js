@@ -10,6 +10,7 @@ let justQ = document.querySelector("#just-q");
 let nav1 = document.querySelector("#nav1");
 let nav2 = document.querySelector("#nav2");
 let parallax = document.querySelector("#section");
+let stats = document.querySelector('#stats')
 
 document.addEventListener("scroll", () => {
   let value = window.scrollY;
@@ -33,6 +34,21 @@ document.addEventListener("scroll", () => {
     nav2.style.position = "absolute";
     nav2.style.top = "";
   }
+  if (value >=2043  ){
+    stats.style.position = "fixed";
+    stats.style.top = "10rem";
+  }else {
+    stats.style.position = "sticky";
+    stats.style.top = "";
+  }
+  if(value>=2600){
+    stats.style.marginTop = "550px";
+    stats.style.position = "sticky";
+    stats.style.top = "";
+  }else{
+    stats.style.marginTop ="0px";
+
+  }
 
   astre.style.top = value * 1.1 - 400 + "px";
   astre.style.left = value * -0.1 - 150 + "px";
@@ -40,4 +56,79 @@ document.addEventListener("scroll", () => {
   cloud.style.top = value * 0.5 + "px";
 });
 
-/*******navbarscroll************/
+/*******theme all************/
+function between(val, min, max) {
+  return Math.max(min, Math.min(val, max));
+}
+
+function scaling(d) {
+  return Math.max(Math.min(-0.2 * Math.pow(d, 2) + 1.05, 1), 0);
+}
+
+let transformOrigins={
+  "-1" : "right",
+  "0" : "center",
+  "1" : "left"
+}
+
+class Theme {
+  scale = 1;
+  constructor(el) {
+    this.root = el;
+    this.icons = Array.from(el.children);
+    if (this.icons.lenght === 0) {
+      return;
+    }
+    this.iconSize = this.icons[0].offsetWidth;
+    el.addEventListener("mousemove", this.handleMouseMove.bind(this));
+    el.addEventListener("mouseleave", this.handleMouseLeave.bind(this));
+    el.addEventListener("mouseenter", this.handleMouseEnter.bind(this));
+  }
+
+  handleMouseMove(e) {
+    this.mousePosition = between(
+      (e.clientX - this.root.offsetLeft) / this.iconSize,
+      0,
+      this.icons.length
+    );
+    this.scaleIcons();
+  }
+  scaleIcons() {
+    let selectedIndex = Math.floor(this.mousePosition);
+    let centerOffset = this.mousePosition - selectedIndex -0.5;
+
+let baseOffset = this.scaleFromDirection(selectedIndex, 0 , -centerOffset * this.iconSize);
+let offset = baseOffset * (0.5- centerOffset);
+    for (let i = selectedIndex + 1; i < this.icons.length; i++) {
+offset += this.scaleFromDirection(i, 1 , offset)
+    }
+    offset = baseOffset * (0.5+ centerOffset);
+    for (let i = selectedIndex - 1; i >=0; i--) {
+offset += this.scaleFromDirection(i, -1 , -offset)
+    }
+  }
+  scaleFromDirection(index, direction, offset){
+    let center = index + 0.5;
+    let distanceFromPointer = this.mousePosition - center;
+    let scale = scaling(distanceFromPointer) * this.scale;
+    let icon = this.icons[index];
+    icon.style.setProperty("transform", `translateX(${offset}px) scale(${scale + 1})`);
+    icon.style.setProperty("transform-origin", `${transformOrigins[direction.toString()]} bottom`);
+    return scale * this.iconSize;
+  }
+  handleMouseLeave() {
+    this.root.classList.add("animated");
+    this.icons.forEach((icon) => {
+      icon.style.removeProperty("transform");
+      icon.style.removeProperty("transform-origin");
+    })
+  }
+  handleMouseEnter() {
+    this.root.classList.add("animated");
+    window.setTimeout(() => {
+      this.root.classList.remove("animated");
+    },100);
+  }
+}
+
+new Theme(document.querySelector(".all-theme"));
