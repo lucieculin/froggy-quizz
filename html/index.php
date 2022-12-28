@@ -50,15 +50,15 @@
   <section id="section" class="none-tab">
     <img src="./assets/images/cloud-back2.png" id="cloud-back" class="clouds" alt="" />
     <img src="./assets/images/sun.png" id="astre" alt="" />
-    <div id="title">
+     <div id="title">
       <div class="img-fq" id="img-f">
-        <img src="./assets/images/F-logo-title.png" alt="" />
+        <img src="../assets/images/F-logo-title.png" alt="" />
       </div>
       <div class="title-d-span" id="tds1">
         <span class="tsp" id="tsp1">ROGGY</span>
       </div>
       <div class="img-fq" id="img-q">
-        <img id="just-q" src="./assets/images/q-logo-title.png" alt="" />
+        <img id="just-q" src="../assets/images/q-logo-title.png" alt="" />
         <div class="title-d-span" id="tds2">
           <span class="tsp" id="tsp2">UIZ</span>
         </div>
@@ -217,7 +217,7 @@
           <h2 class="h2-title-section">Nos thèmes</h2>
           <div class="theme-container">
             <div class="all-theme">
-  
+
               <a href="" class="theme-icon"><img src="./assets/images/film.png" alt="logo film"></a>
               <a href="" class="theme-icon"><img src="./assets/images/serie.png" alt="logo serie"></a>
               <a href="" class="theme-icon"><img src="./assets/images/dessin-anime.png" alt="logo dessin animé"></a>
@@ -352,77 +352,7 @@
 
           <div class="container-ranking-podium">
 
-            <div class="card-ranking gold">
-              <img src="./assets/images/quigon.jpg" alt="quigon photo">
-              <div class="attribut-card-ranking">
-                <div class="name-ranking">Qui Gon Jinn</div>
-                <div class="lvl-ranking">Lvl 99</div>
-              </div>
-              <div class="place">1</div>
-            </div>
 
-            <div class="card-ranking silver">
-              <img src="./assets/images/perceval.jpg" alt="quigon photo">
-              <div class="attribut-card-ranking">
-                <div class="name-ranking">Perceval de Galles</div>
-                <div class="lvl-ranking">Lvl 96</div>
-              </div>
-              <div class="place">2</div>
-            </div>
-
-            <div class="card-ranking bronze">
-              <img src="./assets/images/hermione.jpg" alt="quigon photo">
-              <div class="attribut-card-ranking">
-                <div class="name-ranking">Hermione Granger</div>
-                <div class="lvl-ranking">Lvl 93</div>
-              </div>
-              <div class="place">3</div>
-            </div>
-
-            <div class="card-ranking">
-              <img src="./assets/images/ziggy.jpg" alt="quigon photo">
-              <div class="attribut-card-ranking">
-                <div class="name-ranking">Al Calavicci</div>
-                <div class="lvl-ranking">Lvl 87</div>
-              </div>
-              <div class="place">4</div>
-            </div>
-
-            <div class="card-ranking">
-              <img src="./assets/images/snow.jpg" alt="quigon photo">
-              <div class="attribut-card-ranking">
-                <div class="name-ranking">Jon Snow</div>
-                <div class="lvl-ranking">Lvl 84</div>
-              </div>
-              <div class="place">5</div>
-            </div>
-
-
-          </div>
-        </div>
-        <div id="stats" class="container-stats">
-          <h2 class="h2-title-section">Vos statistique</h2>
-          <div class="stats-wrapper">
-            <p class="paragraphe-stats">
-              <span>Niveau : 12</span>
-              <span>Nombres de parties joués : 21</span>
-              <span>Bonne réponse : 145</span>
-              <span>Pourcentage de bonne réponse : 82%</span>
-              <span>Votre classement : 897</span>
-            </p>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-
-  </div>
-  <div class="roseau"><img src="./assets/images/Roseaux.png" alt="">
-  <img id="frog1" src="./assets/images/frog1.png" alt="">
-  <img id="frog2" src="./assets/images/frog2.png" alt="">
-  <img id="frog3" src="./assets/images/frog3.png" alt="">
-</div>
   <?php
   include('./partials/footer.php')
   ?>
