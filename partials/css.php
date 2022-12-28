@@ -4,4 +4,4 @@
 
 
 <link rel="stylesheet" href="../assets/stylesheet/style.css" />
-<link rel="stylesheet" href="../assets/stylesheet/accueil.css">
+<link rel="stylesheet" href="../partials/isCss.php">
