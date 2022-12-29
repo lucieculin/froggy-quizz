@@ -4,4 +4,7 @@
 
 
 <link rel="stylesheet" href="../styles/style.css" />
-<link rel="stylesheet" href="../partials/isCss.php">
+<?php
+
+include_once $isPage === "home" ? ('./partials/isCss.php') : ('../partials/isCss.php');
+?>

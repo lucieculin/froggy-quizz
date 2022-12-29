@@ -215,11 +215,8 @@ a {
 
 .connexion a {
     color: black;
-<<<<<<<< HEAD:assets/stylesheet/style.css
-    background-image: url(../../assets/images/cloud-nav-dark.png);
-========
+
     background-image: url(../assets/images/cloud-nav-dark.png);
->>>>>>>> lucie:styles/style.css
     background-size: 0rem;
     background-position: center;
     background-repeat: no-repeat;

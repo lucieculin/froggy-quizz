@@ -1,2 +1,6 @@
-<script src="../assets/scriptsheet/script.js" defer></script>
-<script src="../assets/scriptsheet/accueil.js" defer></script>
+
+<script src='../scripts/script.js' defer></script>
+
+<?php
+include_once $isPage === "home" ? ('./partials/isScript.php') : ('../partials/isScript.php');
+?>

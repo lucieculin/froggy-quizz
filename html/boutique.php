@@ -1,5 +1,6 @@
 <?php
-include('./partials/header.php');
+$isPage="boutique";
+include('../partials/header.php');
 ?>
 
 <div class="main">
@@ -24,9 +25,9 @@ include('./partials/header.php');
 
         <div class="cardBank">
 
-            <h3>Mon Portefeuille<img src="assets/images/icons8-portefeuille-de-monnaie-64.png"></h3><br><br>
-            <p>Froggycoins : <strong>'200'</strong><img src="assets/images/froggycoins.png"></p><br>
-            <p>Froggygolds : <strong>'50'</strong><img src="assets/images/froggygolds.png"></p><br>
+            <h3>Mon Portefeuille<img src="../assets/images/icons8-portefeuille-de-monnaie-64.png"></h3><br><br>
+            <p>Froggycoins : <strong>'200'</strong><img src="../assets/images/froggycoins.png"></p><br>
+            <p>Froggygolds : <strong>'50'</strong><img src="../assets/images/froggygolds.png"></p><br>
             <a href="#" >Approvisionner</a>
         </div>
 
@@ -60,5 +61,5 @@ include('./partials/header.php');
 </div>
 
 <?php
-include('./partials/footer.php')
+include('../partials/footer.php')
 ?>

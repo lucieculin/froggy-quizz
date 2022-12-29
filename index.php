@@ -1,4 +1,4 @@
-<?php $isCss = "home";
+<?php $isPage = "home";
 include_once('./repository/theme.Repository.php');
 include_once('./repository/quiz.Repository.php');
 
@@ -17,6 +17,7 @@ $themes = $theme->findAll();
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <?php
   include('./partials/css.php');
   include('./partials/script.php');
@@ -54,14 +55,14 @@ $themes = $theme->findAll();
       </div>
 
       <div class="connexion">
-        <a href="#">Login</a>
+        <a href="./html/login.php">Login</a>
       </div>
     </div>
   </nav>
 
   <section id="section" class="none-tab">
-    <img src="./assets/images/cloud-back2.png" id="cloud-back" class="clouds" alt="" />
-    <img src="./assets/images/sun.png" id="astre" alt="" />
+    <img src="../assets/images/cloud-back2.png" id="cloud-back" class="clouds" alt="" />
+    <img src="../assets/images/sun.png" id="astre" alt="" />
     <div id="title">
       <div class="img-fq" id="img-f">
         <img src="../assets/images/F-logo-title.png" alt="" />
@@ -78,11 +79,11 @@ $themes = $theme->findAll();
     </div>
     <span id="span1">Bienvenue sur</span>
     <span id="span2">Le meilleur quiz du monde</span>
-    <img id="froggy-fly" src="./assets/images/froggy-fly.png" alt="">
-    <img id="froggy-fly-blue" src="./assets/images/froggy-fly-blue.png" alt="">
-    <img id="froggy-fly-orange" src="./assets/images/froggy-fly-orange.png" alt="">
-    <img src="./assets/images/cloud-mid.png" id="cloud" class="clouds" alt="" />
-    <img src="./assets/images/cloud-contact.png" id="cloud-contact" class="clouds" alt="" />
+    <img id="froggy-fly" src="../assets/images/froggy-fly.png" alt="">
+    <img id="froggy-fly-blue" src="../assets/images/froggy-fly-blue.png" alt="">
+    <img id="froggy-fly-orange" src="../assets/images/froggy-fly-orange.png" alt="">
+    <img src="../assets/images/cloud-mid.png" id="cloud" class="clouds" alt="" />
+    <img src="../assets/images/cloud-contact.png" id="cloud-contact" class="clouds" alt="" />
   </section>
 
   <nav id="nav2" class="nav2">
@@ -274,12 +275,82 @@ $themes = $theme->findAll();
       </div>
       <div class="container-home-right">
 
-        <div class="container-podium">
+      <div class="container-podium">
           <h2 class="h2-title-section">Le Podium</h2>
 
           <div class="container-ranking-podium">
 
+            <div class="card-ranking gold">
+              <img src="./assets/images/quigon.jpg" alt="quigon photo">
+              <div class="attribut-card-ranking">
+                <div class="name-ranking">Qui Gon Jinn</div>
+                <div class="lvl-ranking">Lvl 99</div>
+              </div>
+              <div class="place">1</div>
+            </div>
 
+            <div class="card-ranking silver">
+              <img src="./assets/images/perceval.jpg" alt="quigon photo">
+              <div class="attribut-card-ranking">
+                <div class="name-ranking">Perceval de Galles</div>
+                <div class="lvl-ranking">Lvl 96</div>
+              </div>
+              <div class="place">2</div>
+            </div>
+
+            <div class="card-ranking bronze">
+              <img src="./assets/images/hermione.jpg" alt="quigon photo">
+              <div class="attribut-card-ranking">
+                <div class="name-ranking">Hermione Granger</div>
+                <div class="lvl-ranking">Lvl 93</div>
+              </div>
+              <div class="place">3</div>
+            </div>
+
+            <div class="card-ranking">
+              <img src="./assets/images/ziggy.jpg" alt="quigon photo">
+              <div class="attribut-card-ranking">
+                <div class="name-ranking">Al Calavicci</div>
+                <div class="lvl-ranking">Lvl 87</div>
+              </div>
+              <div class="place">4</div>
+            </div>
+
+            <div class="card-ranking">
+              <img src="./assets/images/snow.jpg" alt="quigon photo">
+              <div class="attribut-card-ranking">
+                <div class="name-ranking">Jon Snow</div>
+                <div class="lvl-ranking">Lvl 84</div>
+              </div>
+              <div class="place">5</div>
+            </div>
+
+
+          </div>
+        </div>
+        <div id="stats" class="container-stats">
+          <h2 class="h2-title-section">Vos statistique</h2>
+          <div class="stats-wrapper">
+            <p class="paragraphe-stats">
+              <span>Niveau : 12</span>
+              <span>Nombres de parties joués : 21</span>
+              <span>Bonne réponse : 145</span>
+              <span>Pourcentage de bonne réponse : 82%</span>
+              <span>Votre classement : 897</span>
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <div class="roseau"><img src="./assets/images/Roseaux.png" alt="">
+    <img id="frog1" src="./assets/images/frog1.png" alt="">
+    <img id="frog2" src="./assets/images/frog2.png" alt="">
+    <img id="frog3" src="./assets/images/frog3.png" alt="">
+  </div>
             <?php
             include('./partials/footer.php')
             ?>

@@ -1,24 +1,18 @@
 @font-face {
     font-family: "applejuice";
-<<<<<<<< HEAD:assets/stylesheet/accueil.css
-    src: url("../../assets/font/AppleJuiceRegular.ttf");
-========
     src: url("../assets/font/AppleJuiceRegular.ttf");
->>>>>>>> lucie:styles/accueil.css
+    src: url("../assets/font/AppleJuiceRegular.ttf");
 }
 
 @font-face {
     font-family: 'cloud-font';
-<<<<<<<< HEAD:assets/stylesheet/accueil.css
-    src: url('../../assets/font/Turds-vppD.ttf');
+    src: url('../assets/font/Turds-vppD.ttf');
 }
 
 ::selection {
     background-color: var(--color4);
     color: white;
-========
     src: url('../assets/font/Turds-vppD.ttf');
->>>>>>>> lucie:styles/accueil.css
 }
 
 
@@ -41,12 +35,7 @@ body {
 
     margin: 0;
     padding: 0;
-<<<<<<<< HEAD:assets/stylesheet/accueil.css
-    /* background: url(./assets/images/background-dark-pattoune.png); */
     background: rgb(255, 255, 255);
-========
-    background: url(../assets/images/background-white-pattoune.png);
->>>>>>>> lucie:styles/accueil.css
     background-size: 40%;
     background-repeat: repeat;
 }
@@ -233,11 +222,8 @@ a {
 
 .connexion a {
     color: black;
-<<<<<<<< HEAD:assets/stylesheet/accueil.css
-    background-image: url(../../assets/images/cloud-nav-dark.png);
-========
+
     background-image: url(../assets/images/cloud-nav-dark.png);
->>>>>>>> lucie:styles/accueil.css
     background-size: 0rem;
     background-position: center;
     background-repeat: no-repeat;
@@ -653,11 +639,7 @@ nav a {
     align-items: center;
     background-size: contain;
     overflow: hidden;
-<<<<<<<< HEAD:assets/stylesheet/accueil.css
-    background: url(../../assets/images/ciel.png);
-========
     background: url(../assets/images/ciel.png);
->>>>>>>> lucie:styles/accueil.css
     background-repeat: no-repeat;
     background-size: cover;
     margin-top: 40px !important;
@@ -986,32 +968,10 @@ section span {
 
 .front-face {
     border: var(--color4) 1px solid;
-<<<<<<<< HEAD:assets/stylesheet/accueil.css
-    background: url(../../assets/images/background-dark-pattoune.png);
-    background-size: contain;
-}
-
-.ff2 {
-    background: url(../../assets/images/background-dark-pattoune.png);
-    background-size: contain;
-}
-
-.ff3 {
-    background: url(../../assets/images/background-dark-pattoune.png);
-    background-size: contain;
-}
-
-.ff4 {
-    background: url(../../assets/images/background-dark-pattoune.png);
-    background-size: contain;
-}
-
-.ff5 {
-    background: url(../../assets/images/background-dark-pattoune.png);
-========
     background: url(../assets/images/background-dark-pattoune.png);
     background-size: contain;
- }
+}
+
  .ff2{
     background: url(../assets/images/background-dark-pattoune.png);
     background-size: contain;
@@ -1026,7 +986,6 @@ section span {
  }
  .ff5{
     background: url(../assets/images/background-dark-pattoune.png);
->>>>>>>> lucie:styles/accueil.css
     background-size: contain;
 }
 
@@ -1036,49 +995,22 @@ section span {
     transform: perspective(500px) rotatey(180deg);
 }
 
-<<<<<<<< HEAD:assets/stylesheet/accueil.css
 .bf1 {
-    background: url(../../assets/images/Harry-Potter-l-annonce-que-tous-les-fans-attendaient-avec-impatience.jpg);
+    background: url(../assets/images/Harry-Potter-l-annonce-que-tous-les-fans-attendaient-avec-impatience.jpg);
     background-size: cover;
 }
 
 .bf2 {
-    background: url(../../assets/images/histoire.png);
-========
-.bf1{
-    background: url(../assets/images/Harry-Potter-l-annonce-que-tous-les-fans-attendaient-avec-impatience.jpg);
-    background-size: cover;
-}
-.bf2{
     background: url(../assets/images/histoire.png);
->>>>>>>> lucie:styles/accueil.css
     background-size: cover;
-
-
+    background-position: center;
 }
-<<<<<<<< HEAD:assets/stylesheet/accueil.css
 
-.bf3 {
-    background: url(../../assets/images/kaamelott.png);
-========
 .bf3{
     background: url(../assets/images/kaamelott.png);
->>>>>>>> lucie:styles/accueil.css
-    background-size: cover;
-    background-position: center;
-
-}
-<<<<<<<< HEAD:assets/stylesheet/accueil.css
-
-.bf4 {
-    background: url(../../assets/images/one-piece.png);
     background-size: cover;
     background-position: center;
 }
-
-.bf5 {
-    background: url(../../assets/images/capitale.png);
-========
 .bf4{
     background: url(../assets/images/one-piece.png);
     background-size: cover;
@@ -1086,7 +1018,6 @@ section span {
 }
 .bf5{
     background: url(../assets/images/capitale.png);
->>>>>>>> lucie:styles/accueil.css
     background-size: cover;
     background-position: center;
 }
@@ -1137,11 +1068,7 @@ section span {
     width: auto;
     padding: 10px;
     border-radius: 10px;
-<<<<<<<< HEAD:assets/stylesheet/accueil.css
-    background: url(../../assets/images/background-dark-pattoune.png);
-========
     background: url(../assets/images/background-dark-pattoune.png);
->>>>>>>> lucie:styles/accueil.css
     background-size: contain;
     border: none;
     transform: perspective(500px) translateZ(50px);
@@ -1153,28 +1080,7 @@ section span {
     border: inset 1px var(--color4);
 }
 
-<<<<<<<< HEAD:assets/stylesheet/accueil.css
-.bbtn2 {
-    background: url(../../assets/images/background-dark-pattoune.png);
-    background-size: contain;
-    color: var(--color1);
-}
 
-.bbtn3 {
-    background: url(../../assets/images/background-dark-pattoune.png);
-    background-size: contain;
-    color: var(--color1);
-}
-
-.bbtn4 {
-    background: url(../../assets/images/background-dark-pattoune.png);
-    background-size: contain;
-    color: var(--color1);
-}
-
-.bbtn5 {
-    background: url(../../assets/images/background-dark-pattoune.png);
-========
  .bbtn2 {
     background: url(../assets/images/background-dark-pattoune.png);
     background-size: contain;
@@ -1192,7 +1098,6 @@ section span {
  }
  .bbtn5 {
     background: url(../assets/images/background-dark-pattoune.png);
->>>>>>>> lucie:styles/accueil.css
     background-size: contain;
     color: var(--color1);
 }
@@ -1315,7 +1220,7 @@ section span {
     height: 100px;
     width: 150px;
 margin: 20px;
-    background: url(../../assets/images/background-dark-pattoune.png);
+    background: url(../assets/images/background-dark-pattoune.png);
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -1332,7 +1237,7 @@ margin: 20px;
 }
 
 .card-quiz-by-theme:hover {
-    background: url(../../assets/images/background-white-pattoune.png);
+    background: url(../assets/images/background-white-pattoune.png);
 }
 
 .card-quiz-by-theme:hover a {
@@ -1360,7 +1265,7 @@ margin: 20px;
     display: flex;
     justify-content: left;
     align-items: center;
-    background: url(../images/background-dark-pattoune.png);
+    background: url(../assets/images/background-dark-pattoune.png);
     background-size: contain;
     border-radius: 20px;
     padding: 5px;

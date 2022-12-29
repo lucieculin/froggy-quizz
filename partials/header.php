@@ -17,23 +17,23 @@
   <nav class="nav1">
     <div class="container">
       <div class="logoContainer">
-        <a class="imgLogo1">
+        <a href="../index.php" class="imgLogo1">
           <img src="/assets/images/F-logo.png" alt="logo_froggy_quiz" class="logo" />
         </a>
-        <div class="sp1 logospan">
-          <span class="spsp">ROGGY</span>
-        </div>
+        <a href="../index.php" class="sp1 logospan">
+          <div class="spsp">ROGGY</div>
+        </a>
       </div>
 
       <div class="logoContainer">
-        <a class="imgLogo2">
+        <a href="../index.php" class="imgLogo2">
           <img src="/assets/images/q-logo.png" alt="logo_froggy_quiz" class="logo" />
         </a>
-        <div class="sp2 logospan">
+        <a href="../index.php" class="sp2 logospan">
           <span class="spsp">UIZ</span>
-        </div>
+        </a>
       </div>
-    </div>
+</div>
     <div class="contain-right">
       <div class="container-search">
         <input type="search" class="search" placeholder="Rechercher" />

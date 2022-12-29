@@ -1,4 +1,5 @@
 <?php
+$isPage="identityUser";
 include('../partials/header.php');
 ?>
 <link rel="stylesheet" href="../styles/identity_user.css" />

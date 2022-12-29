@@ -1,7 +1,8 @@
 <?php
+$isPage="startGame";
 include('../partials/header.php');
 ?>
-<link rel="stylesheet" href="../styles/style_demarrer_le-jeu.css" />
+
 
 <div class="lesjeux">
             <button class="btn" href="#">FILMS</button>

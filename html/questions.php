@@ -1,5 +1,6 @@
 <?php
-include('./partials/header.php');
+$isPage="questions";
+include('../partials/header.php');
 ?>
 
 
@@ -26,7 +27,7 @@ include('./partials/header.php');
 
 
     <div class="image">
-    <img src="/assets/images/kaamelott.png">
+    <img src="../assets/images/kaamelott.png">
     </div>
 
 
@@ -53,15 +54,15 @@ include('./partials/header.php');
         $isResponced=false;
         $isCorrect=false;
             if($isResponced==false){ ?>
-                <img src="assets/images/pattounes grise.png">
+                <img src="../assets/images/pattounes grise.png">
         <?php
             }
         elseif($isResponced==true && $isCorrect==true){ ?>
-                <img src="assets/images/pattounes verte.png">
+                <img src="../assets/images/pattounes verte.png">
         <?php
         }
         elseif($isResponced==true && $isCorrect==false){ ?>
-                <img src="assets/images/pattounes rouge.png">
+                <img src="../assets/images/pattounes rouge.png">
         <?php
         }
         }
@@ -71,5 +72,5 @@ include('./partials/header.php');
 
 
 <?php
-include('./partials/footer.php')
+include('../partials/footer.php')
 ?>

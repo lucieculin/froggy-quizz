@@ -1,4 +1,5 @@
 <?php
+$isPage="versus";
 include('../partials/header.php');
 ?>
 <link rel="stylesheet" href="../styles/style_demarrer_le-jeu.css" />

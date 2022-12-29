@@ -1,7 +1,8 @@
 <?php
+$isPage="game-mode";
 include('../partials/header.php');
 ?>
-<link rel="stylesheet" href="../styles/Choix_du_mode_jeux.css" />
+
 
 
     <div class="modejeux">
