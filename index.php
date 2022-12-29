@@ -1,3 +1,15 @@
+<?php $isCss = "home";
+include_once('./repository/theme.Repository.php');
+include_once('./repository/quiz.Repository.php');
+
+$quiz = new QuizRepository();
+$theme = new ThemeRepository();
+
+$allQuiz = $quiz->findAll();
+$themes = $theme->findAll();
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -50,7 +62,7 @@
   <section id="section" class="none-tab">
     <img src="./assets/images/cloud-back2.png" id="cloud-back" class="clouds" alt="" />
     <img src="./assets/images/sun.png" id="astre" alt="" />
-     <div id="title">
+    <div id="title">
       <div class="img-fq" id="img-f">
         <img src="../assets/images/F-logo-title.png" alt="" />
       </div>
@@ -231,117 +243,32 @@
         <div class="container-quiz-by-theme">
           <h2 class="h2-title-section">Nos Quiz</h2>
 
-          <div class="container-by-theme-quiz-by-theme">
-            <h3 class="title-quiz-by-theme">Film</h3>
-            <div class="container-quiz-quiz-by-theme">
-              <div class="card-quiz-by-theme">
-                <h4 class="name-card-quiz-by-theme"><a href="">Harry Potter</a></h4>
-              </div>
-              <div class="card-quiz-by-theme">
-                <h4 class="name-card-quiz-by-theme"><a href="">Star wars</a></h4>
-              </div>
-              <div class="card-quiz-by-theme">
-                <h4 class="name-card-quiz-by-theme"><a href="">Matrix</a></h4>
-              </div>
-              <div class="card-quiz-by-theme">
-                <h4 class="name-card-quiz-by-theme"><a href="">Plus de films</a></h4>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="container-by-theme-quiz-by-theme">
-            <h3 class="title-quiz-by-theme">Série</h3>
-            <div class="container-quiz-quiz-by-theme">
-              <div class="card-quiz-by-theme">
-                <h4 class="name-card-quiz-by-theme"><a href="">Game of thrones</a></h4>
-              </div>
-              <div class="card-quiz-by-theme">
-                <h4 class="name-card-quiz-by-theme"><a href="">Kaamelott</a></h4>
-              </div>
-              <div class="card-quiz-by-theme">
-                <h4 class="name-card-quiz-by-theme"><a href="">Breaking bad</a></h4>
-              </div>
-              <div class="card-quiz-by-theme">
-                <h4 class="name-card-quiz-by-theme"><a href="">Plus de série</a></h4>
+          <?php
+          foreach ($themes as $theme) {
+          ?>
+            <div class="container-by-theme-quiz-by-theme">
+              <h3 class="title-quiz-by-theme"><?= $theme->getName() ?></h3>
+              <div class="container-quiz-quiz-by-theme">
+                <div class="card-quiz-by-theme">
+                  <h4 class="name-card-quiz-by-theme"><a href="">Harry Potter</a></h4>
+                </div>
+                <div class="card-quiz-by-theme">
+                  <h4 class="name-card-quiz-by-theme"><a href="">Star wars</a></h4>
+                </div>
+                <div class="card-quiz-by-theme">
+                  <h4 class="name-card-quiz-by-theme"><a href="">Matrix</a></h4>
+                </div>
+                <div class="card-quiz-by-theme">
+                  <h4 class="name-card-quiz-by-theme"><a href="">Plus de <?= $theme->getName() ?></a></h4>
+                </div>
               </div>
             </div>
-          </div>
-
-          <div class="container-by-theme-quiz-by-theme">
-            <h3 class="title-quiz-by-theme">Déssins animés</h3>
-            <div class="container-quiz-quiz-by-theme">
-              <div class="card-quiz-by-theme">
-                <h4 class="name-card-quiz-by-theme"><a href="">Le roi lion</a></h4>
-              </div>
-              <div class="card-quiz-by-theme">
-                <h4 class="name-card-quiz-by-theme"><a href="">Toy story</a></h4>
-              </div>
-              <div class="card-quiz-by-theme">
-                <h4 class="name-card-quiz-by-theme"><a href="">La reine des neiges</a></h4>
-              </div>
-              <div class="card-quiz-by-theme">
-                <h4 class="name-card-quiz-by-theme"><a href="">Plus de dessins animés</a></h4>
-              </div>
-            </div>
-          </div>
+          <?php
+          }
+          ?>
 
 
-          <div class="container-by-theme-quiz-by-theme">
-            <h3 class="title-quiz-by-theme">Animé</h3>
-            <div class="container-quiz-quiz-by-theme">
-              <div class="card-quiz-by-theme">
-                <h4 class="name-card-quiz-by-theme"><a href="">One piece</a></h4>
-              </div>
-              <div class="card-quiz-by-theme">
-                <h4 class="name-card-quiz-by-theme"><a href="">Naruto</a></h4>
-              </div>
-              <div class="card-quiz-by-theme">
-                <h4 class="name-card-quiz-by-theme"><a href="">Jujutsu kaisen</a></h4>
-              </div>
-              <div class="card-quiz-by-theme">
-                <h4 class="name-card-quiz-by-theme"><a href="">Plus d'animé</a></h4>
-              </div>
-            </div>
-          </div>
 
-
-          <div class="container-by-theme-quiz-by-theme">
-            <h3 class="title-quiz-by-theme">Jeux videos</h3>
-            <div class="container-quiz-quiz-by-theme">
-              <div class="card-quiz-by-theme">
-                <h4 class="name-card-quiz-by-theme"><a href="">Mario</a></h4>
-              </div>
-              <div class="card-quiz-by-theme">
-                <h4 class="name-card-quiz-by-theme"><a href="">World of warcraft</a></h4>
-              </div>
-              <div class="card-quiz-by-theme">
-                <h4 class="name-card-quiz-by-theme"><a href="">Call Of Duty</a></h4>
-              </div>
-              <div class="card-quiz-by-theme">
-                <h4 class="name-card-quiz-by-theme"><a href="">Plus de jeux videos</a></h4>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="container-by-theme-quiz-by-theme">
-            <h3 class="title-quiz-by-theme">Culture</h3>
-            <div class="container-quiz-quiz-by-theme">
-              <div class="card-quiz-by-theme">
-                <h4 class="name-card-quiz-by-theme"><a href="">Cuisine</a></h4>
-              </div>
-              <div class="card-quiz-by-theme">
-                <h4 class="name-card-quiz-by-theme"><a href="">Capitales d'europes</a></h4>
-              </div>
-              <div class="card-quiz-by-theme">
-                <h4 class="name-card-quiz-by-theme"><a href="">Mérovingiens</a></h4>
-              </div>
-              <div class="card-quiz-by-theme">
-                <h4 class="name-card-quiz-by-theme"><a href="">Plus de culture</a></h4>
-              </div>
-            </div>
-          </div>
 
         </div>
       </div>
@@ -353,6 +280,6 @@
           <div class="container-ranking-podium">
 
 
-  <?php
-  include('./partials/footer.php')
-  ?>
+            <?php
+            include('./partials/footer.php')
+            ?>

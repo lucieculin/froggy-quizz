@@ -2,9 +2,13 @@
 <?php
 
 if($isCss==="home"){
-    echo "<link rel='stylesheet' href='../assets/stylesheet/accueil.css'>";
+    echo "<link rel='stylesheet' href='../styles/accueil.css'>";
   
-}else{
+}elseif ($isCss==="avatar") {
+    echo "<link rel='stylesheet' href='../styles/avatar.css'>";
+}
+
+else{
    ?> <script>console.log("echec css")</script> <?php
 };
 

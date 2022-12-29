@@ -3,5 +3,5 @@
 
 
 
-<link rel="stylesheet" href="../assets/stylesheet/style.css" />
+<link rel="stylesheet" href="../styles/style.css" />
 <link rel="stylesheet" href="../partials/isCss.php">
