@@ -7,6 +7,8 @@ class themes
 
         private string $name;
 
+        private int $themeId;
+
     /**
      * @return int
      */
@@ -39,5 +41,27 @@ class themes
         $this->name = $name;
     }
 
+    /**
+     * Get the value of themeId
+     *
+     * @return int
+     */
+    public function getThemeId(): int
+    {
+        return $this->themeId;
+    }
 
+    /**
+     * Set the value of themeId
+     *
+     * @param int $themeId
+     *
+     * @return self
+     */
+    public function setThemeId(int $themeId): self
+    {
+        $this->themeId = $themeId;
+
+        return $this;
+    }
 }

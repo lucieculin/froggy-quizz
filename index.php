@@ -246,12 +246,19 @@ $themes = $theme->findAll();
 
           <?php
           foreach ($themes as $theme) {
+       $quizsByTheme = $quiz->findByTheme($theme->getId(),1);
+   
+       foreach ($quizsByTheme as $quizByTheme){
+      }
+      echo $quizByTheme->name;
+ 
+     
           ?>
             <div class="container-by-theme-quiz-by-theme">
               <h3 class="title-quiz-by-theme"><?= $theme->getName() ?></h3>
               <div class="container-quiz-quiz-by-theme">
                 <div class="card-quiz-by-theme">
-                  <h4 class="name-card-quiz-by-theme"><a href="">Harry Potter</a></h4>
+                  <h4 class="name-card-quiz-by-theme"><a href="">sdf</a></h4>
                 </div>
                 <div class="card-quiz-by-theme">
                   <h4 class="name-card-quiz-by-theme"><a href="">Star wars</a></h4>
