@@ -1,6 +1,6 @@
 <?php  
 
-class QuizRepository
+class AnswerRepository
 {
     
     private PDO $pdo;
@@ -19,24 +19,23 @@ class QuizRepository
 
     public function findAll():array{
         return $this->pdo
-        ->query('SELECT * FROM `quiz`')
-        ->fetchAll(PDO::FETCH_CLASS, quizRepository::class);
+        ->query('SELECT * FROM `answer`')
+        ->fetchAll(PDO::FETCH_CLASS, answer_qcmRepository::class);
     }
 
     public function findById(INT $id){
         $query = $this->pdo
-        ->prepare('SELECT * FROM `quiz`WHERE quiz.id = ? ;');
+        ->prepare('SELECT * FROM `answer`WHERE answer.id = ? ;');
         $query->bindValue(1, $id ,PDO::PARAM_INT);
         $query->execute();
-        return $query->fetchObject(quizRepository::class);
+        return $query->fetchObject(answer_qcmRepository::class);
     }
 
-    public function findByTheme(INT $themeId, INT $limit):array{
+    public function findByanswerId(INT $quizId):array{
         $query = $this->pdo
-        ->prepare('SELECT * FROM `quiz` WHERE quiz.theme_id = ? LIMIT ? ;');
-        $query->bindValue(1, $themeId, PDO::PARAM_INT);
-        $query->bindValue(2, $limit, PDO::PARAM_INT);
+        ->prepare('SELECT * FROM `answers` WHERE answers.quiz_id = ?;');
+        $query->bindValue(1, $quizId, PDO::PARAM_INT);
         $query->execute();
-        return $query->fetchAll(PDO::FETCH_CLASS, QuizRepository::class);
+        return $query->fetchAll(PDO::FETCH_CLASS, answer_qcmRepository::class);
     }
 }

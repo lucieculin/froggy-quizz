@@ -1,6 +1,14 @@
 <?php
 $isPage="questions";
+include_once('../repository/quiz.Repository.php');
+include_once('../repository/questions.Repository.php');
+$idQuiz = intval($_GET['id']);
+$quiz = new QuizRepository();
+$theQuiz = $quiz->findById($idQuiz);
+$question = new QuestionRepository();
+$questions = $question->findByQuizId($idQuiz);
 include('../partials/header.php');
+
 ?>
 
 
@@ -14,13 +22,13 @@ include('../partials/header.php');
 
     <div class="title">
 
-        <h1>KAAMELOTT</h1>
+        <h1><?=$theQuiz->name;?></h1>
 
     </div>
 
     <div class="question">
 
-        <h2> De quoi a peur Yvain ?</h2>
+        <h2><?= $questions[mt_rand(0, 9)]->question?></h2>
 
     </div>
 
