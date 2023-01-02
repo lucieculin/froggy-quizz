@@ -2,11 +2,18 @@
 $isPage="questions";
 include_once('../repository/quiz.Repository.php');
 include_once('../repository/questions.Repository.php');
+include_once('../class/questions.php');
+include_once('../repository/answer_qcm.Repository.php');
 $idQuiz = intval($_GET['id']);
 $quiz = new QuizRepository();
 $theQuiz = $quiz->findById($idQuiz);
 $question = new QuestionRepository();
 $questions = $question->findByQuizId($idQuiz);
+$theQuestion = $questions[mt_rand(0, 9)];
+$answer = new AnswerRepository();
+$answers = $answer->findByQuestionId($theQuestion->id);
+
+
 include('../partials/header.php');
 
 ?>
@@ -28,7 +35,7 @@ include('../partials/header.php');
 
     <div class="question">
 
-        <h2><?= $questions[mt_rand(0, 9)]->question?></h2>
+        <h2><?= $theQuestion->question?></h2>
 
     </div>
 
@@ -42,13 +49,13 @@ include('../partials/header.php');
     
     <div class="responces">
 
-        <div class="A"><a href="#">A. Des loups</a></div>
+        <div class="A"><a href="#">A. <?= $answers[0]->answer?></a></div>
 
-        <div class="B"><a href="#">B. Des tartes aux fraises</a></div>
+        <div class="B"><a href="#">B. <?= $answers[1]->answer?></a></div>
 
-        <div class="C"><a href="#">C. De la magie</a></div>
+        <div class="C"><a href="#">C. <?= $answers[2]->answer?></a></div>
 
-        <div class="D"><a href="#">D. Des guèpes</p></a></div>
+        <div class="D"><a href="#">D. <?= $answers[3]->answer?></p></a></div>
     </div>
 
 

@@ -20,7 +20,7 @@ class AnswerRepository
     public function findAll():array{
         return $this->pdo
         ->query('SELECT * FROM `answer`')
-        ->fetchAll(PDO::FETCH_CLASS, answer_qcmRepository::class);
+        ->fetchAll(PDO::FETCH_CLASS, answerRepository::class);
     }
 
     public function findById(INT $id){
@@ -28,14 +28,14 @@ class AnswerRepository
         ->prepare('SELECT * FROM `answer`WHERE answer.id = ? ;');
         $query->bindValue(1, $id ,PDO::PARAM_INT);
         $query->execute();
-        return $query->fetchObject(answer_qcmRepository::class);
+        return $query->fetchObject(answerRepository::class);
     }
 
-    public function findByanswerId(INT $quizId):array{
+    public function findByQuestionId(INT $questionId):array{
         $query = $this->pdo
-        ->prepare('SELECT * FROM `answers` WHERE answers.quiz_id = ?;');
-        $query->bindValue(1, $quizId, PDO::PARAM_INT);
+        ->prepare('SELECT * FROM `answer` WHERE answer.question_id = ?;');
+        $query->bindValue(1, $questionId, PDO::PARAM_INT);
         $query->execute();
-        return $query->fetchAll(PDO::FETCH_CLASS, answer_qcmRepository::class);
+        return $query->fetchAll(PDO::FETCH_CLASS, answerRepository::class);
     }
 }

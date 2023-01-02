@@ -1,6 +1,6 @@
 <?php
 
-class questions
+class question
 {
     private int $id;
 
