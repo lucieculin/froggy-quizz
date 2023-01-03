@@ -252,13 +252,13 @@ $themes = $theme->findAll();
               <h3 class="title-quiz-by-theme"><?= $theme->getName() ?></h3>
               <div class="container-quiz-quiz-by-theme">
                 <div class="card-quiz-by-theme">
-                  <h4 class="name-card-quiz-by-theme"><a href="./html/questions.php?id=<?= $quizsByTheme[1]->id?>"><?=$quizsByTheme[0]->name;?></a></h4>
+                  <h4 class="name-card-quiz-by-theme"><a href="./html/questions.php?id=<?= $quizsByTheme[0]->id?>"><?=$quizsByTheme[0]->name;?></a></h4>
                 </div>
                 <div class="card-quiz-by-theme">
                   <h4 class="name-card-quiz-by-theme"><a href="./html/questions.php?id=<?= $quizsByTheme[1]->id?>"><?=$quizsByTheme[1]->name;?></a></h4>
                 </div>
                 <div class="card-quiz-by-theme">
-                  <h4 class="name-card-quiz-by-theme"><a href="./html/questions.php?id=<?= $quizsByTheme[1]->id?>"><?=$quizsByTheme[2]->name;?></a></h4>
+                  <h4 class="name-card-quiz-by-theme"><a href="./html/questions.php?id=<?= $quizsByTheme[2]->id?>"><?=$quizsByTheme[2]->name;?></a></h4>
                 </div>
                 <div class="card-quiz-by-theme">
                   <h4 class="name-card-quiz-by-theme"><a href="">Plus de <?= $theme->getName() ?></a></h4>
