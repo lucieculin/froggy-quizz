@@ -1,0 +1,16 @@
+{
+    "name": "frogger/froggy-quiz",
+    "description": "description ici",
+    "autoload": {
+        "psr-4": {
+            "Frogger\\FroggyQuiz\\": "App/"
+        }
+    },
+    "authors": [
+        {
+            "name": "DzG",
+            "email": "ifellous01@gmail.com"
+        }
+    ],
+    "require": {}
+}

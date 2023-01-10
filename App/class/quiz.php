@@ -1,10 +1,13 @@
 <?php
+namespace App;
 
-class questions
+class quiz
 {
     private int $id;
 
-    private string $question;
+    private string $name;
+
+    private int $theme_id;
 
     private int $quiz_id;
 
@@ -27,17 +30,33 @@ class questions
     /**
      * @return string
      */
-    public function getQuestion(): string
+    public function getName(): string
     {
-        return $this->question;
+        return $this->name;
     }
 
     /**
-     * @param string $question
+     * @param string $name
      */
-    public function setQuestion(string $question): void
+    public function setName(string $name): void
     {
-        $this->question = $question;
+        $this->name = $name;
+    }
+
+    /**
+     * @return int
+     */
+    public function getThemeId(): int
+    {
+        return $this->theme_id;
+    }
+
+    /**
+     * @param int $theme_id
+     */
+    public function setThemeId(int $theme_id): void
+    {
+        $this->theme_id = $theme_id;
     }
 
     /**
