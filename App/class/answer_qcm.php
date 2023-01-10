@@ -1,5 +1,7 @@
 <?php
 
+namespace App;
+
 class answer_qcm
 {
     private int $id;

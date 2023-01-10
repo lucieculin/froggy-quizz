@@ -1,6 +1,7 @@
 <?php $isPage = "home";
-include_once('./repository/theme.Repository.php');
-include_once('./repository/quiz.Repository.php');
+require_once 'vendor/autoload.php';
+include_once('./App/repository/ThemeRepository.php');
+include_once('./App/repository/QuizRepository.php');
 
 $quiz = new QuizRepository();
 $theme = new ThemeRepository();

@@ -1,9 +1,9 @@
 <?php
 $isPage = "questions";
-include_once('../repository/quiz.Repository.php');
-include_once('../repository/questions.Repository.php');
-include_once('../class/questions.php');
-include_once('../repository/answer_qcm.Repository.php');
+include_once('../App/repository/QuizRepository.php');
+include_once('../App/repository/QuestionsRepository.php');
+include_once('../App/class/questions.php');
+include_once('../App/repository/AnswerRepository.php');
 include('../partials/header.php');
 
 $idQuiz = intval($_GET['id']);
@@ -19,19 +19,11 @@ $selectedQuestions = array_slice($questions, 0, 10);
 
 $score = 0;
 $currentQuestionIndex = 0;
-$post = $_POST;
-$idAnswerPos
-$selectedAnswer = $answer->findById($idAnswerPost);
 
-
-
-if (isset($_POST['question-' . $currentQuestion->id]) && $selectedAnswer->is_true && $_POST['question-' . $currentQuestion->id] == $answer->id) {
-    $score++;
-}
-
+    $post = $_POST;
 
 $currentQuestionIndex++;
-echo $currentQuestionIndex;
+
 
 ?>
 <div class="main">
@@ -41,13 +33,7 @@ echo $currentQuestionIndex;
 
     <form action="../html/questions.php" method="post" class="responces">
         <?php
-        echo "<br><br><br><br><br><br><br><br></br>";
-        ?><pre><?php
-            var_dump($_POST);
-        ?></pre><?php
 
-        echo "1 =" . $currentQuestionIndex;
-        echo "2=" . count($selectedQuestions);
         if ($currentQuestionIndex < count($selectedQuestions)) {
 
             // Récupère la question en cours
@@ -57,12 +43,17 @@ echo $currentQuestionIndex;
             $answers = $answer->findByQuestionId($currentQuestion->id);
 
             // Affiche la question et les réponses à l'utilisateur
-        ?>
+            if (isset($_POST['question-' . $currentQuestion->id]) && $selectedAnswer->is_true && $_POST['question-' . $currentQuestion->id] == $selectedAnswer->id) {
+                $idAnswerPost =  intval($_POST['question-6_']);
+                $selectedAnswer = $answer->findById($idAnswerPost);
+                $score++;
+            }
+      ?>
             <h1><?= $currentQuestion->question ?></h1>
             <?php
             foreach ($answers as $answer) {
             ?>
-                <input type="radio" name="question-<?= $currentQuestion->id?> " value="<?=$answer->id?> ">' . <?= $answer->answer ?>
+                <input type="radio" name="question-<?= $currentQuestion->id?> " value="<?=$answer->id?> "> <?= $answer->answer ?>
             <?php
             }
             ?>
