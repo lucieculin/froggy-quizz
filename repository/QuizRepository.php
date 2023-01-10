@@ -96,11 +96,11 @@ class QuizRepository
         ->fetchAll(PDO::FETCH_CLASS, quizRepository::class);
     }
 
-    public function findByTheme(INT $themeId, INT $limit):array{
+    public function findByTheme(INT $themeId):array{
         $query = $this->pdo
-        ->prepare('SELECT * FROM `quiz` WHERE quiz.theme_id = ? LIMIT ? ;');
+        ->prepare('SELECT * FROM `quiz` WHERE quiz.theme_id = ?;');
         $query->bindValue(1, $themeId, PDO::PARAM_INT);
-        $query->bindValue(1, $limit, PDO::PARAM_INT);
+        //$query->bindValue(1, $limit, PDO::PARAM_INT);
         $query->execute();
         return $query->fetchAll(PDO::FETCH_CLASS, QuizRepository::class);
     }

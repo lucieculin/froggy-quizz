@@ -1,6 +1,6 @@
 <?php $isPage = "home";
-include_once('./repository/theme.Repository.php');
-include_once('./repository/quiz.Repository.php');
+include_once('./repository/ThemeRepository.php');
+include_once('./repository/QuizRepository.php');
 
 $quiz = new QuizRepository();
 $theme = new ThemeRepository();
@@ -250,15 +250,15 @@ $themes = $theme->findAll();
             <div class="container-by-theme-quiz-by-theme">
               <h3 class="title-quiz-by-theme"><?= $theme->getName() ?></h3>
               <div class="container-quiz-quiz-by-theme">
+                  <?php
+                  foreach ($allQuiz as $quiz){
+                  ?>
                 <div class="card-quiz-by-theme">
-                  <h4 class="name-card-quiz-by-theme"><a href="">Harry Potter</a></h4>
+                  <h4 class="name-card-quiz-by-theme"><a href=""><?= $quiz->getName() ?></a></h4>
                 </div>
-                <div class="card-quiz-by-theme">
-                  <h4 class="name-card-quiz-by-theme"><a href="">Star wars</a></h4>
-                </div>
-                <div class="card-quiz-by-theme">
-                  <h4 class="name-card-quiz-by-theme"><a href="">Matrix</a></h4>
-                </div>
+                      <?php
+                  }
+                  ?>
                 <div class="card-quiz-by-theme">
                   <h4 class="name-card-quiz-by-theme"><a href="">Plus de <?= $theme->getName() ?></a></h4>
                 </div>
