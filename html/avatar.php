@@ -1,6 +1,5 @@
 <?php $isPage = "avatar";
 include('../partials/header.php');
-
 ?>
 
 
