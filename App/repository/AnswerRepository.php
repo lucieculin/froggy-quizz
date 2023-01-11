@@ -20,7 +20,7 @@ class AnswerRepository
     public function findAll():array{
         return $this->pdo
         ->query('SELECT * FROM `answer`')
-        ->fetchAll(PDO::FETCH_CLASS, answerRepository::class);
+        ->fetchAll(PDO::FETCH_CLASS, AnswerRepository::class);
     }
 
     public function findById(INT $id){
@@ -28,7 +28,7 @@ class AnswerRepository
         ->prepare('SELECT * FROM `answer`WHERE answer.id = ? ;');
         $query->bindValue(1, $id ,PDO::PARAM_INT);
         $query->execute();
-        return $query->fetchObject(answerRepository::class);
+        return $query->fetchObject(AnswerRepository::class);
     }
 
     public function findByQuestionId(INT $questionId):array{
@@ -36,6 +36,6 @@ class AnswerRepository
         ->prepare('SELECT * FROM `answer` WHERE answer.question_id = ?;');
         $query->bindValue(1, $questionId, PDO::PARAM_INT);
         $query->execute();
-        return $query->fetchAll(PDO::FETCH_CLASS, answerRepository::class);
+        return $query->fetchAll(PDO::FETCH_CLASS, AnswerRepository::class);
     }
 }

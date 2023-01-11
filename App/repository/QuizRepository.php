@@ -20,7 +20,7 @@ class QuizRepository
     public function findAll():array{
         return $this->pdo
         ->query('SELECT * FROM `quiz`')
-        ->fetchAll(PDO::FETCH_CLASS, quizRepository::class);
+        ->fetchAll(PDO::FETCH_CLASS, QuizRepository::class);
     }
 
     public function findById(INT $id){
@@ -28,7 +28,7 @@ class QuizRepository
         ->prepare('SELECT * FROM `quiz`WHERE quiz.id = ? ;');
         $query->bindValue(1, $id ,PDO::PARAM_INT);
         $query->execute();
-        return $query->fetchObject(quizRepository::class);
+        return $query->fetchObject(QuizRepository::class);
     }
 
     public function findByTheme(INT $themeId, INT $limit):array{
