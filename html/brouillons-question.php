@@ -1,6 +1,4 @@
 <?php
-
-
 $isPage = "questions";
 include_once('../App/repository/QuizRepository.php');
 include_once('../App/repository/QuestionsRepository.php');

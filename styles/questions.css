@@ -34,6 +34,7 @@
 
 .question{
     background: orange;
+    text-align: center;
 }
 
 
@@ -42,21 +43,43 @@
 
 .question-image{
     background: teal;
-    padding: 50px;
+    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .photo{
+    display: flex;
+    justify-content: center;align-items: center;
     background: grey;
+    border-radius: 15px;
     height:200px;
     width: 300px;
+    text-align: center;
 }
 
 
 
 .reponse-container{
     background: pink;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  
+}
+.reponse{
+    min-height: 100px;
+    width: 200px;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin: 10px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 15px;
+    cursor:pointer;
 }
 
 
