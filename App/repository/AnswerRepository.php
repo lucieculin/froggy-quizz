@@ -38,4 +38,12 @@ class AnswerRepository
         $query->execute();
         return $query->fetchAll(PDO::FETCH_CLASS, answerRepository::class);
     }
+
+    public function createAnswer(string $newAnswer, INT $newQuestionId):array{
+        $query = $this->pdo
+            ->prepare('INSERT INTO answer (answer, question_Id) VALUES ( ? , ?)');
+        $query->bindValue(1, $newAnswer);
+        $query->bindValue(1, $newQuestionId[1]);
+        $query->execute();
+    }
 }

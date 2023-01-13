@@ -1,15 +1,14 @@
 {
-    "name": "frogger/froggy-quiz",
-    "description": "description ici",
+    "name": "culin/froggy-quizz",
+    "description": "site",
     "autoload": {
         "psr-4": {
-            "Frogger\\FroggyQuiz\\": "App/"
+            "Culin\\FroggyQuizz\\": "App/"
         }
     },
     "authors": [
         {
-            "name": "DzG",
-            "email": "ifellous01@gmail.com"
+            "name": "composer install"
         }
     ],
     "require": {}

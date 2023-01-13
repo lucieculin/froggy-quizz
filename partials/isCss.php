@@ -16,6 +16,8 @@ if ($isPage === "home") {
     echo "<link rel='stylesheet' href='../styles/Identity_user.css'>";
 }elseif ($isPage === "login") {
     echo "<link rel='stylesheet' href='../styles/login.css'>";
+}elseif ($isPage === "createQuiz") {
+    echo "<link rel='stylesheet' href='../styles/createQuiz.css'>";
 }elseif ($isPage === "questions") {
     echo "<link rel='stylesheet' href='../styles/questions.css'>";
 } else {
