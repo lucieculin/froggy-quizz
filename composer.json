@@ -3,7 +3,7 @@
     "description": "description ici",
     "autoload": {
         "psr-4": {
-            "Frogger\\FroggyQuiz\\": "App/"
+            "Froggeur\\FroggyQuiz\\": "App/"
         }
     },
     "authors": [
