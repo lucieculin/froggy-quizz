@@ -38,4 +38,12 @@ class AnswerRepository
         $query->execute();
         return $query->fetchAll(PDO::FETCH_CLASS, AnswerRepository::class);
     }
+
+    public function getAnswerById($id)
+    {
+        if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest') {
+            $answer = $this->findById($id);
+            echo( json_encode($answer));
+        }
+    }
 }
