@@ -178,7 +178,7 @@ CREATE TABLE IF NOT EXISTS `score` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `themes`
+-- Structure de la table `theme`
 --
 
 DROP TABLE IF EXISTS `themes`;
@@ -189,7 +189,7 @@ CREATE TABLE IF NOT EXISTS `themes` (
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb3;
 
 --
--- Déchargement des données de la table `themes`
+-- Déchargement des données de la table `theme`
 --
 
 INSERT INTO `themes` (`id`, `name`) VALUES
@@ -203,7 +203,7 @@ INSERT INTO `themes` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `users`
+-- Structure de la table `user`
 --
 
 DROP TABLE IF EXISTS `users`;
@@ -245,7 +245,7 @@ ALTER TABLE `score`
   ADD CONSTRAINT `fk_score_users` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 --
--- Contraintes pour la table `users`
+-- Contraintes pour la table `user`
 --
 ALTER TABLE `users`
   ADD CONSTRAINT `fk_users_score` FOREIGN KEY (`score_id`) REFERENCES `score` (`id`);

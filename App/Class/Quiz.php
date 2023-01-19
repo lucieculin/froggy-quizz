@@ -1,14 +1,15 @@
 <?php
-namespace App;
+namespace App\Class;
 
-class themes
+class Quiz
 {
+    private int $id;
 
-        private int $id;
+    private string $name;
 
-        private string $name;
+    private int $theme_id;
 
-        private int $themeId;
+    private int $quiz_id;
 
     /**
      * @return int
@@ -43,26 +44,36 @@ class themes
     }
 
     /**
-     * Get the value of themeId
-     *
      * @return int
      */
     public function getThemeId(): int
     {
-        return $this->themeId;
+        return $this->theme_id;
     }
 
     /**
-     * Set the value of themeId
-     *
-     * @param int $themeId
-     *
-     * @return self
+     * @param int $theme_id
      */
-    public function setThemeId(int $themeId): self
+    public function setThemeId(int $theme_id): void
     {
-        $this->themeId = $themeId;
-
-        return $this;
+        $this->theme_id = $theme_id;
     }
+
+    /**
+     * @return int
+     */
+    public function getQuizId(): int
+    {
+        return $this->quiz_id;
+    }
+
+    /**
+     * @param int $quiz_id
+     */
+    public function setQuizId(int $quiz_id): void
+    {
+        $this->quiz_id = $quiz_id;
+    }
+
+
 }

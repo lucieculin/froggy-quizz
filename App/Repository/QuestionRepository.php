@@ -1,26 +1,14 @@
-<?php  
+<?php
+namespace App\Repository;
+use \PDO;
 
-class QuestionRepository
+class QuestionRepository extends AbstractRepository
 {
-    
-    private PDO $pdo;
-
-    private string $url = 'mysql:host=127.0.0.1:3306;dbname=froggy_quiz';
-    private string $user = 'root';
-    private string $pwd = '';
-
-    public function __construct()
+    public function findAll():array
     {
-        $this->pdo = new PDO($this->url, $this->user, $this->pwd);
-    }
-    
-
-
-
-    public function findAll():array{
         return $this->pdo
-        ->query('SELECT * FROM `questions`')
-        ->fetchAll(PDO::FETCH_CLASS, questionRepository::class);
+            ->query('SELECT * FROM `questions`')
+            ->fetchAll(PDO::FETCH_CLASS, QuestionRepository::class);
     }
 
     public function findById(INT $id){
@@ -28,7 +16,7 @@ class QuestionRepository
         ->prepare('SELECT * FROM `questions`WHERE questions.id = ? ;');
         $query->bindValue(1, $id ,PDO::PARAM_INT);
         $query->execute();
-        return $query->fetchObject(questionRepository::class);
+        return $query->fetchObject(QuestionRepository::class);
     }
 
     public function findByTheme(INT $themeId, INT $limit):array{

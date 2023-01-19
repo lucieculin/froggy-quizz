@@ -1,8 +1,8 @@
 <?php
 
-namespace App;
+namespace App\Class;
 
-class answer_qcm
+class AnswerQcm
 {
     private int $id;
 

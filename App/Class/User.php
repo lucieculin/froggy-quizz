@@ -1,9 +1,9 @@
 <?php
-namespace App;
+namespace App\Class;
 
 use DateTime;
 
-class users
+class User
 {
     private int $id;
 

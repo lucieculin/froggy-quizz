@@ -1,5 +1,5 @@
 <?php
-$isPage="CreateQuiz";
+$isPage="DeleteQuiz";
 include('../partials/header.php');
 
 ?>

@@ -3,7 +3,7 @@
     "description": "site",
     "autoload": {
         "psr-4": {
-            "Culin\\FroggyQuizz\\": "App/"
+            "App\\": "App/"
         }
     },
     "authors": [
@@ -11,5 +11,7 @@
             "name": "composer install"
         }
     ],
-    "require": {}
+    "require": {
+        "ext-pdo": "*"
+    }
 }
