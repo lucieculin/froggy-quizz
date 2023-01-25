@@ -1,16 +1,14 @@
 <?php
 namespace App\Repository;
 
-
 use \PDO;
-use App\Class\AnswerQsm;
 
 class AnswerRepository extends AbstractRepository
 {
     public function findAll():array{
         return $this->pdo
         ->query('SELECT * FROM `answer`')
-        ->fetchAll(PDO::FETCH_CLASS, AnswerQcm::class);
+        ->fetchAll(PDO::FETCH_CLASS, AnswerRepository::class);
     }
 
     public function findById(INT $id){
@@ -18,15 +16,15 @@ class AnswerRepository extends AbstractRepository
         ->prepare('SELECT * FROM `answer`WHERE answer.id = ? ;');
         $query->bindValue(1, $id ,PDO::PARAM_INT);
         $query->execute();
-        return $query->fetchObject(AnswerQcm::class);
+        return $query->fetchObject(AnswerRepository::class);
     }
 
     public function findByQuestionId(INT $questionId):array{
         $query = $this->pdo
-        ->prepare('SELECT * FROM `answer` WHERE AnswerQsm.question_id = ?;');
+        ->prepare('SELECT * FROM `answer` WHERE Answer.question_id = ?;');
         $query->bindValue(1, $questionId, PDO::PARAM_INT);
         $query->execute();
-        return $query->fetchAll(PDO::FETCH_CLASS, AnswerQcm::class);
+        return $query->fetchAll(PDO::FETCH_CLASS, AnswerRepository::class);
     }
 
     public function getAnswerById($id)
@@ -37,11 +35,33 @@ class AnswerRepository extends AbstractRepository
         }
     }
 
-    public function createAnswer(string $newAnswer, INT $newQuestionId):void{
-        $query = $this->pdo
-            ->prepare('INSERT INTO answer (answer, question_Id) VALUES ( ? , ?)');
-        $query->bindValue(1, $newAnswer);
-        $query->bindValue(1, $newQuestionId[1]);
-        $query->execute();
+    public function getDatabase()
+    {
+        try{
+            $pdo = new PDO();
+            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            return $pdo;
+
+        } catch (\PDOException $exception){
+            print "Erreur !:".$exception->getMessage(). "<br/>";
+            die();
+        }
+    }
+
+
+    public function readAnswer($id){
+
+    }
+
+    public function createAnswer($answer, $check_id ){
+
+    }
+
+    public function updateAnswer($id, $answer, $check_id ){
+
+    }
+
+    public function deleteAnswer($id){
+
     }
 }

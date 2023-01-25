@@ -1,13 +1,15 @@
 <?php
 $isPage="UpdateQuiz";
-
 require_once '../vendor/autoload.php';
+
 use App\Repository\AnswerRepository;
 use App\Repository\QuestionRepository;
 use App\Repository\QuizRepository;
 use App\Repository\ThemeRepository;
 
 include('../partials/header.php');
+
+
 
 $themes = new ThemeRepository();
 $displayThemes = $themes->findAll();
@@ -48,11 +50,11 @@ $displayAnswers = $answers->findAll();
             <form method="POST" >
                 <select name="nameTheme1" required>
                     <?php foreach ($displayThemes as $theme) { ?>
-                    <option><?=$theme->name ?></option>
+                    <option><?=$theme->getName() ?></option>
                     <?php } ?>
 
                 </select>
-                <?php var_dump($_POST) ?>
+
             </form>
 
                 <form method="post">
@@ -80,13 +82,13 @@ $displayAnswers = $answers->findAll();
     <div class="themeUpdate">
         <label>Quel Quiz voulez-vous modifier :</label>
         <div class="SelectTheme">
-            <?php foreach ($_POST as $theme) { ?>
+
             <select  name="nameQuiz1" required>
                   <?php foreach ($displayQuizs as $quiz) { ?>
                     <option><?=$quiz->name ?></option>
                 <?php } ?>
             </select>
-            <?php } ?>
+
             <form method="post">
                 <input type="text" name="nameQuiz2" placeholder="modifier le Quiz"/>
             </form>

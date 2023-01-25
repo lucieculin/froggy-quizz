@@ -4,8 +4,7 @@
 use App\Repository\AnswerRepository;
 use App\Repository\QuestionRepository;
 
-Require_Once '../vendor/autoload.php';
-
+require_once '../vendor/autoload.php';
 
 $results = $_POST;
 $answer = new AnswerRepository();
@@ -22,7 +21,7 @@ foreach ($results as $result) {
 
 foreach ($allAnswer as $currentAnswer) {
     $currentQuestion = $question->findById($currentAnswer->question_id);
-
+    
     if ($currentAnswer->is_true) {
         echo $currentQuestion->question . "<br>";
         echo "La reponse est bonne <br>";

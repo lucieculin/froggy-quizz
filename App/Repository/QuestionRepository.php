@@ -35,4 +35,33 @@ class QuestionRepository extends AbstractRepository
         $query->execute();
         return $query->fetchAll(PDO::FETCH_CLASS, QuestionRepository::class);
     }
+
+    public function getDatabase()
+    {
+        try{
+            $pdo = new PDO();
+            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            return $pdo;
+
+        } catch (\PDOException $exception){
+            print "Erreur !:".$exception->getMessage(). "<br/>";
+            die();
+        }
+    }
+
+    public function readQuestion($id){
+
+    }
+
+    public function createQuestion($question, $quiz_id){
+
+    }
+
+    public function updateQuestion($id, $question, $quiz_id){
+
+    }
+
+    public function deleteQuestion($id){
+
+    }
 }
