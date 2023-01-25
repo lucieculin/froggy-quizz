@@ -72,14 +72,14 @@ for ($i = 0; $i < 10; $i++) {
         </div>
         <?php
     }
-    var_dump(json_encode($answer));
+
     ?>
     <input type="submit" value="validez">
   </form>
 
 
 
-  
+
     </div>
 
 
