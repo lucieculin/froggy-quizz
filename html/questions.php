@@ -71,52 +71,15 @@ for ($i = 0; $i < 10; $i++) {
           <div class="btn-suivant" id="btn-suivant<?= $i ?>">Question suivante</div>
         </div>
         <?php
-        //TODO à corriger
-        if(1==1) {
-          $currentQuestionIndex++;
-          // Passe à la question suivante
-        }
-            
-            
-        else {
+    }
+    var_dump(json_encode($answer));
+    ?>
+    <input type="submit" value="validez">
+  </form>
 
 
 
-            // Toutes les questions ont été affichées, affiche le score final
-            echo '<div Class="results">';
-            echo '<h2>Résultats</h2>';
-            echo '<p>Tu as obtenu un score de ' . $score . ' / ' . count($questions) . '.</p>';
-            echo '</div>';
-        }
-
-
-        ?>
-
-    </form>
-
-
-
-    <div class="progress">
-
-
-        <?php
-        $steps = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-        foreach ($steps as $step) {
-            $isResponced = false;
-            $isCorrect = false;
-            if ($isResponced == false) { ?>
-                <img src="../assets/images/pattounes grise.png">
-            <?php
-            } elseif ($isResponced == true && $isCorrect == true) { ?>
-                <img src="../assets/images/pattounes verte.png">
-            <?php
-            } elseif ($isResponced == true && $isCorrect == false) { ?>
-                <img src="../assets/images/pattounes rouge.png">
-        <?php
-            }
-        }
-        ?>
-
+  
     </div>
 
 
