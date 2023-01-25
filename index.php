@@ -1,5 +1,5 @@
 <?php
-error_reporting( E_ERROR | E_NOTICE | E_PARSE );
+error_reporting(E_ERROR | E_NOTICE | E_PARSE);
 $isPage = "home";
 require_once 'vendor/autoload.php';
 
@@ -250,20 +250,20 @@ $allThemes = $themes->findAll();
 
           <?php
           foreach ($allThemes as $theme) {
-      
-            $quizsByTheme = $quiz->findByTheme($theme->getId(),3);
+
+            $quizsByTheme = $quiz->findByTheme($theme->getId(), 3);
           ?>
             <div class="container-by-theme-quiz-by-theme">
               <h3 class="title-quiz-by-theme"><?= $theme->getName() ?></h3>
               <div class="container-quiz-quiz-by-theme">
                 <div class="card-quiz-by-theme">
-                  <h4 class="name-card-quiz-by-theme"><a href="./html/questions.php?id=<?= $quizsByTheme[0]->id?>"><?=$quizsByTheme[0]->name;?></a></h4>
+                  <h4 class="name-card-quiz-by-theme"><a href="./html/questions.php?id=<?= $quizsByTheme[0]->id ?>"><?= $quizsByTheme[0]->name; ?></a></h4>
                 </div>
                 <div class="card-quiz-by-theme">
-                  <h4 class="name-card-quiz-by-theme"><a href="./html/questions.php?id=<?= $quizsByTheme[1]->id?>"><?=$quizsByTheme[1]->name;?></a></h4>
+                  <h4 class="name-card-quiz-by-theme"><a href="./html/questions.php?id=<?= $quizsByTheme[1]->id ?>"><?= $quizsByTheme[1]->name; ?></a></h4>
                 </div>
                 <div class="card-quiz-by-theme">
-                  <h4 class="name-card-quiz-by-theme"><a href="./html/questions.php?id=<?= $quizsByTheme[2]->id?>"><?=$quizsByTheme[2]->name;?></a></h4>
+                  <h4 class="name-card-quiz-by-theme"><a href="./html/questions.php?id=<?= $quizsByTheme[2]->id ?>"><?= $quizsByTheme[2]->name; ?></a></h4>
                 </div>
                 <div class="card-quiz-by-theme">
                   <h4 class="name-card-quiz-by-theme"><a href="">Plus de <?= $theme->getName() ?></a></h4>
@@ -281,7 +281,7 @@ $allThemes = $themes->findAll();
       </div>
       <div class="container-home-right">
 
-      <div class="container-podium">
+        <div class="container-podium">
           <h2 class="h2-title-section">Le Podium</h2>
 
           <div class="container-ranking-podium">
@@ -357,6 +357,6 @@ $allThemes = $themes->findAll();
     <img id="frog2" src="./assets/images/frog2.png" alt="">
     <img id="frog3" src="./assets/images/frog3.png" alt="">
   </div>
-            <?php
-            include('./partials/footer.php')
-            ?>
+  <?php
+  include('./partials/footer.php')
+  ?>

@@ -1,4 +1,3 @@
-
 @font-face {
     font-family: "applejuice";
     src: url(./assets/font/AppleJuiceRegular.ttf);
@@ -25,6 +24,7 @@ body {
 
     margin: 0;
     padding: 0;
+    background-image: url("../assets/images/fond effacé.png");
 
 }
 
@@ -39,26 +39,31 @@ h2 {
     text-shadow: #262626;
     color:#000000;
     margin-top: 100px;
-
-
-
 }
-
+.contact{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
 input {
-    margin-left:12em;
+
     height:2em;
     width: 200px;
 }
 
 label
 {
-    display: block;
-    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
     float: left;
     outline: solid #024f70;
     border-radius: 5px;
     background-color: #d0e2f0;
     text-align: center;
+    padding: 7px;
 }
 
 .contact .contact-form {
@@ -66,13 +71,25 @@ label
     flex-direction: column;
     align-items: center;
     color:#024f70;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bolder;
-    padding: 5rem 5rem;
+    padding: 5rem;
     gap: 1rem;
-   background-image: url("../assets/images/fond effacé.png");
-    background-size:cover;
+    width: 500px;
 
+}
+.label-input{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.submit{
+        width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .contact .contact-form h2 {
@@ -80,7 +97,7 @@ label
     text-align: center;
 }
 
-.contact .contact-form input[type="submit"] {
+.contact .contact-form  {
     margin-top: 1rem;
 
 }
@@ -100,4 +117,11 @@ input[type="submit"]:hover {
     border: 1px solid #FFF;
 }
 
-
+.to-register{
+    height: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
