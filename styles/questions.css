@@ -2,6 +2,7 @@
 @font-face {
     font-family: "applejuice";
     src: url(./assets/font/AppleJuiceRegular.ttf);
+
 }
 
 * {
@@ -23,6 +24,8 @@
 .margin-container {
     padding: 0 300px;
 
+    margin: 0;
+    padding: 0;
 
 }
 /* Starter */
@@ -91,7 +94,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 15px;
+
     cursor: pointer;
     font-size: 10px;
     padding: 5px;
