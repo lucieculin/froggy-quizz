@@ -35,7 +35,7 @@ class AnswerRepository extends AbstractRepository
         }
     }
 
-    public function createAnswer(string $newAnswer, INT $newQuestionId):array{
+    public function createAnswer(string $newAnswer, INT $newQuestionId):void{
         $query = $this->pdo
             ->prepare('INSERT INTO answer (answer, question_Id) VALUES ( ? , ?)');
         $query->bindValue(1, $newAnswer);

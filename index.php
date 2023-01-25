@@ -6,12 +6,12 @@ require_once 'vendor/autoload.php';
 
 
 $quiz = new \App\Repository\QuizRepository();
-$theme = new \App\Repository\ThemeRepository();
+$themes = new \App\Repository\ThemeRepository();
 
 
 
 $allQuiz = $quiz->findAll();
-$themes = $theme->findAll();
+$allThemes = $themes->findAll();
 ?>
 
 <!DOCTYPE html>
@@ -249,8 +249,9 @@ $themes = $theme->findAll();
           <h2 class="h2-title-section">Nos Quiz</h2>
 
           <?php
-          foreach ($themes as $theme) {
-       $quizsByTheme = $quiz->findByTheme($theme->getId(),3);
+          foreach ($allThemes as $theme) {
+      
+            $quizsByTheme = $quiz->findByTheme($theme->getId(),3);
           ?>
             <div class="container-by-theme-quiz-by-theme">
               <h3 class="title-quiz-by-theme"><?= $theme->getName() ?></h3>
