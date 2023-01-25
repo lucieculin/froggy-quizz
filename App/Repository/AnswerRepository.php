@@ -24,7 +24,15 @@ class AnswerRepository extends AbstractRepository
         ->prepare('SELECT * FROM `answer` WHERE Answer.question_id = ?;');
         $query->bindValue(1, $questionId, PDO::PARAM_INT);
         $query->execute();
-        return $query->fetchAll(PDO::FETCH_CLASS, answerRepository::class);
+        return $query->fetchAll(PDO::FETCH_CLASS, AnswerRepository::class);
+    }
+
+    public function getAnswerById($id)
+    {
+        if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest') {
+            $answer = $this->findById($id);
+            echo( json_encode($answer));
+        }
     }
 
     public function createAnswer(string $newAnswer, INT $newQuestionId):array{

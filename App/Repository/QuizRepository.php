@@ -9,6 +9,7 @@ class QuizRepository extends AbstractRepository
         return $this->pdo
         ->query('SELECT * FROM `quiz`')
         ->fetchAll(PDO::FETCH_CLASS, self::class);
+
     }
 
     public function findById(INT $id){
