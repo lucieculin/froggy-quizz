@@ -9,12 +9,15 @@ class AbstractRepository
 
     protected PDO $pdo;
 
-    private string $url = 'mysql:host=127.0.0.1:3306;dbname=froggy_quiz';
-    private string $user = 'root';
-    private string $pwd = '';
+    private string $url;
+    private string $user;
+    private string $pwd;
 
     public function __construct()
     {
-        $this->pdo = new PDO($this->url, $this->user, $this->pwd);
+         $this->url = 'mysql:host=127.0.0.1:3306;dbname=froggy_quiz';
+         $this->user = 'root';
+         $this->pwd = '';
+         $this->pdo = new PDO($this->url, $this->user, $this->pwd);
     }
 }

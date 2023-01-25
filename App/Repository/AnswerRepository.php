@@ -35,11 +35,20 @@ class AnswerRepository extends AbstractRepository
         }
     }
 
-    public function createAnswer(string $newAnswer, INT $newQuestionId):array{
-        $query = $this->pdo
-            ->prepare('INSERT INTO answer (answer, question_Id) VALUES ( ? , ?)');
-        $query->bindValue(1, $newAnswer);
-        $query->bindValue(1, $newQuestionId[1]);
-        $query->execute();
+
+    public function readAnswer($id){
+
+    }
+
+    public function createAnswer($id){
+
+    }
+
+    public function updateAnswer($answer, $check_id ){
+
+    }
+
+    public function deleteAnswer($answer, $check_id, $question_id){
+
     }
 }
