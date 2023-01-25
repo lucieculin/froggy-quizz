@@ -156,7 +156,7 @@ h2 a{
     background-position: center;
 }
 .img-friends{
-    background-image: url('./assets/photos/avosmarque/Amis\ \(1\).png');
+    background-image: url('../assets/photos/avosmarque/Amis\ \(1\).png');
     width: 90%;
     height: 80%;
     background-repeat: no-repeat;
