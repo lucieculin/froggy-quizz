@@ -2,6 +2,7 @@
 require_once 'vendor/autoload.php';
 include_once('./App/Repository/ThemeRepository.php');
 include_once('./App/Repository/QuizRepository.php');
+include_once ('./App/Class/Theme.php');
 
 $quiz = new \App\Repository\QuizRepository();
 $theme = new \App\Repository\ThemeRepository();
@@ -246,7 +247,7 @@ $themes = $theme->findAll();
 
           <?php
           foreach ($themes as $theme) {
-       $quizsByTheme = $quiz->findByTheme($theme->getId(),3);
+              $quizsByTheme = $quiz->findByTheme($theme->getId(), 3);
           ?>
             <div class="container-by-theme-quiz-by-theme">
               <h3 class="title-quiz-by-theme"><?= $theme->getName() ?></h3>
