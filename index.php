@@ -2,16 +2,14 @@
 error_reporting( E_ERROR | E_NOTICE | E_PARSE );
 $isPage = "home";
 require_once 'vendor/autoload.php';
-
-
+include_once('./App/Repository/ThemeRepository.php');
+include_once('./App/Repository/QuizRepository.php');
 
 $quiz = new \App\Repository\QuizRepository();
-$themes = new \App\Repository\ThemeRepository();
-
-
+$theme = new \App\Repository\ThemeRepository();
 
 $allQuiz = $quiz->findAll();
-$allThemes = $themes->findAll();
+$themes = $theme->findAll();
 ?>
 
 <!DOCTYPE html>
@@ -250,7 +248,7 @@ $allThemes = $themes->findAll();
 
           <?php
           foreach ($allThemes as $theme) {
-      
+
             $quizsByTheme = $quiz->findByTheme($theme->getId(),3);
           ?>
             <div class="container-by-theme-quiz-by-theme">

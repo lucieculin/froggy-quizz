@@ -12,15 +12,17 @@ if ($isPage === "home") {
     echo "<link rel='stylesheet' href='../styles/style_demarrer_le-jeu.css'>";
 } elseif ($isPage === "startGame") {
     echo "<link rel='stylesheet' href='../styles/style_demarrer_le-jeu.css'>";
-}elseif ($isPage === "identityUser") {
-    echo "<link rel='stylesheet' href='../styles/Identity_user.css'>";
-}elseif ($isPage === "login") {
+} elseif ($isPage === "identityUser") {
+    echo "<link rel='stylesheet' href='../styles/Identity_login.css'>";
+} elseif ($isPage === "login") {
     echo "<link rel='stylesheet' href='../styles/login.css'>";
+} elseif ($isPage === "register"){
+    echo "<link rel='stylesheet' href='../styles/register.css'>";
 }elseif ($isPage === "AdminQuiz") {
     echo "<link rel='stylesheet' href='../styles/AdminQuiz.css'>";
-}elseif ($isPage === "UpdateQuiz") {
+} elseif ($isPage === "UpdateQuiz") {
     echo "<link rel='stylesheet' href='../styles/UpdateQuiz.css'>";
-}elseif ($isPage === "questions") {
+} elseif ($isPage === "questions") {
     echo "<link rel='stylesheet' href='../styles/questions.css'>";
 } else {
 ?> <script>

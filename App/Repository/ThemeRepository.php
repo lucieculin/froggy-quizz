@@ -15,6 +15,7 @@ class ThemeRepository extends AbstractRepository
         ->fetchAll(PDO::FETCH_CLASS, Theme::class);
 
     }
+    
 
     public function getDatabase()
     {
