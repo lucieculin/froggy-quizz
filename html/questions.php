@@ -1,9 +1,13 @@
 <?php
+require_once '../vendor/autoload.php';
+
+use App\Repository\QuizRepository;
+use App\Repository\QuestionRepository;
+use App\Repository\AnswerRepository;
+
+
 $isPage = "questions";
-include_once('../App/Repository/QuizRepository.php');
-include_once('../App/Repository/QuestionRepository.php');
-include_once('../App/Class/Question.php');
-include_once('../App/Repository/AnswerRepository.php');
+
 include('../partials/header.php');
 
 $idQuiz = intval($_GET['id']);
