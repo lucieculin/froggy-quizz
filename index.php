@@ -1,10 +1,10 @@
 <?php $isPage = "home";
 require_once 'vendor/autoload.php';
-include_once('./App/repository/ThemeRepository.php');
-include_once('./App/repository/QuizRepository.php');
+include_once('./App/Repository/ThemeRepository.php');
+include_once('./App/Repository/QuizRepository.php');
 
-$quiz = new QuizRepository();
-$theme = new ThemeRepository();
+$quiz = new \App\Repository\QuizRepository();
+$theme = new \App\Repository\ThemeRepository();
 
 $allQuiz = $quiz->findAll();
 $themes = $theme->findAll();

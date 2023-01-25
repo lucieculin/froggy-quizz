@@ -1,9 +1,13 @@
 <?php
+require_once '../vendor/autoload.php';
+
+use App\Repository\QuizRepository;
+use App\Repository\QuestionRepository;
+use App\Repository\AnswerRepository;
+
+
 $isPage = "questions";
-include_once('../App/repository/QuizRepository.php');
-include_once('../App/repository/QuestionsRepository.php');
-include_once('../App/class/questions.php');
-include_once('../App/repository/AnswerRepository.php');
+
 include('../partials/header.php');
 
 $idQuiz = intval($_GET['id']);
@@ -68,7 +72,7 @@ $currentQuestionIndex++;
 
 
             // Toutes les questions ont été affichées, affiche le score final
-            echo '<div class="results">';
+            echo '<div Class="results">';
             echo '<h2>Résultats</h2>';
             echo '<p>Tu as obtenu un score de ' . $score . ' / ' . count($questions) . '.</p>';
             echo '</div>';

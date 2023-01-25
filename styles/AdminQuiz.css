@@ -1,0 +1,29 @@
+.containerAdminQuiz{
+    padding-top: 10rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-bottom: 10rem;
+}
+
+.btnAdminQuiz{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.h2AdminQuiz{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+}
+.bAdminQuiz{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    width: 30rem;
+    height: 3rem;
+}
+
+.h1AdminQuiz{
+    display: flex;
+    justify-content: center;
+}

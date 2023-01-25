@@ -102,87 +102,87 @@ $(document).ready(function() {
                 case "skincolor":
                     for (var i=0;i<skins.length; i++) {
                         skin = skins[i];
-                        html += "<div class='skins' id='s_"+skin+"' style='background-color:#"+skin+";'></div>";
+                        html += "<div Class='skins' id='s_"+skin+"' style='background-color:#"+skin+";'></div>";
                     }
                     break;
                 case "eyes":
                     for (i=0;i<eyes.length; i++) {
                         eye = eyes[i];
-                        html += "<div class='eyes' id='e_"+eye+"' style='background-color:#"+current_skincolor+";background-position:"+(i*-53)+"px 0px;'></div>";
+                        html += "<div Class='eyes' id='e_"+eye+"' style='background-color:#"+current_skincolor+";background-position:"+(i*-53)+"px 0px;'></div>";
                     }
                     break;
                 case "eyebrows":
                     for (i=0;i<eyebrows.length; i++) {
                         eyebrow = eyebrows[i];
-                        html += "<div class='eyebrows' id='eb_"+eyebrow+"' style='background-color:#"+current_skincolor+";background-position:"+(i*-53)+"px -53px;'></div>";
+                        html += "<div Class='eyebrows' id='eb_"+eyebrow+"' style='background-color:#"+current_skincolor+";background-position:"+(i*-53)+"px -53px;'></div>";
                     }
                     break;
                 case "mouths":
                     for (i=0;i<mouths.length; i++) {
                         mouth = mouths[i];
-                        html += "<div class='mouths' id='m_"+mouth+"' style='background-color:#"+current_skincolor+";background-position:"+(i*-53)+"px -106px;'></div>";
+                        html += "<div Class='mouths' id='m_"+mouth+"' style='background-color:#"+current_skincolor+";background-position:"+(i*-53)+"px -106px;'></div>";
                     }
                     break;
                 case "hairstyles":
                     for (i=0;i<hairstyles.length; i++) {
                         hairstyle = hairstyles[i];
-                        html += "<div class='hairstyles' id='h_"+hairstyle+"' style='background-color:#ffffff;background-position:"+(i*-53)+"px -159px;'></div>";
+                        html += "<div Class='hairstyles' id='h_"+hairstyle+"' style='background-color:#ffffff;background-position:"+(i*-53)+"px -159px;'></div>";
                     }
                     break;
                 case "haircolors":
                     for (i=0;i<haircolors.length; i++) {
                         haircolor = haircolors[i];
                         haircolor_front = haircolor.split("_");
-                        html += "<div class='haircolors' id='hc_"+haircolor+"' style='background-color:#"+haircolor_front[0]+";'></div>";
+                        html += "<div Class='haircolors' id='hc_"+haircolor+"' style='background-color:#"+haircolor_front[0]+";'></div>";
                     }
                     break;
                 case "facialhairs":
                     for (i=0;i<facialhairs.length; i++) {
                         facialhair = facialhairs[i];
                         haircolor_front = facialhair.split("_");
-                        html += "<div class='facialhairs' id='f_"+facialhair+"' style='background-color:#ffffff;background-position:"+(i*-53)+"px -212px;'></div>";
+                        html += "<div Class='facialhairs' id='f_"+facialhair+"' style='background-color:#ffffff;background-position:"+(i*-53)+"px -212px;'></div>";
                     }
                     break;
                 case "clothes":
                     for (var i=0;i<clothes.length; i++) {
                         clothe = clothes[i];
-                        html += "<div class='clothes' id='c_"+clothe+"' style='background-color:#ffffff;background-position:"+(i*-53)+"px -265px;'></div>";
+                        html += "<div Class='clothes' id='c_"+clothe+"' style='background-color:#ffffff;background-position:"+(i*-53)+"px -265px;'></div>";
                     }
                     break;
                 case "fabriccolors":
                     for (var i=0;i<fabriccolors.length; i++) {
                         fabriccolor = fabriccolors[i];
-                        html += "<div class='fabriccolors' id='f_"+fabriccolor+"' style='background-color:#"+fabriccolor+";'></div>";
+                        html += "<div Class='fabriccolors' id='f_"+fabriccolor+"' style='background-color:#"+fabriccolor+";'></div>";
                     }
                     break;
                 case "backgroundcolors":
                     for (var i=0;i<backgroundcolors.length; i++) {
                         backgroundcolor = backgroundcolors[i];
-                        html += "<div class='backgroundcolors' id='g_"+backgroundcolor+"' style='background-color:#"+backgroundcolor+";'></div>";
+                        html += "<div Class='backgroundcolors' id='g_"+backgroundcolor+"' style='background-color:#"+backgroundcolor+";'></div>";
                     }
                     break;
                 case "glasses":
                     for (var i=0;i<glasses.length; i++) {
                         glass = glasses[i];
-                        html += "<div class='glasses' id='g_"+glass+"' style='background-color:#ffffff;background-position:"+(i*-53)+"px -313px;'></div>";
+                        html += "<div Class='glasses' id='g_"+glass+"' style='background-color:#ffffff;background-position:"+(i*-53)+"px -313px;'></div>";
                     }
                     break;
                 case "glassopacity":
                     for (var i=0;i<glassopacities.length; i++) {
                         glassopacity = glassopacities[i];
-                        html += "<div class='glassopacity' id='o_"+glassopacity+"' style='background-color:#ffffff;'>"+glassopacity+"%</div>";
+                        html += "<div Class='glassopacity' id='o_"+glassopacity+"' style='background-color:#ffffff;'>"+glassopacity+"%</div>";
                     }
                     break;
                 case "tattoos":
                     for (var i=0;i<tattoos.length; i++) {
                         tattoo = tattoos[i];
-                        html += "<div class='tattoos' id='t_"+tattoo+"' style='background-color:#ffffff;background-position:"+(i*-53)+"px -419px;'></div>";
+                        html += "<div Class='tattoos' id='t_"+tattoo+"' style='background-color:#ffffff;background-position:"+(i*-53)+"px -419px;'></div>";
                     }
                     break;
                 case "accesories":
                     for (var i=0;i<accesories.length; i++) {
                         accesory = accesories[i];
-                        html += "<div class='accesories' id='a_"+accesory+"' style='background-color:#ffffff;background-position:"+(i*-53)+"px -369px;'></div>";
+                        html += "<div Class='accesories' id='a_"+accesory+"' style='background-color:#ffffff;background-position:"+(i*-53)+"px -369px;'></div>";
                     }
                     break;
             }
@@ -194,7 +194,7 @@ $(document).ready(function() {
         random();
     });
     $("body").delegate("#menu_lines","click",function() {
-        menu_class = $("#menu").attr("class");
+        menu_class = $("#menu").attr("Class");
         if (menu_class==="") {
             $("#menu").addClass("active");
             $("#menu").css({

@@ -16,6 +16,10 @@ if ($isPage === "home") {
     echo "<link rel='stylesheet' href='../styles/Identity_user.css'>";
 }elseif ($isPage === "login") {
     echo "<link rel='stylesheet' href='../styles/login.css'>";
+}elseif ($isPage === "AdminQuiz") {
+    echo "<link rel='stylesheet' href='../styles/AdminQuiz.css'>";
+}elseif ($isPage === "UpdateQuiz") {
+    echo "<link rel='stylesheet' href='../styles/UpdateQuiz.css'>";
 }elseif ($isPage === "questions") {
     echo "<link rel='stylesheet' href='../styles/questions.css'>";
 } else {

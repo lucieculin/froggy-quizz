@@ -1,0 +1,30 @@
+.bodyUpdate{
+    padding-top: 10rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-bottom: 10rem;
+}
+.btnAdminQuiz{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.bAdminQuiz{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    width: 30rem;
+    height: 3rem;
+}
+.themeUpdate{
+    padding-top: 2rem;
+}
+
+.SelectTheme{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+.btnModifier{
+    margin-top: 2rem;
+}
