@@ -38,11 +38,15 @@ for ($i = 0; $i < 10; $i++) {
 <div class="main">
   <div class="margin-container">
     <form action="../html/result.php" method="post">
-
+    <div class="question-container" id="starter">
+      <h2><?=$theQuiz->name?></h2>
+      <div class="btn-suivant" id="start">Commencez le quiz</div>
+    </div>
     <?php
     // Boucle pour afficher les 10 questions sélectionnées
     for ($i = 0; $i < 10; $i++) {
     ?>
+
         <div class="question-container" id="qc<?= $i ?>">
           <div class="question">
             <h2><?= $selectedQuestions[$i]->question ?></h2>

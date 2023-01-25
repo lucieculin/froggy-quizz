@@ -25,6 +25,10 @@
 
 
 }
+/* Starter */
+#starter{
+    z-index: 2
+}
 
 /* Conteneur de Question */
 .question-container {
@@ -116,15 +120,19 @@
     transform: rotate(90deg);
 }
 
-.slide-out {
-    animation: slide-out 1s both;
+.starter-anim{
+    animation: starter 1s both;
     display:none;
 }
+.question-anim{
+    animation-name: question 1s both;
+    display: none;
+     }
 
 
 /***animation***/
 
-@keyframes slide-out {
+@keyframes starter {
     0% {
         transform: rotate(0);
         transform-origin: top left;
@@ -157,3 +165,14 @@
     }
 
 }
+
+
+    @keyframes question {
+    from {
+    opacity: 1;
+    }
+    to {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg);
+    }
+    }
