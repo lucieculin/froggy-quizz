@@ -1,4 +1,6 @@
-<?php $isPage = "home";
+<?php
+error_reporting( E_ERROR | E_NOTICE | E_PARSE );
+$isPage = "home";
 require_once 'vendor/autoload.php';
 
 
