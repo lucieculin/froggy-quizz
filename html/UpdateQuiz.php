@@ -1,6 +1,6 @@
 <?php
 $isPage="UpdateQuiz";
-
+error_reporting( E_ERROR | E_NOTICE | E_PARSE );
 require_once '../vendor/autoload.php';
 use App\Repository\AnswerRepository;
 use App\Repository\QuestionRepository;

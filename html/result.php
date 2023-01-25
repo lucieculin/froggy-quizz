@@ -1,6 +1,6 @@
 <h1>ici vos resultats</h1>
 <?php
-
+error_reporting( E_ERROR | E_NOTICE | E_PARSE );
 use App\Repository\AnswerRepository;
 use App\Repository\QuestionRepository;
 

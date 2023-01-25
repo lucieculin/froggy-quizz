@@ -1,7 +1,7 @@
 <?php
 
 require_once '../vendor/autoload.php';
-
+error_reporting( E_ERROR | E_NOTICE | E_PARSE );
 use App\Repository\QuizRepository;
 use App\Repository\QuestionRepository;
 use App\Repository\AnswerRepository;
