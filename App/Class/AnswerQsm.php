@@ -2,7 +2,7 @@
 
 namespace App\Class;
 
-class AnswerQcm
+class AnswerQsm
 {
     private int $id;
 

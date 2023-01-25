@@ -2,9 +2,9 @@
 
 require_once '../vendor/autoload.php';
 
-use App\Repository\QuizRepository;
-use App\Repository\QuestionRepository;
-use App\Repository\AnswerRepository;
+include_once('./App/Repository/QuizRepository.php');
+include_once('./App/Repository/QuestionRepository.php');
+include_once('./App/Repository/AnswerRepository.php');
 
 
 $isPage = "questions";

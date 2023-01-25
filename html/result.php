@@ -1,7 +1,11 @@
 <h1>ici vos resultats</h1>
 <?php
-include_once('../App/repository/AnswerRepository.php');
-include_once('../App/repository/QuestionsRepository.php');
+
+use App\Repository\AnswerRepository;
+use App\Repository\QuestionRepository;
+
+Require_Once '../vendor/autoload.php';
+
 
 $results = $_POST;
 $answer = new AnswerRepository();

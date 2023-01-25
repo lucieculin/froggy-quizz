@@ -9,6 +9,7 @@ $theme = new \App\Repository\ThemeRepository();
 
 $allQuiz = $quiz->findAll();
 $themes = $theme->findAll();
+
 ?>
 
 <!DOCTYPE html>

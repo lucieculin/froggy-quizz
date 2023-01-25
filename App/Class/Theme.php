@@ -4,11 +4,14 @@ namespace App\Class;
 class Theme
 {
 
-        private int $id;
+    private int $id;
 
-        private string $name;
+    private string $name;
 
-        private int $themeId;
+    private int $themeId;
+
+
+
 
     /**
      * @return int
@@ -43,8 +46,6 @@ class Theme
     }
 
     /**
-     * Get the value of themeId
-     *
      * @return int
      */
     public function getThemeId(): int
@@ -53,16 +54,13 @@ class Theme
     }
 
     /**
-     * Set the value of themeId
-     *
      * @param int $themeId
-     *
-     * @return self
      */
-    public function setThemeId(int $themeId): self
+    public function setThemeId(int $themeId): void
     {
         $this->themeId = $themeId;
-
-        return $this;
     }
+
+
+
 }
