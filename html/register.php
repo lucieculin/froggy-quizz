@@ -26,25 +26,25 @@ include('../partials/header.php');
             </div>
 
 
-            <div class="dateOfBirth">
-                <label for="dateOfBirth">Date de naissance:</label>
-                <input type="date" id="dateOfBirth" name="dateOfBirth" placeholder="Saisissez votre date de naissance...">
-            </div>
-
             <div class="email">
                 <label for="email">Email:</label>
                 <input type="text" id="email" name="email" placeholder="Saisissez votre email...">
             </div>
 
-            <div class="nickName">
-                <label for="nickName">Pseudo Frog:</label>
-                <input type="text" id="nickName" name="nickName" placeholder="Saisissez votre pseudo...">
+            <div class="userName">
+                <label for="userName">Pseudo Frog:</label>
+                <input type="text" id="userName" name="userName" placeholder="Saisissez votre pseudo...">
             </div>
 
             <div class="password">
                 <label for="password">Froggy Pass:</label>
                 <input type="text" id="password" name="password" placeholder="Saisissez un mot de pass...">
             </div>
+
+        <div class="password_retype">
+            <label for="password">Froggy Pass:</label>
+            <input type="text" id="password" name="password" placeholder="Saisissez un mot de pass...">
+        </div>
             <div class="submit">
             <input type="submit" value="ENVOYER">
             </div>
