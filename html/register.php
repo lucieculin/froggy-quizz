@@ -43,7 +43,7 @@ include('../partials/header.php');
 
         <div class="password_retype">
             <label for="password">Froggy Pass:</label>
-            <input type="text" id="password" name="password" placeholder="Saisissez un mot de pass...">
+            <input type="text" id="password_retype" name="password_retype" placeholder="Saisissez un mot de pass...">
         </div>
             <div class="submit">
             <input type="submit" value="ENVOYER">

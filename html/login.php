@@ -1,6 +1,6 @@
 
 <?php
-require_once 'vendor/autoload.php';
+require_once '../vendor/autoload.php';
 $isPage="login";
 include('../partials/header.php');
 
@@ -36,13 +36,12 @@ if(isset($_POST['userName']) && isset($_POST['password']))
             $password = hash('sha256',$password);
             if($data['password'] === $password)
             {
-                $_SESSION['user'] = $data['nickName'];
+                $_SESSION['user'] = $data['userName'];
                 header('Location:mon_compte.php');
-            }else header('Location: index.php?login_err=password');
-        }else header('Location:index.php?login_err=email');
-    }else header('Location:index.php?login_err=already');
-
-}else header('location:index.php');
+            }else header('Location: login.php?login_err=password');
+        }else header('Location:login.php?login_err=email');
+    }else header('Location:login.php?login_err=already');
+}else header('location:login.php');
     ?>
 <main>
 
@@ -62,10 +61,6 @@ if(isset($_POST['userName']) && isset($_POST['password']))
                 <input type="text" id="password" name="password" placeholder="Saisissez un mot de pass...">
             </div>
 
-            <div class="label-input">
-                <label for="password_retype">Froggy Pass:</label>
-                <input type="text" id="password" name="password" placeholder="Saisissez un mot de pass...">
-            </div>
 
             <div class="submit">
                 <input type="submit" value="Connexion">

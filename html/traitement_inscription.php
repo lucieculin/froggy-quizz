@@ -15,6 +15,7 @@ if(isset($_POST['userName']) && isset($_POST['password']) && isset($_POST['passw
 {
     $userName = htmlspecialchars($_POST['userName']);
     $password = htmlspecialchars($_POST['password']);
+    $password_retype = htmlspecialchars($_POST['password_retype']);
     $email = htmlspecialchars($_POST['email']);
 }
 
@@ -45,9 +46,9 @@ if(isset($_POST['userName']) && isset($_POST['password']) && isset($_POST['passw
                             'ip' => $ip
                         ));
                         header('Location:register.php?reg_err=success');
-                    }else header('Location: inscription.php?reg_err=password');
-                }else header('Location: inscription.php?reg_err=email');
-            }else header('Location: inscription.php?reg_err=email_length');
-        }else header('Location: inscription.php?reg_err=pseudo_length');
-    }else header('Location: inscription.php?reg_err=already');
-}
+                    }else header('Location: register.php?reg_err=password');
+                }else header('Location: register.php?reg_err=email');
+            }else header('Location: register.php?reg_err=email_length');
+        }else header('Location: register.php?reg_err=pseudo_length');
+    }else header('Location: register.php?reg_err=already');
+
