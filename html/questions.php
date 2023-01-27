@@ -40,21 +40,18 @@ for ($i = 0; $i < 10; $i++) {
 <div class="main">
   <div class="margin-container">
     <form action="../html/result.php" method="post">
-    <div class="question-container" id="starter">
-      <h2><?=$theQuiz->name?></h2>
-      <div class="btn-suivant" id="start">Commencez le quiz</div>
-    </div>
-    <?php
-    // Boucle pour afficher les 10 questions sélectionnées
-    for ($i = 0; $i < 10; $i++) {
-    ?>
+    
+      <?php
+      // Boucle pour afficher les 10 questions sélectionnées
+      for ($i = 0; $i < 10; $i++) {
+      ?>
 
-        <div class="question-container" id="qc<?= $i ?>">
+        <div class="question-container" id="qc<?= $i ?>" >
+          <div class="question-image">
+            <img class="img-question-image" src="../assets/images/Quiz/<?=$selectedQuestions[$i]->id?>.png" alt="Photo de <?=$theQuiz->name?> ">
+          </div>
           <div class="question">
             <h2><?= $selectedQuestions[$i]->question ?></h2>
-          </div>
-          <div class="question-image">
-            <div class="photo">ici mon image</div>
           </div>
           <div class="reponse-container">
 
@@ -62,25 +59,29 @@ for ($i = 0; $i < 10; $i++) {
             // Boucle pour afficher les réponses pour chaque question
             foreach ($answers[$i] as $answer) { ?>
               <label>
-                <input type="radio" name="quiz<?php echo $i; ?>" value="<?php echo $answer->id; ?>">
+                <input type="radio" name="quiz<?php echo $i; ?>" value="<?php echo $answer->id; ?>" class="input-hidden">
                 <span class="reponse"><?= $answer->answer ?></span>
               </label>
             <?php } ?>
           </div>
 
-          <div class="btn-suivant" id="btn-suivant<?= $i ?>">Question suivante</div>
         </div>
-        <?php
-    }
+        
+      <?php
+      }
 
-    ?>
-    <input type="submit" value="validez">
-  </form>
+      ?>
+        <div class="question-container" id="starter">
+        <h2><?= $theQuiz->name ?></h2>
+        <div class="btn-suivant" id="start" >Commencez le quiz</div>
+      </div>
+      <input type="submit" value="validez">
+    </form>
 
 
 
-
-    </div>
+  </div>
+</div>
 
 
 </div>

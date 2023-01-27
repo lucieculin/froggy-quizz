@@ -7,7 +7,9 @@
 
 
 }
+ :root{
 
+ }
 * {
     margin: 0;
     padding: 0;
@@ -26,6 +28,7 @@
 body {
     margin: 0;
     padding: 0;
+    background: radial-gradient(circle at 20% 10%, #ffffff, #f4fdff, #e9faff, #ddf8ff, #d1f5ff, #c5f3ff, #b8f0ff, #abeeff) !important;
 
 }
 
