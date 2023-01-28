@@ -38,7 +38,7 @@ if(isset($_POST['userName']) && isset($_POST['password']) && isset($_POST['passw
                         $password = hash('sha256', $password);
                         $ip = $_SERVER['REMOTE_ADDR'];
 
-                        $insert = $bdd->prepare('INSERT INTO utilisateurs(useurName, email, password, ip)VALUES(:userName, :email, :password, :ip)');
+                        $insert = $bdd->prepare('INSERT INTO utilisateurs(userName, email, password, ip)VALUES(:userName, :email, :password, :ip)');
                         $insert->execute(array(
                             'userName' => $userName,
                             'email' => $email,
