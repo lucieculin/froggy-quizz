@@ -38,17 +38,31 @@ for ($i = 0; $i < 10; $i++) {
 ?>
 
 <div class="main">
+<ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
   <div class="margin-container">
     <form action="../html/result.php" method="post">
-    
+      <div class="question-container">
+        <input class="submit-button"type="submit" value="validez">
+      </div>
       <?php
       // Boucle pour afficher les 10 questions sélectionnées
       for ($i = 0; $i < 10; $i++) {
-      ?>
+        ?>
 
-        <div class="question-container" id="qc<?= $i ?>" >
+        <div class="question-container" id="qc<?= $i ?>">
           <div class="question-image">
-            <img class="img-question-image" src="../assets/images/Quiz/<?=$selectedQuestions[$i]->id?>.png" alt="Photo de <?=$theQuiz->name?> ">
+            <img class="img-question-image" src="../assets/images/Quiz/<?= $selectedQuestions[$i]->id ?>.png" alt="Photo de <?= $theQuiz->name ?> ">
           </div>
           <div class="question">
             <h2><?= $selectedQuestions[$i]->question ?></h2>
@@ -66,16 +80,16 @@ for ($i = 0; $i < 10; $i++) {
           </div>
 
         </div>
-        
+
       <?php
       }
 
       ?>
-        <div class="question-container" id="starter">
+      <div id="starter">
         <h2><?= $theQuiz->name ?></h2>
-        <div class="btn-suivant" id="start" >Commencez le quiz</div>
+        <div class="btn-suivant" id="start">Commencez le quiz</div>
       </div>
-      <input type="submit" value="validez">
+
     </form>
 
 
