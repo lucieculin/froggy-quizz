@@ -1,6 +1,8 @@
 <?php
 namespace App\Repository;
 
+use App\Class\Quiz;
+use App\Class\Theme;
 use \PDO;
 
 class QuizRepository extends AbstractRepository
@@ -8,16 +10,28 @@ class QuizRepository extends AbstractRepository
     public function findAll():array{
         return $this->pdo
         ->query('SELECT * FROM `quiz`')
-        ->fetchAll(PDO::FETCH_CLASS, self::class);
+        ->fetchAll(PDO::FETCH_CLASS, Quiz::class);
 
     }
+
+    public function findAllLimit():array{
+        return $this->pdo
+            ->query('SELECT quiz.id, quiz.name, quiz.theme_id, themes.name as themeName FROM quiz
+                                INNER JOIN themes ON themes.id = quiz.theme_id
+                                LIMIT 10')
+            ->fetchAll(PDO::FETCH_CLASS, Quiz::class);
+
+    }
+
+
+
 
     public function findById(INT $id){
         $query = $this->pdo
         ->prepare('SELECT * FROM `quiz`WHERE quiz.id = ? ;');
         $query->bindValue(1, $id ,PDO::PARAM_INT);
         $query->execute();
-        return $query->fetchObject(self::class);
+        return $query->fetchObject(Quiz::class);
     }
 
     public function findByTheme(INT $themeId, INT $limit):array{
@@ -26,7 +40,7 @@ class QuizRepository extends AbstractRepository
         $query->bindValue(1, $themeId, PDO::PARAM_INT);
         $query->bindValue(2, $limit, PDO::PARAM_INT);
         $query->execute();
-        return $query->fetchAll(PDO::FETCH_CLASS, self::class);
+        return $query->fetchAll(PDO::FETCH_CLASS, Quiz::class);
     }
 
     public function getDatabase()
@@ -42,19 +56,25 @@ class QuizRepository extends AbstractRepository
         }
     }
 
-    public function readQuiz($id){
+
+    public function createQuiz(string $name, int $theme_id){
+        $query = $this->pdo
+            ->prepare("INSERT INTO quiz (name, theme_id) VALUE ('$name, $theme_id');");
+        $query->execute();
 
     }
 
-    public function createQuiz($name, $theme_id){
+    public function updateQuiz(int $id, string $name, int $theme_id){
+            $query = $this->pdo
+                ->prepare("UPDATE quiz WHERE id = '$id' SET name = '$name' SET name = '$theme_id';");
+            $query->execute();
 
-    }
 
-    public function updateQuiz($id, $name, $theme_id){
+        }
 
-    }
-
-    public function deleteQuiz($id){
-
+    public function deleteQuiz(int $id)   {
+        $query = $this->pdo
+            ->prepare("DELETE FROM quiz WHERE id = '$id';");
+        $query->execute();
     }
 }

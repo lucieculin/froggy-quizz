@@ -2,6 +2,7 @@
 
 namespace App\Repository;
 
+use http\Params;
 use \PDO;
 use App\Class\Theme;
 
@@ -15,35 +16,46 @@ class ThemeRepository extends AbstractRepository
         ->fetchAll(PDO::FETCH_CLASS, Theme::class);
 
     }
+
+    public function findAllLimit():array{
+        return $this->pdo
+            ->query('SELECT * FROM `themes` LIMIT 10')
+            ->fetchAll(PDO::FETCH_CLASS, Theme::class);
+
+    }
+
+
+    public function findById(INT $id){
+        $query = $this->pdo
+            ->prepare("SELECT * FROM themes WHERE themes.id = ?;");
+        $query->bindValue(1, $id, PDO::PARAM_INT);
+        $query->execute();
+        return $query->fetchObject( ThemeRepository::class);
+    }
     
 
-    public function getDatabase()
-    {
-        try{
-        $pdo = new PDO();
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        return $pdo;
 
-        } catch (\PDOException $exception){
-            print "Erreur !:".$exception->getMessage(). "<br/>";
-            die();
-        }
-    }
 
-    public function readTheme($id){
+
+    public function createTheme(string $name){
+        $query = $this->pdo
+        ->prepare("INSERT INTO themes (name) VALUE ('$name');");
+         $query->execute();
 
     }
 
-    public function createTheme($name){
+    public function updateTheme(int $id, string $name){
+        $query = $this->pdo
+            ->prepare("UPDATE themes WHERE id = '$id' SET name = '$name';");
+        $query->execute();
+
 
     }
 
-    public function updateTheme($id, $name){
-
-    }
-
-    public function deleteTheme($id){
-
+    public function deleteTheme(int $id){
+        $query = $this->pdo
+            ->prepare("DELETE FROM themes WHERE id = '$id';");
+        $query->execute();
     }
     
 

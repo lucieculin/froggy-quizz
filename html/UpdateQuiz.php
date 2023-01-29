@@ -14,6 +14,8 @@ include('../partials/header.php');
 $themes = new ThemeRepository();
 $displayThemes = $themes->findAll();
 
+
+
 $quizs = new QuizRepository();
 $displayQuizs = $quizs->findAll();
 
@@ -60,6 +62,9 @@ $displayAnswers = $answers->findAll();
                 <form method="post">
                     <input type="text" name="nameTheme2" placeholder="modifier le theme"/>
                 </form>
+
+
+
         </div>
 
         <form method="post" action="modifier_fichier.php" enctype="multiârt/form-data">

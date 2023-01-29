@@ -1,6 +1,7 @@
 <?php
 namespace App\Repository;
 
+use App\Class\AnswerQcm;
 use \PDO;
 
 class AnswerRepository extends AbstractRepository
@@ -8,7 +9,15 @@ class AnswerRepository extends AbstractRepository
     public function findAll():array{
         return $this->pdo
         ->query('SELECT * FROM `answer`')
-        ->fetchAll(PDO::FETCH_CLASS, AnswerRepository::class);
+        ->fetchAll(PDO::FETCH_CLASS, AnswerQcm::class);
+    }
+
+    public function findAllLimit():array{
+        return $this->pdo
+            ->query('SELECT answer.id, answer.answer, answer.question_id, answer.is_true, questions.question as questionName FROM answer
+                            INNER JOIN questions ON questions.id = answer.question_id
+                            LIMIT 4;')
+            ->fetchAll(PDO::FETCH_CLASS, AnswerQcm::class);
     }
 
     public function findById(INT $id){
@@ -16,7 +25,7 @@ class AnswerRepository extends AbstractRepository
         ->prepare('SELECT * FROM `answer`WHERE answer.id = ? ;');
         $query->bindValue(1, $id ,PDO::PARAM_INT);
         $query->execute();
-        return $query->fetchObject(AnswerRepository::class);
+        return $query->fetchObject(AnswerQcm::class);
     }
 
     public function findByQuestionId(INT $questionId):array{
@@ -24,7 +33,7 @@ class AnswerRepository extends AbstractRepository
         ->prepare('SELECT * FROM `answer` WHERE Answer.question_id = ?;');
         $query->bindValue(1, $questionId, PDO::PARAM_INT);
         $query->execute();
-        return $query->fetchAll(PDO::FETCH_CLASS, AnswerRepository::class);
+        return $query->fetchAll(PDO::FETCH_CLASS, AnswerQcm::class);
     }
 
     public function getAnswerById($id)
@@ -49,19 +58,30 @@ class AnswerRepository extends AbstractRepository
     }
 
 
-    public function readAnswer($id){
+       public function createAnswer(string $answer, bool $isTrue ){
+        $query = $this->pdo
+            ->prepare("INSERT INTO answer (answer, is_True) VALUE ('$answer, $isTrue');");
+        $query->execute();
 
     }
 
-    public function createAnswer($answer, $check_id ){
+    public function updateAnswer(int $id, string $answer, bool $isTrue )
+        {
+            $query = $this->pdo
+                ->prepare("UPDATE answer WHERE id = '$id' SET name = '$answer' SET name = '$isTrue';");
+            $query->execute();
 
-    }
 
-    public function updateAnswer($id, $answer, $check_id ){
+        }
 
-    }
 
-    public function deleteAnswer($id){
 
-    }
+    public function deleteAnswer($id)
+        {
+            $query = $this->pdo
+                ->prepare("DELETE FROM answer WHERE id = '$id';");
+            $query->execute();
+        }
+
+
 }

@@ -22,6 +22,12 @@ if ($isPage === "home") {
     echo "<link rel='stylesheet' href='../styles/AdminQuiz.css'>";
 } elseif ($isPage === "UpdateQuiz") {
     echo "<link rel='stylesheet' href='../styles/UpdateQuiz.css'>";
+} elseif ($isPage === "CreerFormulaire") {
+    echo "<link rel='stylesheet' href='../styles/CreerFormulaire.css'>";
+} elseif ($isPage === "DatabaseTheme" || $isPage === "DatabaseQuiz" || $isPage === "DatabaseQuestion" || $isPage === "DatabaseAnswer") {
+    echo "<link rel='stylesheet' href='../styles/Database.css'>";
+} elseif ($isPage === "EditTheme" || $isPage === "EditQuiz" || $isPage === "EditQuestion" || $isPage === "EditAnswers") {
+    echo "<link rel='stylesheet' href='../styles/EditTheme.css'>";
 } elseif ($isPage === "questions") {
     echo "<link rel='stylesheet' href='../styles/questions.css'>";
 } else {

@@ -10,23 +10,7 @@ class Question
 
     private int $quiz_id;
 
-    private string $questionImage;
 
-    /**
-     * @return string
-     */
-    public function getQuestionImage(): string
-    {
-        return $this->questionImage;
-    }
-
-    /**
-     * @param string $questionImage
-     */
-    public function setQuestionImage(string $questionImage): void
-    {
-        $this->questionImage = $questionImage;
-    }
 
     /**
      * @return int
