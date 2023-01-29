@@ -21,59 +21,59 @@ var current_glassopacity = 0.5;
 $(document).ready(function() {
     $("body").delegate("#menu_list button","click",function() {
         var idx = $(this).attr("id");
-        if (idx=="download") {
+        if (idx==="download") {
             var current_eyes;
             $("#eyes g").each(function() {
-                if ($(this).css("display")=="inline") {
+                if ($(this).css("display")==="inline") {
                     id = $(this).attr("id");
                     current_eyes = id.substr(2);
                 }
             });
             var current_eyebrows;
             $("#eyebrows g").each(function() {
-                if ($(this).css("display")=="inline") {
+                if ($(this).css("display")==="inline") {
                     id = $(this).attr("id");
                     current_eyebrows = id.substr(3);
                 }
             });
             var current_mouth;
             $("#mouths g").each(function() {
-                if ($(this).css("display")=="inline") {
+                if ($(this).css("display")==="inline") {
                     id = $(this).attr("id");
                     current_mouth = id.substr(2);
                 }
             });
             var current_facialhair = "none";
             $("#facialhair g").each(function() {
-                if ($(this).css("display")=="inline") {
+                if ($(this).css("display")==="inline") {
                     id = $(this).attr("id");
                     current_facialhair = id.substr(2);
                 }
             });
             var current_clothe;
             $("#clothes g").each(function() {
-                if ($(this).css("display")=="inline") {
+                if ($(this).css("display")==="inline") {
                     id = $(this).attr("id");
                     current_clothe = id.substr(2);
                 }
             });
             var current_glasses = "none";
             $("#glasses g").each(function() {
-                if ($(this).css("display")=="inline") {
+                if ($(this).css("display")==="inline") {
                     id = $(this).attr("id");
                     current_glasses = id.substr(2);
                 }
             });
             var current_tattoos = "none";
             $("#tattoos g").each(function() {
-                if ($(this).css("display")=="inline") {
+                if ($(this).css("display")==="inline") {
                     id = $(this).attr("id");
                     current_tattoos = id.substr(2);
                 }
             });
             var current_accesories = "none";
             $("#accesories g").each(function() {
-                if ($(this).css("display")=="inline") {
+                if ($(this).css("display")==="inline") {
                     id = $(this).attr("id");
                     current_accesories = id.substr(2);
                 }

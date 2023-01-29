@@ -1,4 +1,9 @@
 <?php
+
+use App\Repository\AnswerRepository;
+use App\Repository\QuestionRepository;
+use App\Repository\QuizRepository;
+
 $isPage = "questions";
 include_once('../App/repository/QuizRepository.php');
 include_once('../App/repository/QuestionsRepository.php');

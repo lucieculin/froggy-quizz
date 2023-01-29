@@ -7,7 +7,7 @@ class User
 {
     private int $id;
 
-    private string $nickname;
+    private string $userName;
 
     private string $password;
 
@@ -38,15 +38,15 @@ class User
      */
     public function getNickname(): string
     {
-        return $this->nickname;
+        return $this->userName;
     }
 
     /**
-     * @param string $nickname
+     * @param string $userName
      */
-    public function setNickname(string $nickname): void
+    public function setNickname(string $userName): void
     {
-        $this->nickname = $nickname;
+        $this->userName = $userName;
     }
 
     /**
