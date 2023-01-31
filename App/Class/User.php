@@ -9,6 +9,10 @@ class User
 
     private string $userName;
 
+    private string $firstName;
+
+    private string $lastName;
+
     private string $password;
 
     private string $role;
@@ -36,7 +40,7 @@ class User
     /**
      * @return string
      */
-    public function getNickname(): string
+    public function getUserName(): string
     {
         return $this->userName;
     }
@@ -44,9 +48,41 @@ class User
     /**
      * @param string $userName
      */
-    public function setNickname(string $userName): void
+    public function setUserName(string $userName): void
     {
         $this->userName = $userName;
+    }
+
+    /**
+     * @param string $firstName
+     */
+    public function setFirstName(string $firstName): void
+    {
+        $this->firstName = $firstName;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFirstName(): string
+    {
+        return $this->firstName;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLastName(): string
+    {
+        return $this->lastName;
+    }
+
+    /**
+     * @param string $lastName
+     */
+    public function setLastName(string $lastName): void
+    {
+        $this->lastName = $lastName;
     }
 
     /**
@@ -98,20 +134,21 @@ class User
     }
 
     /**
-     * @return Date
+     * @return DateTime
      */
-    public function getCreatedAt(): Date
+    public function getCreatedAt(): DateTime
     {
         return $this->created_at;
     }
 
     /**
-     * @param Date $created_at
+     * @param DateTime $created_at
      */
-    public function setCreatedAt(Date $created_at): void
+    public function setCreatedAt(DateTime $created_at): void
     {
         $this->created_at = $created_at;
     }
+
 
 
 

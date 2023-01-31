@@ -1,4 +1,5 @@
 <?php
+error_reporting( E_ERROR | E_NOTICE | E_PARSE );
 $isPage = "identityUser";
 include('../partials/header.php');
 ?>
@@ -22,8 +23,8 @@ include('../partials/header.php');
                 <img class="photo-identity" src="../assets/photos/user_male_portrait.png" alt="photo_avatar">
             </div>
             <div class="info-identity">
-                <p>Pseudo : "$userNickname"</p>
-                <p>Nom : "$userName"</p>
+                <p>Pseudo : "$userName"</p>
+                <p>Nom : "$userLastName"</p>
                 <p>Prénom : "$userFirstName"</p>
                 <p>Date d'inscription : "$userDateTime"</p>
                 <p>Classement : "$userClassement" </p>

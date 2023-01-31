@@ -20,5 +20,6 @@ class AbstractRepository
          $this->user = 'root';
          $this->pwd = '';
          $this->pdo = new PDO($this->url, $this->user, $this->pwd);
+         $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
     }
 }

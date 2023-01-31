@@ -1,4 +1,6 @@
-<?php $isPage = "avatar";
+<?php
+error_reporting( E_ERROR | E_NOTICE | E_PARSE );
+$isPage = "avatar";
 include('../partials/header.php');
 ?>
 

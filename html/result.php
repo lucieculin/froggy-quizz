@@ -28,7 +28,7 @@ foreach ($allAnswer as $currentAnswer) {
         $score++;
     } else {
         echo $currentQuestion->question . "<br>";
-        echo "la réponse est mauvaise <br>";
+        echo "La réponse est mauvaise <br>";
     }
 }
 ?>

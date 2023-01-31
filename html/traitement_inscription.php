@@ -1,4 +1,5 @@
 <?php
+error_reporting( E_ERROR | E_NOTICE | E_PARSE );
     require_once './html/config.php';
 
 try
