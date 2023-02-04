@@ -39,26 +39,26 @@ for ($i = 0; $i < 10; $i++) {
 
 <div class="main">
 <ul class="circles">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-            </ul>
+    <li>?</li>
+    <li>?</li>
+    <li>?</li>
+    <li>?</li>
+    <li>?</li>
+    <li>?</li>
+    <li>?</li>
+    <li>?</li>
+    <li>?</li>
+    <li>?</li>
+  </ul>
   <div class="margin-container">
     <form action="../html/result.php" method="post">
       <div class="question-container">
-        <input class="submit-button"type="submit" value="validez">
+        <input class="submit-button" type="submit" value="validez">
       </div>
       <?php
       // Boucle pour afficher les 10 questions sélectionnées
       for ($i = 0; $i < 10; $i++) {
-        ?>
+      ?>
 
         <div class="question-container" id="qc<?= $i ?>">
           <div class="question-image">
