@@ -36,9 +36,8 @@ for ($i = 0; $i < 10; $i++) {
   $answers[$i] = $answer->findByQuestionId($selectedQuestions[$i]->id);
 }
 ?>
-
 <div class="main">
-<ul class="circles">
+  <ul class="circles">
     <li>?</li>
     <li>?</li>
     <li>?</li>
@@ -52,52 +51,41 @@ for ($i = 0; $i < 10; $i++) {
   </ul>
   <div class="margin-container">
     <form action="../html/result.php" method="post">
-      <div class="question-container">
+      <div class="question-container submit-container">
         <input class="submit-button" type="submit" value="validez">
       </div>
       <?php
       // Boucle pour afficher les 10 questions sélectionnées
       for ($i = 0; $i < 10; $i++) {
       ?>
-
         <div class="question-container" id="qc<?= $i ?>">
-          <div class="question-image">
-            <img class="img-question-image" src="../assets/images/Quiz/<?= $selectedQuestions[$i]->id ?>.png" alt="Photo de <?= $theQuiz->name ?> ">
+          <img class="img-question" src="../assets/images/quiz-paysage/<?= $selectedQuestions[$i]->id ?>.png" alt="Photo de <?= $theQuiz->name ?> ">
+          <div class="qr-container">
+            <div class="question">
+              <h2><?= $selectedQuestions[$i]->question ?></h2>
+            </div>
+            <div class="reponse-container">
+              <?php
+              // Boucle pour afficher les réponses pour chaque question
+              foreach ($answers[$i] as $answer) { ?>
+                <label>
+                  <input type="radio" name="quiz<?php echo $i; ?>" value="<?php echo $answer->id; ?>" class="input-hidden">
+                  <span class="reponse"><?= $answer->answer ?></span>
+                </label>
+              <?php } ?>
+            </div>
           </div>
-          <div class="question">
-            <h2><?= $selectedQuestions[$i]->question ?></h2>
-          </div>
-          <div class="reponse-container">
-
-            <?php
-            // Boucle pour afficher les réponses pour chaque question
-            foreach ($answers[$i] as $answer) { ?>
-              <label>
-                <input type="radio" name="quiz<?php echo $i; ?>" value="<?php echo $answer->id; ?>" class="input-hidden">
-                <span class="reponse"><?= $answer->answer ?></span>
-              </label>
-            <?php } ?>
-          </div>
-
         </div>
-
       <?php
       }
-
       ?>
       <div id="starter">
         <h2><?= $theQuiz->name ?></h2>
         <div class="btn-suivant" id="start">Commencez le quiz</div>
       </div>
-
     </form>
-
-
-
   </div>
 </div>
-
-
 </div>
 <?php
 include('../partials/footer.php')
