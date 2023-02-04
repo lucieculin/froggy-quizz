@@ -2,6 +2,7 @@
 error_reporting( E_ERROR | E_NOTICE | E_PARSE );
 $isPage = "avatar";
 include('../partials/header.php');
+include('./partials/script.php');
 ?>
 
 

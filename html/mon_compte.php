@@ -1,25 +1,20 @@
 <?php
-    session_start();
-    if(isset($_SESSION['user']))
-        header('Location:index.php');
-    ?>
+error_reporting(E_ERROR | E_NOTICE | E_PARSE);
+// Ouverture Session
+session_start();
+require_once '../vendor/autoload.php';
+$isPage = "Mon Compte";
+include('../partials/header.php');
+?>
+<h1>Profil de <?= $_SESSION["user"]["userName"] ?></h1>
+
+<p>PseudoFrog : <?= $_SESSION["user"]["userName"] ?></p>
+<p>Email : <?= $_SESSION["user"]["email"] ?></p>
 
 
 
-<!DOCTYPE html>
-<html lang="fr">
-
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 
-        <title>Bonjour !</title>
-    </head>
-
-    <body>
-    <h1>Bonjour ! <?php echo $_SESSION['user']; ?></h1>
-    <a href="deconnexion.php" class="btn btn-danger btn-lg">Déconnexion</a>
-    </body>
-</html>
+<?php
+include('../partials/footer.php')
+?>
