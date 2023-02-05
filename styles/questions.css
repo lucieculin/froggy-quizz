@@ -25,12 +25,9 @@
 }
 
 .circles {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: calc(100% - 122px);
+    height: 100%;
     overflow: hidden;
+    position: relative;
 }
 
 .circles li {
@@ -211,16 +208,27 @@
     border-radius: 50%;
     border-radius: 50%;
     background-image: linear-gradient(145deg, #ffffff6c, #d9d9d96c);
-
     box-shadow: 9px 9px 18px #cdcdcd6c,
         -9px -9px 18px #ffffff6c;
     border: none;
+    position:relative;
+    cursor: pointer;
+}
+.span-submit{
+    position:absolute;
+    font-family: var(--font3);
+}
+.submit-button:hover {
+    transition: .2s linear;
+    box-shadow: inset -2px -2px 8px #ffffff6c, inset -2px -2px 12px #ffffff6c, inset 2px 2px 4px #ffffff6c, inset 2px 2px 8px #0000006c;
+    color: transparent;
 }
 
-.submit-button:hover {
+
+/* .submit-button:hover {
     letter-spacing: 2px;
     transition: all .4s ease-in-out;
-}
+} */
 
 /* Question*/
 .question {
@@ -251,6 +259,11 @@
 /***question réponse ***/
 .qr-container {
     height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
 /*Réponse */
@@ -270,8 +283,8 @@ h2 {
 
 .reponse {
     min-height: 40px;
-    width: 250px;
-    border-radius: 50px;
+    width: 150px;
+    border-radius: 25px;
     margin: 10px 50px;
     display: flex;
     justify-content: center;
@@ -281,16 +294,23 @@ h2 {
     cursor: pointer;
     font-size: 12px;
     padding: 5px;
-
     background-image: linear-gradient(145deg, #ffffff6c, #d9d9d96c);
     box-shadow: 5px 5px 11px #cdcdcd6c,
         -5px -5px 11px #ffffff6c;
+    transform: translateY(-50%);
+    padding: 10px;
 }
 
 .reponse:hover {
-    letter-spacing: 0.2px;
-    transition: all .4s ease-in-out;
+    transition: .2s linear;
+    box-shadow: inset -2px -2px 8px #ffffff6c, inset -2px -2px 12px #ffffff6c, inset 2px 2px 4px #ffffff6c, inset 2px 2px 8px #0000006c;
+}
 
+
+
+.reponse:hover .span-reponse {
+    display: inline-block;
+    transform: scale(0.98);
 }
 
 /***Suivant***/
@@ -306,12 +326,21 @@ h2 {
     border-radius: 10px;
 }
 
+.btn-suivant:hover {
+    transition: .2s linear;
+    box-shadow: inset -2px -2px 8px #ffffff6c, inset -2px -2px 12px #ffffff6c, inset 2px 2px 4px #ffffff6c, inset 2px 2px 8px #0000006c;
+}
+
+.btn-suivant:hover .span-start {
+    display: inline-block;
+    transform: scale(0.98);
+}
+
 .progress {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 80px;
-
 }
 
 .progress img {
@@ -363,5 +392,4 @@ h2 {
         transform: rotate(60deg) translateY(700px) translateX(700px);
         opacity: 1;
     }
-
 }
