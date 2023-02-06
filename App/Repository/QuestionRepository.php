@@ -29,6 +29,8 @@ class QuestionRepository extends AbstractRepository
         return $query->fetchObject(Question::class);
     }
 
+
+
     public function findByTheme(INT $themeId, INT $limit):array{
         $query = $this->pdo
         ->prepare('SELECT * FROM `questions` WHERE questions.theme_id = ? LIMIT ? ;');
