@@ -38,16 +38,10 @@ if (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
 $password = password_hash($_POST["password"], PASSWORD_ARGON2I);
 
 
-// AJOUTER CONTROLLES DU PASSWORD ICI !!!!
+// AJOUTER CONTRÔLES DU PASSWORD ICI !!!!
 
 
-// Enregistrement en BDD
-$query = "INSERT * INTO `users`(`userName`, `firstName`, `lastName`, `email`, `password`, `role`) 
-VALUES (:userName, :email, '$password', '[\"ROLE_USER\"]')";
-$query = $data->prepare($query);
-$query->bindValue(":userName", $userName, PDO::PARAM_STR);
-$query->bindValue(":email", $_POST["email"], PDO::PARAM_STR);
-$query->execute();
+
 
 // Recuperation id nouvel utilisateur
 $id = $data->mastInsertId();

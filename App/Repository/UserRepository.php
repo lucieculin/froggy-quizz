@@ -37,5 +37,25 @@ namespace App\Repository;
 
         }
 
+        public function createUser(User $user): void
+        {
+            $userName = $user->getUserName();
+            $firstName= $user->getFirstName();
+            $lastName= $user->getLastName();
+            $password= $user->getPassword();
+
+            $query = $this->pdo->prepare(
+                'INSERT INTO `users`(`userName`, `firstName`, `lastName`, `password`, `role`) 
+                VALUES (:userName, :firstName, :lastName, :password,`[\"ROLE_USER\"]`');
+
+            $query = $this->pdo->prepare($query);
+            $query->bindValue(":userName", $userName, PDO::PARAM_STR);
+            $query->bindValue(":firstName", $firstName, PDO::PARAM_STR);
+            $query->bindValue(":lastName", $lastName, PDO::PARAM_STR);
+            $query->bindValue(":password", $password, PDO::PARAM_STR);
+
+            $query->execute();
+        }
+
 
   }

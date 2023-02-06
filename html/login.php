@@ -28,24 +28,6 @@ $data = new PDO("mysql:host=127.0.0.1:3306;dbname=froggy_quiz", 'root', password
 
     }
 
-    // Connexion BDD
-    $query = "SELECT * FROM `users` WHERE `email` = :email";
-
-    $query = $this->pdo->prepare($this);
-
-    $query->bindValue(":email", $_POST["email"], PDO::PARAM_STR);
-
-    $query->execute();
-
-    $user = $query->fetch();
-
-    dump($user);
-    die;
-
-    if (!$user) {
-        die("L'utilisateur n'existe pas");
-    }
-
     // User existant, vérification password
     if (!password_verify($_POST["password"], $user["password"])) {
         die("L'utilisateur et/ou le password est incorrect");
@@ -67,13 +49,7 @@ $data = new PDO("mysql:host=127.0.0.1:3306;dbname=froggy_quiz", 'root', password
 
 
     }
-        // Enregistrement en BDD
-        $query = "INSERT INTO `users`(`userName`, `firstName`, `lastName`, `email`, `password`, `role`) 
-        VALUES (:userName, :email, '$password', '[\"ROLE_USER\"]')";
-        $query = $data->prepare($query);
-        $query->bindValue(":userName", $userName, PDO::PARAM_STR);
-        $query->bindValue(":email", $_POST["email"], PDO::PARAM_STR);
-        $query->execute();
+
 
 ?>
 
