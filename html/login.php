@@ -13,10 +13,11 @@ include('../partials/header.php');
 $userRepository = new UserRepository();
 $data = new PDO("mysql:host=127.0.0.1:3306;dbname=froggy_quiz", 'root', password: '');
 
+//Instanciation du repository
+$user = new UserRepository();
 
 
-// Vérification envoie formulaire
-if (empty($_POST));
+
 // Le formulaire a été envoyé
 // Vérification que tous les champs requis sont remplis
 if (
@@ -31,19 +32,13 @@ if (
 if (!empty($_POST)) {
 
     // User existant, vérification password
+
     if (!password_verify($_POST["password"], $user["password"])) {
         die("L'utilisateur et/ou le password est incorrect"); {
             // Utilisateur et password corrects
             // Connexion de l'utilisateur
 
 
-            // Stockage des infos utilisateur dans $_SESSION
-            $_SESSION["user"] = [
-                "id" => $user["id"],
-                "userName" => $user["userName"],
-                "email" => $user["email"],
-                "role" => $user["role"]
-            ];
             // Redirection page mon_compte
             header("Location: mon_compte.php");
         }

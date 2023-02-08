@@ -13,42 +13,43 @@ include('../partials/header.php');
 $userRepository = new UserRepository();
 $data = new PDO("mysql:host=127.0.0.1:3306;dbname=froggy_quiz", 'root', password: '');
 
-
+//Instanciation du repository
+$user = new UserRepository();
 if (isset($_SESSION["user"])) {
 
     //Ajouter un include vers Mon compte/Login
 }
 // Vérification envoie formulaire
-//if (empty($_POST)) {
+if (empty($_POST)) {
 // Le formulaire a été envoyé
 // Vérification que tous les champs requis sont remplis
-//if (isset($_POST["firstName"], $_POST["lastName"], $_POST["email"], $_POST["userName"], $_POST["password"])
-// && !empty($_POST["firstName"]) && !empty($_POST["lastName"]) && !empty(["email"]) && !empty(["userName"]) && !empty(["password"])
-//) {
+    if (isset($_POST["firstName"], $_POST["lastName"], $_POST["email"], $_POST["userName"], $_POST["password"])
+        && !empty($_POST["firstName"]) && !empty($_POST["lastName"]) && !empty(["email"]) && !empty(["userName"]) && !empty(["password"])
+    ) {
 // Le formulaire est complet
 
 // Protection des données
-$userName = strip_tags($_POST["userName"]);
+        $userName = strip_tags($_POST["userName"]);
 
-if (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
-
-}
+        if (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
+            return;
+        }
 
 // Hachage du password
-$password = password_hash($_POST["password"], PASSWORD_ARGON2I);
+        $password = password_hash($_POST["password"], PASSWORD_ARGON2I);
 
 
 // AJOUTER CONTRÔLES DU PASSWORD ICI !!!!
 
 
-
-
 // Stockage des infos utilisateur dans $_SESSION
-$_SESSION["user"] = [
-    "userName" => $userName,
-    "email" => $_POST["email"],
-    "role" => ["ROLE_USER"]
-];
+        $_SESSION["user"] = [
+            "userName" => $userName,
+            "email" => $_POST["email"],
+            "role" => ["ROLE_USER"]
+        ];
+    }
+}
 // Redirection page mon_compte
 
 
@@ -92,8 +93,7 @@ $_SESSION["user"] = [
 
             <div class="password_retype">
                 <label for="password">Froggy Pass:</label>
-                <input type="text" id="password_retype" name="password_retype"
-                       placeholder="Saisissez un mot de pass...">
+                <input type="text" id="password_retype" name="password_retype" placeholder="Confirmez le mot de pass...">
             </div>
             <div class="submit">
                 <input type="submit" name="create" value="ENVOYER">
