@@ -31,6 +31,7 @@ shuffle($questions);
 // Sélection des 10 premières questions
 $selectedQuestions = array_slice($questions, 0, 10);
 
+
 // Récupération des réponses pour les questions sélectionnées
 for ($i = 0; $i < 10; $i++) {
   $answers[$i] = $answer->findByQuestionId($selectedQuestions[$i]->id);
