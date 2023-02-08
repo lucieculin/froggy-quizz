@@ -42,17 +42,19 @@ namespace App\Repository;
             $userName = $user->getUserName();
             $firstName= $user->getFirstName();
             $lastName= $user->getLastName();
+            $email= $user->getEmail();
             $password= $user->getPassword();
 
             $query = $this->pdo->prepare(
-                'INSERT INTO `users`(`userName`, `firstName`, `lastName`, `password`, `role`) 
-                VALUES (:userName, :firstName, :lastName, :password,`[\"ROLE_USER\"]`');
+                'INSERT INTO `users`(`userName`, `name`, `lastname`, `email`,`password`) 
+                VALUES ( ?, ?, ?, ?, ?');
 
             $query = $this->pdo->prepare($query);
-            $query->bindValue(":userName", $userName, PDO::PARAM_STR);
-            $query->bindValue(":firstName", $firstName, PDO::PARAM_STR);
-            $query->bindValue(":lastName", $lastName, PDO::PARAM_STR);
-            $query->bindValue(":password", $password, PDO::PARAM_STR);
+            $query->bindValue(1, $userName, PDO::PARAM_INT);
+            $query->bindValue(2, $firstName, PDO::PARAM_INT);
+            $query->bindValue(3, $lastName, PDO::PARAM_INT);
+            $query->bindValue(4, $email, PDO::PARAM_INT);
+            $query->bindValue(5, $password, PDO::PARAM_INT);
 
             $query->execute();
         }

@@ -1,6 +1,8 @@
 <?php
 
 use App\Repository\UserRepository;
+use App\Class\User;
+
 
 error_reporting(E_ERROR | E_NOTICE | E_PARSE);
 // Ouverture Session
@@ -61,7 +63,7 @@ if (empty($_POST)) {
 
     <section class="contact">
 
-        <form class="contact-form" method="POST">
+        <form class="contact-form" method="GET">
 
             <h2>Inscription</h2>
 
@@ -73,7 +75,7 @@ if (empty($_POST)) {
 
             <div class="lastName">
                 <label for="lastName">Prénom:</label>
-                <input type="text" id="lastName" name="lastname" placeholder="Saisissez votre prénom...">
+                <input type="text" id="lastName" name="lastName" placeholder="Saisissez votre prénom...">
             </div>
 
 
@@ -100,6 +102,19 @@ if (empty($_POST)) {
                 <input type="submit" name="create" value="ENVOYER">
             </div>
 
+
+            <?php if(!empty($_GET['create']) && isset($_GET["firstName"]) && isset($_GET["lastName"]) && isset($_GET["email"]) && isset($_GET["userName"]) && isset($_GET['password']) && isset($_GET['password_retype'])){
+                $userFirstName = $_GET["firstName"];
+                $userLastName = $_GET["lastName"];
+                $userEmail = $_GET["email"];
+                $userUserName = $_GET["userName"];
+                $userPassword = $_GET["password"];
+
+
+                $addUser = $data->query("INSERT INTO users (users.username, users.name, users.lastname, users.email, users.password) VALUES ('$userUserName', '$userFirstName', '$userLastName', '$userEmail', '$userPassword' );");
+            }
+
+            ?>
         </form>
     </section>
 
