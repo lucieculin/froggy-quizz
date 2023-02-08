@@ -69,16 +69,18 @@ for ($i = 0; $i < 10; $i++) {
               <div class="reponse-container">
                 <?php
                 // Boucle pour afficher les réponses pour chaque question
-                foreach ($answers[$i] as $answer) { ?>
+                foreach ($answers[$i] as $answer) {
+                  ?>
                   <label>
                     <input type="radio" name="quiz<?php echo $i; ?>" value="<?php echo $answer->id; ?>" class="input-hidden">
-                    <div class="reponse"><span class="span-reponse"><?= $answer->answer ?></span></div>
+                    <div class="reponse <?= $answer->is_true ? 'true' : '' ?>"><span class="span-reponse"><?= $answer->answer ?></span></div>
                   </label>
                 <?php } ?>
               </div>
+              <div  class="btn-suivant next">Question suivant</div>
             </div>
           </div>
-        <?php
+          <?php
         }
         ?>
         <div id="starter">

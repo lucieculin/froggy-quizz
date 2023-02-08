@@ -1,7 +1,7 @@
 /* Styles généraux */
 @font-face {
     font-family: "applejuice";
-    src: url(./assets/font/AppleJuiceRegular.ttf);
+    src: url(../assets/font/AppleJuiceRegular.ttf);
 
 }
 
@@ -301,17 +301,12 @@ h2 {
     padding: 10px;
 }
 
-.reponse:hover {
+.pushed {
     transition: .2s linear;
     box-shadow: inset -2px -2px 8px #ffffff6c, inset -2px -2px 12px #ffffff6c, inset 2px 2px 4px #ffffff6c, inset 2px 2px 8px #0000006c;
 }
 
 
-
-.reponse:hover .span-reponse {
-    display: inline-block;
-    transform: scale(0.98);
-}
 
 /***Suivant***/
 .btn-suivant {
@@ -325,16 +320,23 @@ h2 {
     font-family: var(--font3);
     border-radius: 10px;
 }
+.next{
+    display: none;
+}
 
 .btn-suivant:hover {
     transition: .2s linear;
     box-shadow: inset -2px -2px 8px #ffffff6c, inset -2px -2px 12px #ffffff6c, inset 2px 2px 4px #ffffff6c, inset 2px 2px 8px #0000006c;
 }
 
-.btn-suivant:hover .span-start {
-    display: inline-block;
-    transform: scale(0.98);
+.is-true{
+    background: green;
 }
+
+.is-false{
+    background: red;
+}
+
 
 .progress {
     display: flex;
@@ -352,10 +354,6 @@ h2 {
     display: none;
 }
 
-.question-anim {
-    animation-name: question 1s both;
-    display: none;
-}
 
 
 
