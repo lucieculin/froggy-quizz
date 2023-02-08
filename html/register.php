@@ -43,14 +43,8 @@ $password = password_hash($_POST["password"], PASSWORD_ARGON2I);
 
 
 
-// Recuperation id nouvel utilisateur
-$id = $data->mastInsertId();
-// Connexion utilisateur
-
-
 // Stockage des infos utilisateur dans $_SESSION
 $_SESSION["user"] = [
-    "id" => $id,
     "userName" => $userName,
     "email" => $_POST["email"],
     "role" => ["ROLE_USER"]
