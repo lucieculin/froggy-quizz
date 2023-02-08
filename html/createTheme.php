@@ -61,7 +61,7 @@ $newTheme = "nouveau Theme";
             <?php }
 
               else{ ?>
-                      <button><a href="themeExistant.php">Vous souhaitez ajouter des données sur le theme <?= $_GET['option'] ?></a></button>;
+                      <button><a href="themeExistant.php">Vous souhaitez ajouter des données sur le theme <?= $_GET['option'] ?></a></button>
 
                  <?php }
 }else{
