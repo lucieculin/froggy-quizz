@@ -23,34 +23,33 @@ if (isset($_SESSION["user"])) {
 }
 // Vérification envoie formulaire
 if (empty($_POST)) {
-// Le formulaire a été envoyé
-// Vérification que tous les champs requis sont remplis
-    if (isset($_POST["firstName"], $_POST["lastName"], $_POST["email"], $_POST["userName"], $_POST["password"])
+    // Le formulaire a été envoyé
+    // Vérification que tous les champs requis sont remplis
+    if (
+        isset($_POST["firstName"], $_POST["lastName"], $_POST["email"], $_POST["userName"], $_POST["password"])
         && !empty($_POST["firstName"]) && !empty($_POST["lastName"]) && !empty(["email"]) && !empty(["userName"]) && !empty(["password"])
     ) {
-// Le formulaire est complet
+        // Le formulaire est complet
 
-// Protection des données
+        // Protection des données
         $userName = strip_tags($_POST["userName"]);
 
         if (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
-          
         }
 
-// Hachage du password
+        // Hachage du password
         $password = password_hash($_POST["password"], PASSWORD_ARGON2I);
 
 
-// AJOUTER CONTRÔLES DU PASSWORD ICI !!!!
+        // AJOUTER CONTRÔLES DU PASSWORD ICI !!!!
 
 
-// Stockage des infos utilisateur dans $_SESSION
+        // Stockage des infos utilisateur dans $_SESSION
         $_SESSION["user"] = [
             "userName" => $userName,
             "email" => $_POST["email"],
             "role" => ["ROLE_USER"]
         ];
-        
     }
 }
 // Redirection page mon_compte
@@ -63,7 +62,7 @@ if (empty($_POST)) {
 
     <section class="contact">
 
-        <form class="contact-form" method="GET">
+        <form class="contact-form" method="POST">
 
             <h2>Inscription</h2>
 
@@ -103,15 +102,27 @@ if (empty($_POST)) {
             </div>
 
 
-            <?php if(!empty($_GET['create']) && isset($_GET["firstName"]) && isset($_GET["lastName"]) && isset($_GET["email"]) && isset($_GET["userName"]) && isset($_GET['password']) && isset($_GET['password_retype'])){
-                $userFirstName = $_GET["firstName"];
-                $userLastName = $_GET["lastName"];
-                $userEmail = $_GET["email"];
-                $userUserName = $_GET["userName"];
-                $userPassword = $_GET["password"];
+            <?php if (!empty($_POST['create']) && !empty($_POST["firstName"]) && !empty($_POST["lastName"]) && !empty($_POST["email"]) && !empty($_POST["userName"]) && !empty($_POST['password']) && !empty($_POST['password_retype'])) {
+                if ($_POST['password'] !== $_POST['password_retype']) {
+                    echo "Vos mdp ne sont pas identique";
+                } else {
 
 
-                $addUser = $data->query("INSERT INTO users (users.username, users.name, users.lastname, users.email, users.password) VALUES ('$userUserName', '$userFirstName', '$userLastName', '$userEmail', '$userPassword' );");
+                    $userFirstName = $_POST["firstName"];
+                    $userLastName = $_POST["lastName"];
+                    $userEmail = $_POST["email"];
+                    $userUserName = $_POST["userName"];
+                    $userPassword = $_POST["password"];
+
+
+                    // $addUser = $data->query("INSERT INTO users (users.username, users.name, users.lastname, users.email, users.password) VALUES ('$userUserName', '$userFirstName', '$userLastName', '$userEmail', '$userPassword' );");
+
+                    echo "pénom = " . $userFirstName . " / " ;
+                    echo "nom = " . $userLastName . " / " ;
+                    echo "mail = " . $userEmail . " / " ;
+                    echo "pseudo = " . $userUserName . " / " ;
+                    echo "mdp = " . $userPassword  ;
+                }
             }
 
             ?>
@@ -124,7 +135,7 @@ if (empty($_POST)) {
 
 <?php
 
-if(isset($_POST["create"])){
+if (isset($_POST["create"])) {
     // createUser($user);
 }
 include('../partials/footer.php')
