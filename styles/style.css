@@ -594,6 +594,7 @@ transition: .2s linear;
 .main {
     overflow: hidden;
     padding-top: 120px;
+    padding-bottom: 120px;
 }
 
 
