@@ -35,7 +35,7 @@ include('../partials/header.php');
 
         </form>
 
-        <form action="../index.php"  target="_blank">
+        <form action="../../index.php" target="_blank">
 
             <button class="bAdminQuiz" type="submit" name="udpdate">RETOURNER SUR LA PAGE D'ACCUEIL</button>
 

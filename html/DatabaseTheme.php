@@ -65,8 +65,8 @@ $pages = ceil($countIdTheme / PER_PAGE);
                    <td>#<?= $theme['id'] ?></td>
                     <td><?= $theme['name'] ?></td>
                     <td>
-                        <a class="btn" href="./EditTheme.php?id=<?= $theme['id']?>">Edit</a>
-                        <a class="btn" href="./Delete.php?id=<?= $theme['id']?>">Delete</a>
+                        <a class="btn" href="EditTheme.php?id=<?= $theme['id']?>">Edit</a>
+                        <a class="btn" href="../Delete.php?id=<?= $theme['id']?>">Delete</a>
                     </td>
                 </tr>
             <?php endforeach ?>

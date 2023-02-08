@@ -77,8 +77,8 @@ $pages = ceil($countIdAnswer / PER_PAGE);
                     <td><?= $answer['nameQuestion'] ?></td>
                     <td><?= $answer['is_true'] ?></td>
                     <td>
-                        <a class="btn" href="./EditTheme.php?id=<?= $answer['id']?>">Edit</a>
-                        <a class="btn" href="./Delete.php?id=<?= $answer['id']?>">Delete</a>
+                        <a class="btn" href="EditTheme.php?id=<?= $answer['id']?>">Edit</a>
+                        <a class="btn" href="../Delete.php?id=<?= $answer['id']?>">Delete</a>
                     </td>
                 </tr>
             <?php endforeach ?>

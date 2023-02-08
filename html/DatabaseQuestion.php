@@ -70,8 +70,8 @@ $pages = ceil($countIdQuestion / PER_PAGE);
                     <td><?= $question['question'] ?></td>
                     <td><?= $question['nameQuiz'] ?></td>
                     <td>
-                        <a class="btn" href="./EditTheme.php?id=<?= $question['id']?>">Edit</a>
-                        <a class="btn" href="./Delete.php?id=<?= $question['id']?>">Delete</a>
+                        <a class="btn" href="EditTheme.php?id=<?= $question['id']?>">Edit</a>
+                        <a class="btn" href="../Delete.php?id=<?= $question['id']?>">Delete</a>
                     </td>
                 </tr>
             <?php endforeach ?>

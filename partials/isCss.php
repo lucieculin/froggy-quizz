@@ -19,7 +19,7 @@ if ($isPage === "home") {
 } elseif ($isPage === "register"){
     echo "<link rel='stylesheet' href='../styles/register.css'>";
 }elseif ($isPage === "AdminQuiz") {
-    echo "<link rel='stylesheet' href='../styles/AdminQuiz.css'>";
+    echo "<link rel='stylesheet' href='../../styles/AdminQuiz.css'>";
 } elseif ($isPage === "UpdateQuiz") {
     echo "<link rel='stylesheet' href='../styles/UpdateQuiz.css'>";
 } elseif ($isPage === "CreerFormulaire") {

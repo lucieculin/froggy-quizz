@@ -33,7 +33,7 @@ $displayAnswers = $answers->findAll();
 
     <div class="btnAdminQuiz">
 
-        <form action="./AdminQuiz.php" method="get" target="_blank">
+        <form action="AdminQuiz.php" method="get" target="_blank">
 
             <button class="bAdminQuiz" type="submit" name="Retour">GEREZ VOTRE BASE DE DONNEES</button>
 
