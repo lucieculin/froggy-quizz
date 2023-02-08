@@ -13,8 +13,8 @@ include('../partials/header.php');
 $userRepository = new UserRepository();
 $data = new PDO("mysql:host=127.0.0.1:3306;dbname=froggy_quiz", 'root', password: '');
 
-//Instanciation du repository
-$user = new UserRepository();
+
+
 if (isset($_SESSION["user"])) {
 
     //Ajouter un include vers Mon compte/Login
@@ -32,7 +32,7 @@ if (empty($_POST)) {
         $userName = strip_tags($_POST["userName"]);
 
         if (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
-            return;
+          
         }
 
 // Hachage du password
@@ -48,6 +48,7 @@ if (empty($_POST)) {
             "email" => $_POST["email"],
             "role" => ["ROLE_USER"]
         ];
+        
     }
 }
 // Redirection page mon_compte
@@ -107,5 +108,9 @@ if (empty($_POST)) {
 
 
 <?php
+
+if(isset($_POST["create"])){
+    // createUser($user);
+}
 include('../partials/footer.php')
 ?>
