@@ -1,9 +1,10 @@
 <?php
-$isPage="CreerFormulaire";
+$isPage="createTheme";
 require_once '../vendor/autoload.php';
 
 
 use App\Repository\ThemeRepository;
+use App\Repository\QuizRepository;
 
 include('../partials/header.php');
 $bdd= new PDO("mysql:host=127.0.0.1:3306;dbname=froggy_quiz", 'root', password:null);
@@ -15,39 +16,44 @@ if($bdd){
 }
 
 
-$newThemes = new ThemeRepository();
-$displayTheme = $newThemes->findAll();
-$newTheme = "nouveau Theme";
+$newsQuiz = new QuizRepository();
+$displayTheme = $newsQuiz->findAll();
+
+$newsQuiz = "nouveau Quiz";
 
 
 ?>
-
 <div class="bodyCreate">
 
-    <h1>Quel est le nom de votre nouveau thème</h1>
+    <h1>Quel est le nom de votre nouveau Quiz</h1>
 
     <form method="GET" action="">
 
-        <label for="theme"  >Entrer un nouveau thème :</label>
+        <label for="quiz"  >Entrer un nouveau Quiz :</label>
 
-        <input type="text" name="theme" id="theme" value=""/>
+        <input type="text" name="quiz" id="quiz" value=""/>
 
 
         <input type="submit" name="soumettre" value="soumettre"/>
 
-        <?php if((isset($_GET['soumettre'])) && (isset($_GET['theme']) )){
-        var_dump($_GET);
-
-        $theme = $_GET['theme'];
+        <?php if((isset($_GET['soumettre'])) && (isset($_GET['quiz']) )){
 
 
-        $addTheme = $bdd->query("INSERT INTO themes (themes.name) VALUES ('$theme');");
+            $quiz = $_GET['quiz'];
 
-        if($addTheme){
-        echo "Les Données importées avec succes";
-        }else{
-        die(mysqli_connect_error($bdd));
-        }
+            $newTheme = new ThemeRepository();
+            $idTheme = $newTheme->findIdByName('Culture');
+
+            echo $idTheme;
+
+            $addQuiz = $bdd->query("INSERT INTO quiz (quiz.name, quiz.theme_id) VALUES ('$quiz', '$idTheme');");
+
+            if($addQuiz){
+                echo "Données importées avec succes";?>
+                <button><a href="formulaireIndex.php">Passer Au Quiz</a></button>
+            <?php }else{
+                die(mysqli_connect_error($bdd));
+            }
         }?>
 
 
@@ -55,3 +61,4 @@ $newTheme = "nouveau Theme";
 
     </form>
 
+</div>
