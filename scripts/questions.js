@@ -31,7 +31,8 @@ response.forEach(function (btnNext) {
         btnNext.classList.add("is-false");
         trueButton.classList.add("is-true");
       }
-      
+      let next = questionContainer.querySelector(".next");
+      next.style.display = "block";
     }
   });
 });

@@ -77,7 +77,7 @@ for ($i = 0; $i < 10; $i++) {
                   </label>
                 <?php } ?>
               </div>
-              <div  class="btn-suivant next">Question suivant</div>
+              <div  class=" next">Question suivant</div>
             </div>
           </div>
           <?php

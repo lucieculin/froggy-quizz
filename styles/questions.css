@@ -258,6 +258,7 @@
 
 /***question réponse ***/
 .qr-container {
+    position:relative;
     height: 100%;
     width: 60%;
     display: flex;
@@ -301,11 +302,6 @@ h2 {
     padding: 10px;
 }
 
-.pushed {
-    transition: .2s linear;
-    box-shadow: inset -2px -2px 8px #ffffff6c, inset -2px -2px 12px #ffffff6c, inset 2px 2px 4px #ffffff6c, inset 2px 2px 8px #0000006c;
-}
-
 
 
 /***Suivant***/
@@ -321,20 +317,40 @@ h2 {
     border-radius: 10px;
 }
 .next{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
     display: none;
+    cursor: pointer;
+    text-align: center;
+    padding: 5px;
+    background-image: linear-gradient(145deg, #ffffff6c, #d9d9d96c);
+    box-shadow: 5px 5px 11px #cdcdcd6c,
+        -5px -5px 11px #ffffff6c;
+    font-size: 11px;
+    font-family: var(--font3);
+    border-radius: 10px;
 }
 
 .btn-suivant:hover {
     transition: .2s linear;
-    box-shadow: inset -2px -2px 8px #ffffff6c, inset -2px -2px 12px #ffffff6c, inset 2px 2px 4px #ffffff6c, inset 2px 2px 8px #0000006c;
+    box-shadow: inset -2px -2px 8px #ffffff6c, inset -2px -2px 12px #ffffff6c,
+     inset 2px 2px 4px #ffffff6c, inset 2px 2px 8px #0000006c;
 }
 
 .is-true{
-    background: green;
+    transition: .2s linear;
+    background: #3592356c;
+    box-shadow: inset 3px 3px 7px #1e531e6c,
+                inset -3px -3px 7px #57df576c;
 }
 
 .is-false{
-    background: red;
+    transition: .2s linear;
+    background: #fe4d4d6c;
+    box-shadow: inset 3px 3px 7px #8e2a2a6c,
+                inset -3px -3px 7px #ff80806c;
 }
 
 
