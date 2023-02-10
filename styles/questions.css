@@ -199,6 +199,7 @@
 
 .submit-container {
     justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
 
@@ -315,6 +316,7 @@ h2 {
     font-size: 15px;
     font-family: var(--font3);
     border-radius: 10px;
+    border:none
 }
 .next{
     position: absolute;
@@ -333,7 +335,7 @@ h2 {
     border-radius: 10px;
 }
 
-.btn-suivant:hover {
+.next-pushed {
     transition: .2s linear;
     box-shadow: inset -2px -2px 8px #ffffff6c, inset -2px -2px 12px #ffffff6c,
      inset 2px 2px 4px #ffffff6c, inset 2px 2px 8px #0000006c;

@@ -36,6 +36,17 @@ foreach ($allAnswer as $currentAnswer) {
 
 
 <div class="main">
+    <?php 
+    if($score<4){
+echo "gros naze ! ";
+    }elseif($score>=4 && $score<8){
+echo "pas maaal";
+    }elseif($score>=8){
+echo "geniuuus";
+    }else{
+        echo "wtf";
+    }
+    ?>
 <h1>Votre Score est de <?=$score?>/10</h1>
  
 <div class="container-results">

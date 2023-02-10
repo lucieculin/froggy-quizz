@@ -3,7 +3,8 @@ let start = document.querySelector("#start");
 let starter = document.querySelector("#starter");
 let allQuestions = document.querySelectorAll(".question-container");
 let nexts = document.querySelectorAll(".next");
-let currentQuestionIndex = 9;
+let btns = document.querySelectorAll(".btn-suivant");
+let currentQuestionIndex = 10;
 
 start.addEventListener("click", () => {
   starter.style.display = "flex";
@@ -44,3 +45,12 @@ nexts.forEach(function (next) {
     allQuestions[currentQuestionIndex].style.display = "flex";
   });
 });
+
+btns.forEach(function (btn) {
+  btn.addEventListener("mousedown", () => {
+btn.classList.add("next-pushed");
+  })
+  btn.addEventListener("mouseup", () => {
+btn.classList.remove("next-pushed");
+  })
+})
