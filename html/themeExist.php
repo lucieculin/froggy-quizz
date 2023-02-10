@@ -17,7 +17,7 @@ if($bdd){
 
 
 $newThemes = new ThemeRepository();
-$displayTheme = $newThemes->findById();
+$displayTheme = $newThemes->findAll();
 
 $newsQuiz = new QuizRepository();
 $displayQuiz = $newsQuiz->findAll();
@@ -31,7 +31,6 @@ foreach ($displayTheme as $item) {
     }
 }
 
-$displayQuizByTheme = $newsQuiz->findById(6, );
 
 ?>
 
