@@ -2,6 +2,7 @@
 
 namespace App\Repository;
 
+use App\Class\Question;
 use http\Params;
 use \PDO;
 use App\Class\Theme;
@@ -32,15 +33,18 @@ class ThemeRepository extends AbstractRepository
         $query->execute();
         return $query->fetchObject( ThemeRepository::class);
     }
-    
 
-    public function findIdByName(string $name){
+
+
+
+    public function findIdByName(string $name):array{
         $query = $this->pdo
-            ->prepare('SELECT themes.id FROM themes WHERE themes.name = ?');
-        $query->bindValue(1, $name, PDO::PARAM_INT);
+            ->prepare('SELECT themes.id FROM themes WHERE themes.name = $name;');
+        $query->bindValue(1, $name, PDO::PARAM_STR_CHAR);
         $query->execute();
-        return $query->fetchObject(theme::class);
+        return $query->fetch(PDO::FETCH_CLASS, Theme::class);
     }
+
 
 
     public function createTheme(string $name){

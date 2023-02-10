@@ -28,7 +28,7 @@ class QuizRepository extends AbstractRepository
 
     public function findById(INT $id){
         $query = $this->pdo
-        ->prepare('SELECT * FROM `quiz`WHERE quiz.id = ? ;');
+        ->prepare('SELECT quiz.name FROM `quiz` WHERE quiz.theme_id = ? ;');
         $query->bindValue(1, $id ,PDO::PARAM_INT);
         $query->execute();
         return $query->fetchObject(Quiz::class);
@@ -55,6 +55,7 @@ class QuizRepository extends AbstractRepository
             die();
         }
     }
+
 
 
     public function createQuiz(string $name, int $theme_id){

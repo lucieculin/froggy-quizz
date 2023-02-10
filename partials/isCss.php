@@ -19,11 +19,11 @@ if ($isPage === "home") {
 } elseif ($isPage === "register"){
     echo "<link rel='stylesheet' href='../styles/register.css'>";
 }elseif ($isPage === "AdminQuiz") {
-    echo "<link rel='stylesheet' href='../../styles/AdminQuiz.css'>";
+    echo "<link rel='stylesheet' href='../styles/AdminQuiz.css'>";
 } elseif ($isPage === "UpdateQuiz") {
     echo "<link rel='stylesheet' href='../styles/UpdateQuiz.css'>";
-} elseif ($isPage === "CreerFormulaire") {
-    echo "<link rel='stylesheet' href='../styles/CreerFormulaire.css'>";
+} elseif ($isPage === "createTheme" || $isPage === "themeExist") {
+    echo "<link rel='stylesheet' href='../styles/createTheme.css'>";
 } elseif ($isPage === "DatabaseTheme" || $isPage === "DatabaseQuiz" || $isPage === "DatabaseQuestion" || $isPage === "DatabaseAnswer") {
     echo "<link rel='stylesheet' href='../styles/Database.css'>";
 } elseif ($isPage === "EditTheme" || $isPage === "EditQuiz" || $isPage === "EditQuestion" || $isPage === "EditAnswers") {

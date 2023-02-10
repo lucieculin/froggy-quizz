@@ -17,13 +17,21 @@ if($bdd){
 
 
 $newThemes = new ThemeRepository();
-$displayTheme = $newThemes->findAll();
+$displayTheme = $newThemes->findById();
 
 $newsQuiz = new QuizRepository();
 $displayQuiz = $newsQuiz->findAll();
 
-$getTheme = $_GET['valeur'];
+$getTheme = $_GET['theme'];
 $newQuiz = "nouveau Quiz";
+
+foreach ($displayTheme as $item) {
+    if($item->getName() === $getTheme){
+       echo $result= $item->getId();
+    }
+}
+
+$displayQuizByTheme = $newsQuiz->findById(6, );
 
 ?>
 
@@ -36,13 +44,20 @@ $newQuiz = "nouveau Quiz";
     <h2>Créer un nouveau Quiz</h2>
 
 
+
+
+
     <form method="GET" action="">
 
         <select class="" id="quiz" name="option" required>
+
             <option id="option" name="vide" value="vide" selected="selected">----Select Quiz----</option>
+<?php if(!empty($getTheme)){?>
             <?php foreach ($displayQuiz as $quiz){ ?>
-                <option id="option" name="QuizChoice" value="<?= $quiz->getName() ?>"><?= $quiz->getName()?></option>
+
+                <option id="option" name="QuizChoice" value="<?= $result?>"> <?php var_dump($result); ?><?= $quiz->getName()?></option>
             <?php } ?>
+<?php } ?>
             <option id="option" name="newQuiz" value="<?= $newQuiz ?>" ><?= $newQuiz ?></option>
 
         </select>
