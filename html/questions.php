@@ -58,7 +58,9 @@ for ($i = 0; $i < 10; $i++) {
         </div>
         <?php
         // Boucle pour afficher les 10 questions sélectionnées
+        $counter = 0;
         for ($i = 0; $i < 10; $i++) {
+          $counter++;
         ?>
           <div class="question-container" id="qc<?= $i ?>">
             <img class="img-question" src="../assets/images/quiz-paysage/<?= $selectedQuestions[$i]->id ?>.png" alt="Photo de <?= $theQuiz->name ?> ">
@@ -75,13 +77,15 @@ for ($i = 0; $i < 10; $i++) {
                     <input type="radio" name="quiz<?php echo $i; ?>" value="<?php echo $answer->id; ?>" class="input-hidden">
                     <div class="reponse <?= $answer->is_true ? 'true' : '' ?>"><span class="span-reponse"><?= $answer->answer ?></span></div>
                   </label>
-                <?php } ?>
+                <?php } echo $counter; ?>
               </div>
               <div  class=" next">Question suivant</div>
+
             </div>
           </div>
           <?php
         }
+       
         ?>
         <div id="starter">
           <h2><?= $theQuiz->name ?></h2>
