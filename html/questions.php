@@ -7,6 +7,7 @@ use App\Repository\QuestionRepository;
 use App\Repository\AnswerRepository;
 
 
+
 $isPage = "questions";
 
 include('../partials/header.php');
@@ -36,10 +37,9 @@ $selectedQuestions = array_slice($questions, 0, 12);
 for ($i = 0; $i < 10; $i++) {
   $answers[$i] = $answer->findByQuestionId($selectedQuestions[$i]->id);
 }
-
-
 ?>
 <ul class="circles">
+  <li>?</li>  
   <li>?</li>
   <li>?</li>
   <li>?</li>
@@ -48,12 +48,12 @@ for ($i = 0; $i < 10; $i++) {
   <li>?</li>
   <li>?</li>
   <li>?</li>
-  <li>?</li>
-  <li>?</li>
+  <li>?</li> 
   <div class="main">
     <div class="margin-container">
       <form action="../html/result.php" method="post">
         <div class="question-container submit-container">
+        <input type="hidden" name="id" value="<?=$idQuiz?>">
           <input class="btn-suivant" type="submit"  value="Découvrez votre score">
         </div>
         <?php

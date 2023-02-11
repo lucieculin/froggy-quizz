@@ -14,6 +14,8 @@ $answer = new AnswerRepository();
 $question = new QuestionRepository();
 $score = 0;
 $nbr = 1;
+$points = 0;
+$idQuizz = $_POST["id"];
 
 foreach ($results as $result) {
     $currentAnswer = $answer->findById($result);
@@ -22,52 +24,41 @@ foreach ($results as $result) {
 
 foreach ($allAnswer as $currentAnswer) {
     $currentQuestion = $question->findById($currentAnswer->question_id);
-    
+
     if ($currentAnswer->is_true) {
-        // echo $currentQuestion->question . "<br>";
-        // echo "La reponse est bonne <br>";
         $score++;
     } else {
-        // echo $currentQuestion->question . "<br>";
-        // echo "la réponse est mauvaise <br>";
     }
 }
+//Defini la phrase de conclusion en fonction des resultats
+if ($score < 5 && $score >= 0) {
+    $conclusion = "Vous n'avez pas la moyenne. Retentez votre chance.";
+    $points = 0;
+    $spanPoints = "Vous n'optenez aucun point.";
+} elseif ($score >= 5 && $score < 9) {
+    $conclusion = "Bravo vous avez la moyenne.";
+    $points = 1;
+    $spanPoints = "Vous obtenez 1 point.";
+} elseif ($score >= 9) {
+    $conclusion = "Félicitation! Vous avez une exellente note ";
+    $points = 2;
+    $spanPoints = "Vous obtenez 2 points.";
+} else {
+    $conclusion = "";
+}
 ?>
-
-
 <div class="main">
-    <?php 
-    if($score<4){
-echo "gros naze ! ";
-    }elseif($score>=4 && $score<8){
-echo "pas maaal";
-    }elseif($score>=8){
-echo "geniuuus";
-    }else{
-        echo "wtf";
-    }
-    ?>
-<h1>Votre Score est de <?=$score?>/10</h1>
- 
-<div class="container-results">
-<?php
-foreach  ($allAnswer as $currentAnswer) {
- 
-?>
-    <div class="card-result">
-    <h2>Question n°<?=$nbr?></h2>
-
+    <div class="card" id="card";>
+        <h1>Votre Score est de <?= $score ?>/10</h1>
+        <h2><?= $conclusion ?></h2>
+        <span><?= $spanPoints ?></span>
+        <?php
+        ?>
+        <div class="container-results">
+                <a href="../html/questions.php?id=<?= $idQuizz ?>" class="btn">Réessayer</a>
+                <a href="../index.php" class="btn">Retour sur la page d'accueil</a>
+        </div>
     </div>
-<?php
-$nbr++;
-}
-?>
-</div>
-
-
-
-
-
 </div>
 <?php
 include('../partials/footer.php')
