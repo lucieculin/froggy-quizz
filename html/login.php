@@ -17,18 +17,11 @@ $data = new PDO("mysql:host=127.0.0.1:3306;dbname=froggy_quiz", 'root', password
 $user = new UserRepository();
 
 
+@$userName = $_POST["userName"];
+@$password = md5($_POST["password"]);
+@$connexion = $_POST["Connexion"];
+$erreur = "";
 
-// Le formulaire a été envoyé
-// Vérification que tous les champs requis sont remplis
-if (
-    isset($_POST["userName"], $_POST["password"])
-    && !empty(["userName"]) && !empty(["password"])
-) {
-    // Vérification de la validité de l'email
-    if (filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
-        die("Ceci n'est pas une adresse valide");
-    }
-}
 if (!empty($_POST)) {
 
     // User existant, vérification password
@@ -38,16 +31,31 @@ if (!empty($_POST)) {
             // Utilisateur et password corrects
             // Connexion de l'utilisateur
 
-
-            // Redirection page mon_compte
-            header("Location: mon_compte.php");
         }
     }
 }
 
-    
-    
-    ?>
+
+if (isset($connexion)) {
+
+    $selection = $data->prepare("select * from users where userName=? and password=? limit 1");
+    $selection->execute(array($userName, $password));
+    $tab = $selection->fetchAll();
+    if (count($tab) > 0) {
+        $_SESSION["userName"] = ucfirst(strtolower($tab[0]["userName"]));
+        $_SESSION["autoriser"] = "oui";
+        header("location:mon_compte.php");
+    } else
+        $erreur = "Mauvais login ou mot de passe!";
+}
+
+
+?>
+
+
+
+
+
 
 
 <main>
@@ -70,7 +78,7 @@ if (!empty($_POST)) {
             
             
             <div class="submit">
-                <input type="submit" value="Connexion">
+                <input type="submit" name="logged" value="Connexion">
             </div>
             
         </form>
@@ -80,11 +88,9 @@ if (!empty($_POST)) {
 
     </section>
     
-    
 </main>
 
 
 <?php
-
 include('../partials/footer.php')
 ?>

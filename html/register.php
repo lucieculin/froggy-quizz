@@ -115,9 +115,9 @@ if (empty($_POST)) {
                     $userPassword = $_POST["password"];
 
 
-                    // $addUser = $data->query("INSERT INTO users (users.username, users.name, users.lastname, users.email, users.password) VALUES ('$userUserName', '$userFirstName', '$userLastName', '$userEmail', '$userPassword' );");
+                     $addUser = $data->query("INSERT INTO users (users.username, users.name, users.lastname, users.email, users.password) VALUES ('$userUserName', '$userFirstName', '$userLastName', '$userEmail', '$userPassword' );");
 
-                    echo "pénom = " . $userFirstName . " / " ;
+                    echo "prénom = " . $userFirstName . " / " ;
                     echo "nom = " . $userLastName . " / " ;
                     echo "mail = " . $userEmail . " / " ;
                     echo "pseudo = " . $userUserName . " / " ;

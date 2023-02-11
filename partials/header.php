@@ -62,7 +62,7 @@
       <a href="#" class="underline">Profil</a>
 
       <ul class="drop">
-        <li>Mon compte</li>
+        <li><a href="./mon_compte.php">Mon Compte</a></li>
         <li>Mon identité</li>
 
       </ul>

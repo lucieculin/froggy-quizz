@@ -24,6 +24,8 @@ if ($isPage === "home") {
     echo "<link rel='stylesheet' href='../styles/UpdateQuiz.css'>";
 } elseif ($isPage === "questions") {
     echo "<link rel='stylesheet' href='../styles/questions.css'>";
+} elseif ($isPage === "mon_compte") {
+    echo "<link rel='stylesheet' href='../styles/mon_compte.css'>";
 } else {
 ?> <script>
         console.log("echec css")
