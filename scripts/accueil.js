@@ -34,19 +34,24 @@ document.addEventListener("scroll", () => {
     nav2.style.position = "absolute";
     nav2.style.top = "";
   }
-  if (value >= 2043) {
+  // if (value >= 2043) {
+  //   stats.style.position = "fixed";
+  //   stats.style.top = "10rem";
+  // } else {
+  //   stats.style.position = "sticky";
+  //   stats.style.top = "";
+  // }
+  // if (value >= 2600) {
+  //   stats.style.marginTop = "550px";
+  //   stats.style.position = "sticky";
+  //   stats.style.top = "";
+  // } else {
+  //   stats.style.marginTop = "0px";
+  // }
+  if (stats.offsetTop - window.pageYOffset <= 200) {
     stats.style.position = "fixed";
-    stats.style.top = "10rem";
-  } else {
-    stats.style.position = "sticky";
-    stats.style.top = "";
-  }
-  if (value >= 2600) {
-    stats.style.marginTop = "550px";
-    stats.style.position = "sticky";
-    stats.style.top = "";
-  } else {
-    stats.style.marginTop = "0px";
+   stats.style.top = "200px";
+
   }
 
   astre.style.top = value * 1.1 - 400 + "px";
