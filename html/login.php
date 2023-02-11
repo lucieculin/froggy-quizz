@@ -13,33 +13,16 @@ include('../partials/header.php');
 $userRepository = new UserRepository();
 $data = new PDO("mysql:host=127.0.0.1:3306;dbname=froggy_quiz", 'root', password: '');
 
-//Instanciation du repository
-$user = new UserRepository();
 
-
-@$userName = $_POST["userName"];
-@$password = md5($_POST["password"]);
+@$userUserName = $_POST["userName"];
+@$userPassword = md5($_POST["password"]);
 @$connexion = $_POST["Connexion"];
 $erreur = "";
 
-if (!empty($_POST)) {
-
-    // User existant, vérification password
-
-    if (!password_verify($_POST["password"], $user["password"])) {
-        die("L'utilisateur et/ou le password est incorrect"); {
-            // Utilisateur et password corrects
-            // Connexion de l'utilisateur
-
-        }
-    }
-}
-
-
 if (isset($connexion)) {
 
-    $selection = $data->prepare("select * from users where userName=? and password=? limit 1");
-    $selection->execute(array($userName, $password));
+    $selection = $data->prepare("SELECT * from users where userName=? and password=? limit 1");
+    $selection->execute(array($userUserName, $userPassword));
     $tab = $selection->fetchAll();
     if (count($tab) > 0) {
         $_SESSION["userName"] = ucfirst(strtolower($tab[0]["userName"]));
@@ -51,12 +34,6 @@ if (isset($connexion)) {
 
 
 ?>
-
-
-
-
-
-
 
 <main>
     
