@@ -36,12 +36,17 @@ body {
     margin: 0;
     padding: 0;
 }
-
+.burger {
+    display: none;
+}
 .container-home-page {
-    padding: 0 10%;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    width: 1200px;
+    overflow: visible;
+
 }
 
 nav {
@@ -619,8 +624,7 @@ nav a {
 }
 
 .main {
-    padding-top: 120px;
-    height: 2200px !important;
+    height: 1800px !important;
 
 }
 
@@ -1384,8 +1388,11 @@ height: 100%;
 
 /*****************Tablette Mode**************************/
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1200px) {
     
+    .h2-title-section{
+        width: 600px;
+    }
     .none-tab{
         display: none !important;
     }
@@ -1393,10 +1400,8 @@ height: 100%;
      position : fixed !important;
       top: 4rem;
     }
-    .container-home-grid{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    .container-home-right{
+        display: none !important;
     }
  .card-quiz-by-theme{
     height: 60px;
@@ -1405,4 +1410,92 @@ height: 100%;
  .container-home-page{
     width: 100%;
  }
+ .container-home-grid{
+    justify-content: center;
+ }
+ .card{
+    height: 100px;
+    min-width: 75px;
+ }
+}
+  
+/***********************Mobile Mode***********************/
+
+@media screen and (max-width: 900px){
+.container-margin{
+    display: none !important;
+}
+.container-home-page{
+   padding-top: 200px;
+ }
+ 
+ .burger {
+    display: block;
+    position: relative;
+    padding: 0px;
+    padding-right: 10px;
+    width: 45px;
+    height: 45px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 35px;
+    height: 2px;
+    background: var(--bluue);
+    border-radius: 3px;
+    transition: .4s ease-in-out;
+}
+
+.show-nav .bar {
+    width: 0;
+    background: transparent;
+}
+
+.bar::before,
+.bar::after {
+    content: "";
+    width: 35px;
+    height: 2px;
+    left: 0px;
+    position: absolute;
+    background: var(--bluue);
+    border-radius: 3px;
+    transition: .4s ease-in-out;
+}
+
+.bar::before {
+    transform: translatey(-12px);
+}
+
+.bar::after {
+    transform: translatey(12px);
+}
+
+.show-nav .bar::before {
+    transform: rotate(45deg);
+    background: red;
+}
+
+.show-nav .bar::after {
+    transform: rotate(-45deg);
+    background: red;
+}
+
+.show-nav .zero {
+    transition: 1s ease-out;
+
+}
+
+.show-nav .first {
+    transition: 1s .2s ease-out;
+}
+
+.show-nav .second {
+    transition: 1s .4s ease-out;
+}
+
 }

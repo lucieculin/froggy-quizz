@@ -1,5 +1,5 @@
 
-<footer class="footer">
+<footer class="footer" id="footer">
       <div class="colomn1 colomns">
         <h3 class="h3-footer">QUIZZ FROG</h3>
         <ul>

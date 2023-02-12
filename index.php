@@ -31,17 +31,19 @@ $allThemes = $themes->findAll();
 </head>
 
 <body>
-  <nav class="nav1" id="nav1">
-    <div class="container">
-      <div class="logoContainer">
-        <a class="imgLogo1">
-          <img src="/assets/images/F-logo.png" alt="logo_froggy_quiz" class="logo" />
-        </a>
-        <div class="sp1 logospan">
-          <span class="spsp">ROGGY</span>
+  <div class="header" id="header">
+
+    <nav class="nav1" id="nav1">
+      <div class="container">
+        <div class="logoContainer">
+          <a class="imgLogo1">
+            <img src="/assets/images/F-logo.png" alt="logo_froggy_quiz" class="logo" />
+          </a>
+          <div class="sp1 logospan">
+            <span class="spsp">ROGGY</span>
         </div>
       </div>
-
+      
       <div class="logoContainer">
         <a class="imgLogo2">
           <img src="/assets/images/q-logo.png" alt="logo_froggy_quiz" class="logo" />
@@ -58,7 +60,7 @@ $allThemes = $themes->findAll();
           <img src="../assets/images/loupe.png" alt="image de loupe" />
         </button>
       </div>
-
+      
       <div class="connexion">
         <a href="./html/login.php">Login</a>
       </div>
@@ -90,7 +92,7 @@ $allThemes = $themes->findAll();
     <img src="../assets/images/cloud-mid.png" id="cloud" class="clouds" alt="" />
     <img src="../assets/images/cloud-contact.png" id="cloud-contact" class="clouds" alt="" />
   </section>
-
+  
   <nav id="nav2" class="nav2">
     <ul class="list-nav2">
       <div class="nav navdrop" id="nav2nav1">
@@ -103,17 +105,17 @@ $allThemes = $themes->findAll();
       </div>
       <div class="nav navdrop">
         <div class="underline">Profil</div>
-
+        
         <ul class="drop">
           <li>Mon compte</li>
           <li>Mon identité</li>
-
+          
         </ul>
       </div>
-
+      
       <div class="nav navdrop">
         <div class="underline">Règlages</div>
-
+        
         <ul class="drop">
           <li id="language">Languages</li>
           <li id="container-sousmenu-language">
@@ -121,11 +123,11 @@ $allThemes = $themes->findAll();
               <li id="fr">Francais</li>
               <li id="uk">English</li>
             </ul>
-
+            
           </li>
           <li id="theme">Thèmes</li>
           <li id="container-sousmenu-theme">
-
+            
             <ul id="box-theme">
               <li id="light">Light</li>
               <li id="dark">Dark</li>
@@ -135,32 +137,38 @@ $allThemes = $themes->findAll();
       </div>
       <div class="nav">
         <div id="no-drop" class="no-drop underline">Boutique</div>
-
+        
         <!-- <ul class="drop">
-            <li>random</li>
-            <li>random</li>
-            <li>random</li>
-            <li>random</li>
-            <li>random</li>
-          </ul> -->
-
+          <li>random</li>
+          <li>random</li>
+          <li>random</li>
+          <li>random</li>
+          <li>random</li>
+        </ul> -->
+        
       </div>
-
+      
       <div class="indicator" id="indicator">
         <!-- <div class="under-indicator"></div> -->
         <div id="indicator-sousmenu">
-        </div>
-    </ul>
+          </div>
+        </ul>
     <div class="cloud-nav"></div>
+
+    <button class="burger">
+            <span class="bar"></span>
+        </button>
+        
   </nav>
-
-
-
+  
+</div>
+  
+  
   <!-- /*******************page******************************/ -->
-
-
-
-
+  
+  
+  
+  
 
 
 

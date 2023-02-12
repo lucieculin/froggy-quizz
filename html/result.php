@@ -47,19 +47,7 @@ if ($score < 5 && $score >= 0) {
     $conclusion = "";
 }
 ?>
-<div class="main">
-    <div class="card" id="card";>
-        <h1>Votre Score est de <?= $score ?>/10</h1>
-        <h2><?= $conclusion ?></h2>
-        <span><?= $spanPoints ?></span>
-        <?php
-        ?>
-        <div class="container-results">
-                <a href="../html/questions.php?id=<?= $idQuizz ?>" class="btn">Réessayer</a>
-                <a href="../index.php" class="btn">Retour sur la page d'accueil</a>
-        </div>
-    </div>
-</div>
+é
 <?php
 include('../partials/footer.php')
 ?>

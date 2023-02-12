@@ -34,25 +34,38 @@ document.addEventListener("scroll", () => {
     nav2.style.position = "absolute";
     nav2.style.top = "";
   }
-  // if (value >= 2043) {
-  //   stats.style.position = "fixed";
-  //   stats.style.top = "10rem";
-  // } else {
-  //   stats.style.position = "sticky";
-  //   stats.style.top = "";
-  // }
-  // if (value >= 2600) {
-  //   stats.style.marginTop = "550px";
-  //   stats.style.position = "sticky";
-  //   stats.style.top = "";
-  // } else {
-  //   stats.style.marginTop = "0px";
-  // }
-  if (stats.offsetTop - window.pageYOffset <= 200) {
-    stats.style.position = "fixed";
-   stats.style.top = "200px";
 
+
+  // let header = document.querySelector('#header');
+  // let headerHeight = header.offsetHeight;
+  // let footer = document.querySelector('#footer');
+  // let footerTop = footer.offsetTop;
+  // let statsHeight = stats.offsetHeight;
+
+  // if (value >= headerHeight && value <= footerTop - statsHeight) {
+  //   stats.style.position = "fixed";
+  //   stats.style.top = `${headerHeight}px`;
+  // } else {
+  //   stats.style.position = "relative";
+  //   stats.style.top = "";
+  // }
+
+  
+  if (value >= 2043) {
+    stats.style.position = "fixed";
+    stats.style.top = "190px";
+  } else {
+    stats.style.position = "sticky";
+    stats.style.top = "";
   }
+  if (value >= 2600) {
+    stats.style.marginTop = "550px";
+    stats.style.position = "sticky";
+    stats.style.top = "";
+  } else {
+    stats.style.marginTop = "0px";
+  }
+
 
   astre.style.top = value * 1.1 - 400 + "px";
   astre.style.left = value * -0.1 - 150 + "px";

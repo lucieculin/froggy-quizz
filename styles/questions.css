@@ -20,15 +20,18 @@
     --font3: 'Poppins', sans-serif;
 }
 
+
 .main {
     height: 500px;
 }
+
 
 .circles {
     height: 100%;
     overflow: hidden;
     position: relative;
 }
+
 
 .circles li {
     position: absolute;
@@ -45,7 +48,6 @@
     color: white;
 }
 
-
 .circles li:nth-child(1) {
     left: 25%;
     width: 80px;
@@ -53,7 +55,6 @@
     font-size: 64px;
     animation-delay: 0s;
 }
-
 
 .circles li:nth-child(2) {
     left: 10%;
