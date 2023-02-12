@@ -3,11 +3,25 @@ $isPage="AdminQuiz";
 include('../partials/header.php');
 
 ?>
+<body class="bodyAdminQuiz">
 
-<div class="containerAdminQuiz">
+
+
     <h1 class="h1AdminQuiz">GEREZ VOTRE BASE DE DONNEES</h1>
 
     <h2 class="h2AdminQuiz">Vous souhaitez :</h2>
+
+
+
+<div class="carteAdminQuiz">
+
+    <div class="imgAdminQuiz">
+
+        <img src="../assets/images/database3.jpg">
+
+    </div>
+
+
 
     <div class="btnAdminQuiz">
 
@@ -35,18 +49,24 @@ include('../partials/header.php');
 
         </form>
 
+        <form action="formulaireIndex.php" target="_blank">
+
+            <button class="bAdminQuiz" type="submit" name="udpdate">CREER DU CONTENU</button>
+
+        </form>
+
         <form action="../../index.php" target="_blank">
 
             <button class="bAdminQuiz" type="submit" name="udpdate">RETOURNER SUR LA PAGE D'ACCUEIL</button>
 
         </form>
 
-
-
     </div>
 
 </div>
 
+
+</body>
 
 <?php
 include('../partials/footer.php');

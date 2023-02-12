@@ -1,0 +1,39 @@
+.containerDelete{
+    padding-top: 10rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.bodyDelete{
+
+    background-color: black;
+    color: white;
+
+}
+img{
+    width: 100%;
+}
+
+.btnDelete{
+    background-color: grey;
+    color: white;
+    border: 1px solid whitesmoke;
+    padding: 14px;
+    font-size: 16px;
+}
+.btnDelete:hover {
+    border : 3px solid whitesmoke;
+    border-radius: 25%;
+    transform: rotate(7deg) scale(1.4);
+}
+
+.deleteImg{
+    display: none;
+    margin-top: 50px;
+}

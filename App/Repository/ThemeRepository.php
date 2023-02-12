@@ -28,10 +28,10 @@ class ThemeRepository extends AbstractRepository
 
     public function findById(INT $id){
         $query = $this->pdo
-            ->prepare("SELECT * FROM themes WHERE themes.id = ?;");
+            ->prepare("SELECT themes.name FROM themes WHERE themes.id = ?;");
         $query->bindValue(1, $id, PDO::PARAM_INT);
         $query->execute();
-        return $query->fetchObject( ThemeRepository::class);
+        return $query->fetchObject( Theme::class);
     }
 
 

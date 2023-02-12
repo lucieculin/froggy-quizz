@@ -19,8 +19,7 @@ if($bdd){
 $newThemes = new ThemeRepository();
 $displayTheme = $newThemes->findAll();
 
-$newsQuiz = new QuizRepository();
-$displayQuiz = $newsQuiz->findAll();
+
 
 $getTheme = $_GET['theme'];
 $newQuiz = "nouveau Quiz";
@@ -30,13 +29,14 @@ foreach ($displayTheme as $item) {
        echo $result= $item->getId();
     }
 }
-
+$newsQuiz = new QuizRepository();
+$displayQuiz = $newsQuiz->findAllById(intval($result));
 
 ?>
 
 <div class="bodyCreate">
 
-    <?php var_dump($getTheme); ?>
+    <?php var_dump($result); ?>
 
     <h1>Modification sur le thème <?= $getTheme ?></h1>
 
@@ -51,12 +51,12 @@ foreach ($displayTheme as $item) {
         <select class="" id="quiz" name="option" required>
 
             <option id="option" name="vide" value="vide" selected="selected">----Select Quiz----</option>
-<?php if(!empty($getTheme)){?>
+
             <?php foreach ($displayQuiz as $quiz){ ?>
 
-                <option id="option" name="QuizChoice" value="<?= $result?>"> <?php var_dump($result); ?><?= $quiz->getName()?></option>
+                <option id="option" name="QuizChoice" value="<?= $quiz->getName()?>"><?= $quiz->getName()?></option>
             <?php } ?>
-<?php } ?>
+
             <option id="option" name="newQuiz" value="<?= $newQuiz ?>" ><?= $newQuiz ?></option>
 
         </select>
@@ -67,6 +67,7 @@ foreach ($displayTheme as $item) {
             var_dump($_GET['option']);
 
             if($_GET['option'] === 'vide'){
+
                 echo 'Selectionner un Quiz existant ou créer un nouveau Quiz';
 
             }
@@ -74,13 +75,13 @@ foreach ($displayTheme as $item) {
 
             elseif ($_GET['option'] === $newQuiz) { ?>
 
-                <button><a href="createQuiz.php">Valider la création d'un nouveau Quiz</a></button>
+                <button><a href="createQuiz.php?">Valider la création d'un nouveau Quiz</a></button>
 
 
             <?php }
 
             else{ ?>
-                <button><a href="quizExist.php?valeur=<?=$_GET['option']?>">Vous souhaitez ajouter des données sur le Quiz <?= $_GET['option'] ?></a></button>
+                <button><a href="quizExist.php?quiz=<?=$_GET['option']?>">Vous souhaitez ajouter des données sur le Quiz <?= $_GET['option'] ?></a></button>
                 <?php var_dump($_GET) ?>
 
             <?php }
@@ -92,35 +93,6 @@ foreach ($displayTheme as $item) {
 
 
     </form>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

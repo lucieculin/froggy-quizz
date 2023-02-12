@@ -20,14 +20,14 @@ if ($isPage === "home") {
     echo "<link rel='stylesheet' href='../styles/register.css'>";
 }elseif ($isPage === "AdminQuiz") {
     echo "<link rel='stylesheet' href='../styles/AdminQuiz.css'>";
-} elseif ($isPage === "UpdateQuiz") {
-    echo "<link rel='stylesheet' href='../styles/UpdateQuiz.css'>";
-} elseif ($isPage === "createTheme" || $isPage === "themeExist") {
+} elseif ($isPage === "createTheme" || $isPage === "themeExist" || $isPage === "quizExist" || $isPage === "createQuiz" || $isPage === "createAnswer") {
     echo "<link rel='stylesheet' href='../styles/createTheme.css'>";
-} elseif ($isPage === "DatabaseTheme" || $isPage === "DatabaseQuiz" || $isPage === "DatabaseQuestion" || $isPage === "DatabaseAnswer") {
+}elseif ($isPage === "delete") {
+    echo "<link rel='stylesheet' href='../styles/delete.css'>";
+}elseif ($isPage === "DatabaseTheme" || $isPage === "DatabaseQuiz" || $isPage === "DatabaseQuestion" || $isPage === "DatabaseAnswer") {
     echo "<link rel='stylesheet' href='../styles/Database.css'>";
-} elseif ($isPage === "EditTheme" || $isPage === "EditQuiz" || $isPage === "EditQuestion" || $isPage === "EditAnswers") {
-    echo "<link rel='stylesheet' href='../styles/EditTheme.css'>";
+} elseif ($isPage === "updateTheme" || $isPage === "updateQuiz" || $isPage === "updateQuestion" || $isPage === "updateAnswers") {
+    echo "<link rel='stylesheet' href='../styles/update.css'>";
 } elseif ($isPage === "questions") {
     echo "<link rel='stylesheet' href='../styles/questions.css'>";
 } else {

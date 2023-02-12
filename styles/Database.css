@@ -1,20 +1,58 @@
-.body {
-    padding-top: 15rem;
-    margin-left: 5rem;
-    margin-right: 5rem;
-    margin-bottom: 10rem;
+.bodyDatabase {
+    background: radial-gradient(circle, rgba(255,255,255,1) 13%, rgba(2,109,155,1) 74%);
+
+
 }
 
-.container{
+.containerDatabase{
+    padding-top: 10rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
     display: flex;
     flex-direction: column;
 }
 table, th, td{
     border: 1px solid black;
+    align-items: center;
 }
 
 .forminput{
     display: flex;
+    justify-content: center;
     gap: 1rem;
     padding: 2rem;
+}
+h1{
+    display: flex;
+    justify-content: center;
+}
+table{
+
+    width: 80%;
+    margin: 3rem;
+
+}
+
+.btnDatabase{
+    display: flex;
+    gap : 2rem;
+    justify-content: space-around;
+    font-weight: bolder;
+}
+
+.btn{
+    color: black;
+
+}
+
+.btnPagination{
+    color: black;
+    margin: 2rem;
+}
+
+.paginationDatabase{
+    display: flex;
+    justify-content: center;
+    font-size: larger;
+
 }

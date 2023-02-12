@@ -26,13 +26,15 @@ class QuizRepository extends AbstractRepository
 
 
 
-    public function findById(INT $id){
+    public function findAllById(int $id):array{
         $query = $this->pdo
-        ->prepare('SELECT quiz.name FROM `quiz` WHERE quiz.theme_id = ? ;');
-        $query->bindValue(1, $id ,PDO::PARAM_INT);
+            ->prepare('SELECT * FROM `quiz` WHERE quiz.theme_id = ?;');
+        $query->bindValue(1, $id, PDO::PARAM_INT);
         $query->execute();
-        return $query->fetchObject(Quiz::class);
+        return $query->fetchAll(PDO::FETCH_CLASS, Quiz::class);
     }
+
+
 
     public function findByTheme(INT $themeId, INT $limit):array{
         $query = $this->pdo

@@ -39,8 +39,8 @@ $pages = ceil($countIdTheme / PER_PAGE);
 
 ?>
 
-<div class="body">
-    <div class="container">
+<div class="bodyDatabase">
+    <div class="containerDatabase">
 
         <h1>Mes Themes</h1>
 
@@ -65,13 +65,17 @@ $pages = ceil($countIdTheme / PER_PAGE);
                    <td>#<?= $theme['id'] ?></td>
                     <td><?= $theme['name'] ?></td>
                     <td>
-                        <a class="btn" href="EditTheme.php?id=<?= $theme['id']?>">Edit</a>
-                        <a class="btn" href="../Delete.php?id=<?= $theme['id']?>">Delete</a>
+                        <div class="btnDatabase">
+                        <a class="btn" href="updateTheme.php?id=<?= $theme['id']?>">Update</a>
+                        <a class="btn" href="delete.php?id=<?= $theme['id']?>">Delete</a>
+                        </div>
                     </td>
                 </tr>
             <?php endforeach ?>
             </tbody>
         </table>
+
+        <div class="paginationDatabase">
 
         <?php if ($pages > 1 && $page > 1): ?>
             <a href = "?p=<?= $page - 1 ?>" class="btnPagination">Page Précédente</a>
@@ -81,7 +85,7 @@ $pages = ceil($countIdTheme / PER_PAGE);
         <?php if ($pages > 1 && $page < $pages): ?>
             <a href = "?p=<?= $page + 1 ?>" class="btnPagination">Page Suivante</a>
         <?php endif ?>
-
+        </div>
 
     </div>
 
