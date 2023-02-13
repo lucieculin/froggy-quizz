@@ -47,7 +47,7 @@ $pages = ceil($countIdQuestion / PER_PAGE);
 
         <h1>Mes Questions</h1>
 
-        <form action="" class="forminput">
+        <form action="" class="formInput">
             <div class="">
                 <input type="text" class="" name="q" placeholder="Rechercher par Question" value="<?= $_GET['q'] ?? null ?>">
             </div>
@@ -90,19 +90,15 @@ $pages = ceil($countIdQuestion / PER_PAGE);
             <a href = "?p=<?= $page + 1 ?>" class="btnPagination">Page Suivante</a>
         <?php endif ?>
         </div>
+
+        <div class="buttonAccueilAdmin">
+            <button><a href="AdminQuiz.php">Accueil Admin</a></button>
+
+            <button><a href="../index.php">Accueil Principale</a></button>
+        </div>
+
     </div>
 
 </div>
 
 
-
-
-
-
-
-
-
-
-<?php
-include('../partials/footer.php');
-?>

@@ -30,14 +30,18 @@ $newTheme = "nouveau Theme";
 
          <h2>Créer un nouveau thème</h2>
 
+    <fieldset>
+        <legend>---SELECTION---</legend>
+
+
     <form method="GET" action="">
 
         <select class="" id="theme" name="option" required>
-            <option id="option" name="vide" value="vide" selected="selected">----Select Theme----</option>
+
             <?php foreach ($displayTheme as $theme){ ?>
                 <option id="option" name="themeChoice" value="<?= $theme->getName() ?>"><?= $theme->getName()?></option>
             <?php } ?>
-            <option id="option" name="newTheme" value="<?= $newTheme ?>" ><?= $newTheme ?></option>
+            <option id="option" name="newTheme" value="<?= $newTheme ?>" selected="selected"><?= $newTheme ?></option>
 
         </select>
 
@@ -48,13 +52,7 @@ $newTheme = "nouveau Theme";
 <?php if(isset($_GET['selectionner'] ) && ($_GET['selectionner']=== 'selectionner')){
 
 
-         if($_GET['option'] === 'vide'){
-        echo 'Selectionner un thème existant ou créer un nouveau thème';
-
-        }
-
-
-         elseif ($_GET['option'] === $newTheme) { ?>
+         if($_GET['option'] === $newTheme) { ?>
 
              <button><a href="createTheme.php">Valider la création d'un nouveau thème</a></button>
 
@@ -75,7 +73,7 @@ $newTheme = "nouveau Theme";
 
         </form>
 
-
+    </fieldset>
 
 
 

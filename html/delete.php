@@ -18,13 +18,14 @@ require_once '../vendor/autoload.php';
     <img src="https://media.giphy.com/media/CeSaBm8pF3vG/giphy.gif" width="480" height="270" alt="refus acces">
 </div>
 
+    <div class="buttonDeleteAdmin">
+        <button><a href="AdminQuiz.php">Accueil Admin</a></button>
 
+        <button><a href="../index.php">Accueil Principale</a></button>
+    </div>
 
 
 
 </div>
 </div>
-<script src="../scripts/delete.js"></script>
-<?php
-include('../partials/footer.php');
-?>
+

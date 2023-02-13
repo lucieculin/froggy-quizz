@@ -1,8 +1,8 @@
 .containerDelete{
-    padding-top: 10rem;
+    padding-top: 5rem;
     margin-left: 5rem;
     margin-right: 5rem;
-    height: 500px;
+    height: 1400px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,8 +12,11 @@
 
 .bodyDelete{
 
-    background-color: black;
+    background-image: url("../assets/images/Delete.jpg");
     color: white;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: poppins;
 
 }
 img{
@@ -36,4 +39,10 @@ img{
 .deleteImg{
     display: none;
     margin-top: 50px;
+}
+
+.buttonDeleteAdmin{
+    display: flex;
+    gap: 3rem;
+    margin: 5rem;
 }

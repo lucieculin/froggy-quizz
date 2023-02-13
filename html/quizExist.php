@@ -44,22 +44,29 @@ foreach ($displayQuiz as $quiz) {
 
     <h2>Créer les Questions </h2>
 
-<form method="get" action="createAnswer.php">
+<form method="get" action="">
 
     <label for="question" >Entrer la nouvelle question pour le Quiz : "<?= $getQuiz ?>"</label>
     <input type="text" name="question" placeholder="Entrer la question"/>
+
+    <?php echo $result?>
+    <input type="hidden" name="id" value="<?php echo $result?>"/>
+    <input type="hidden" name="name" value="<?php echo $getQuiz?>"/>
 
     <input type="submit" name="soumettre" value="soumettre"/>
 
 
 <?php if((!empty($_GET['question'])) && (!empty($_GET['soumettre']))){
-    echo "tata";
-    $question = $_GET['question'];
 
-    $addQuestion = $bdd->query("INSERT INTO questions (questions.question, questions.quiz_id) VALUES ('$question', '$result');");
+    $question = htmlentities($_GET['question']);
+    $idQuiz = $_GET['id'];
+
+    $addQuestion = $bdd->query("INSERT INTO questions (questions.question, questions.quiz_id) VALUES ('$question', $idQuiz);");
 
     if($addQuestion){
         echo "Données importées avec succes";?>
+        <button><a href="createAnswer.php?idQuiz=<?= $_GET['id']?>&nameQuestion=<?= $_GET['question']?>">Aller aux réponses</a></button>
+
     <?php }else{
         die(mysqli_connect_error($bdd));
     }

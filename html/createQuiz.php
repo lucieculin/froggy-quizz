@@ -33,6 +33,7 @@ $newsQuiz = "nouveau Quiz";
 
         <input type="text" name="quiz" id="quiz" value=""/>
 
+        <input type="hidden" name="idTheme" value=""/>
 
         <input type="submit" name="soumettre" value="soumettre"/>
 

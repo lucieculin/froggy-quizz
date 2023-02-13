@@ -5,69 +5,54 @@ include('../partials/header.php');
 ?>
 <body class="bodyAdminQuiz">
 
-
-
     <h1 class="h1AdminQuiz">GEREZ VOTRE BASE DE DONNEES</h1>
 
-    <h2 class="h2AdminQuiz">Vous souhaitez :</h2>
+<div class="centerCarteAdmin">
 
+    <div class="carteAdminQuiz">
 
+        <div class="btnAdminQuiz">
 
-<div class="carteAdminQuiz">
+            <form action="DatabaseTheme.php" method="get" target="_blank">
 
-    <div class="imgAdminQuiz">
+                <button class="bAdminQuiz" type="submit" name="create">VOIR LES THEMES</button>
 
-        <img src="../assets/images/database3.jpg">
+            </form>
 
-    </div>
+            <form action="DatabaseQuiz.php" method="get" target="_blank">
 
+                <button class="bAdminQuiz" type="submit" name="create">VOIR LES QUIZ</button>
 
+            </form>
 
-    <div class="btnAdminQuiz">
+            <form action="DatabaseQuestion.php" method="get" target="_blank">
 
-        <form action="DatabaseTheme.php" method="get" target="_blank">
+                <button class="bAdminQuiz" type="submit" name="create">VOIR LES QUESTIONS</button>
 
-            <button class="bAdminQuiz" type="submit" name="create">VOIR LES THEMES</button>
+            </form>
 
-        </form>
+            <form action="DatabaseAnswer.php" method="get" target="_blank">
 
-        <form action="DatabaseQuiz.php" method="get" target="_blank">
+                <button class="bAdminQuiz" type="submit" name="create">VOIR LES REPONSES</button>
 
-            <button class="bAdminQuiz" type="submit" name="create">VOIR LES QUIZ</button>
+            </form>
 
-        </form>
+            <form action="formulaireIndex.php" target="_blank">
 
-        <form action="DatabaseQuestion.php" method="get" target="_blank">
+                <button class="bAdminQuiz" type="submit" name="udpdate">CREER DU CONTENU</button>
 
-            <button class="bAdminQuiz" type="submit" name="create">VOIR LES QUESTIONS</button>
+            </form>
 
-        </form>
+            <form action="../../index.php" target="_blank">
 
-        <form action="DatabaseAnswer.php" method="get" target="_blank">
+                <button class="bAdminQuiz" type="submit" name="udpdate">RETOURNER SUR LA PAGE D'ACCUEIL DU SITE</button>
 
-            <button class="bAdminQuiz" type="submit" name="create">VOIR LES REPONSES</button>
+            </form>
 
-        </form>
-
-        <form action="formulaireIndex.php" target="_blank">
-
-            <button class="bAdminQuiz" type="submit" name="udpdate">CREER DU CONTENU</button>
-
-        </form>
-
-        <form action="../../index.php" target="_blank">
-
-            <button class="bAdminQuiz" type="submit" name="udpdate">RETOURNER SUR LA PAGE D'ACCUEIL</button>
-
-        </form>
+        </div>
 
     </div>
 
 </div>
 
-
 </body>
-
-<?php
-include('../partials/footer.php');
-?>
