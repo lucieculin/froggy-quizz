@@ -17,6 +17,9 @@ class User
 
     private string $role;
 
+
+
+
     /**
      * @return string
      */
@@ -37,7 +40,7 @@ class User
 
     private int $baniere_id;
 
-    private DateTime $created_at;
+
 
     /**
      * @return int

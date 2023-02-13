@@ -1,6 +1,6 @@
 <?php
-
 use App\Repository\UserRepository;
+use App\Class\User;
 
 error_reporting(E_ERROR | E_NOTICE | E_PARSE);
 // Ouverture Session
@@ -9,65 +9,64 @@ require_once '../vendor/autoload.php';
 $isPage = "login";
 include('../partials/header.php');
 
-
 $userRepository = new UserRepository();
 $data = new PDO("mysql:host=127.0.0.1:3306;dbname=froggy_quiz", 'root', password: '');
 
-
-@$userUserName = $_POST["userName"];
-@$userPassword = md5($_POST["password"]);
-@$connexion = $_POST["Connexion"];
-$erreur = "";
-
-if (isset($connexion)) {
-
-    $selection = $data->prepare("SELECT * from users where userName=? and password=? limit 1");
-    $selection->execute(array($userUserName, $userPassword));
-    $tab = $selection->fetchAll();
-    if (count($tab) > 0) {
-        $_SESSION["userName"] = ucfirst(strtolower($tab[0]["userName"]));
-        $_SESSION["autoriser"] = "oui";
-        header("location:mon_compte.php");
-    } else
-        $erreur = "Mauvais login ou mot de passe!";
+if (isset($_SESSION["user"])) {
+    header("Location: mon_compte.php");
+    exit;
 }
 
+if (isset($_POST["submit"]) && !empty($_POST["userName"]) && !empty($_POST["password"])) {
+    $userName = $_POST["userName"];
+    $password = $_POST["password"];
+
+    $query = $data->query("SELECT * FROM users WHERE username = '$userName'");
+    $user = $query->fetch();
+
+    if ($user && password_verify($password, $user['password'])) {
+        $_SESSION["user"] = [
+            "userName" => $userName,
+            "email" => $user["email"],
+            "role" => ["ROLE_USER"]
+        ];
+
+        header("Location: mon_compte.php");
+        exit;
+    } else {
+        $error = "Le nom d'utilisateur ou le mot de passe est incorrect";
+    }
+}
 
 ?>
 
-<main>
-    
-    <section class="contact">
-        
-        <form class="contact-form" action="" method="POST">
-            
-            <h2>Connexion</h2>
-            
-            <div class="label-input">
-                <label for="userName">Pseudo Frog:</label>
-                <input type="text" id="userName" name="userName" placeholder="Saisissez votre pseudo...">
-            </div>
-            
-            <div class="label-input">
-                <label for="password">Froggy Pass:</label>
-                <input type="text" id="password" name="password" placeholder="Saisissez un mot de pass...">
-            </div>
-            
-            
-            <div class="submit">
-                <input type="submit" name="logged" value="Connexion">
-            </div>
-            
-        </form>
-        <div class="to-register">
-            <a href="./register.php">Créer un compte.</a>
-        </div>
+    <main>
+        <section class="contact">
+            <form class="contact-form" method="POST">
+                <h2>Connexion</h2>
 
-    </section>
-    
-</main>
+                <div class="userName">
+                    <label for="userName">Pseudo Frog:</label>
+                    <input type="text" id="userName" name="userName" placeholder="Saisissez votre pseudo...">
+                </div>
 
+                <div class="password">
+                    <label for="password">Froggy Pass:</label>
+                    <input type="password" id="password" name="password" placeholder="Saisissez votre mot de passe...">
+                </div>
 
-<?php
-include('../partials/footer.php')
-?>
+                <div class="submit">
+                    <input type="submit" name="submit" value="SE CONNECTER">
+                </div>
+
+                <?php if (isset($error)) : ?>
+                    <p><?= $error ?></p>
+                <?php endif; ?>
+            </form>
+            <a href="register.php">
+                <button>Créer un compte</button>
+            </a>
+        </section>
+    </main>
+
+<?php include('../partials/footer.php'); ?>
