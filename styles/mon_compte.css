@@ -1,33 +1,42 @@
-
-.main {
-    height: 1000px;
-    width: 100%;
-
+body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(66.5% 221.21% at 136.03% -61.44%,rgba(161,155,217,.4) 0%,rgba(161,155,217,0) 92.09%),radial-gradient(93.54% 126.91% at 29.15% -56.29%,rgba(233,69,96,.7) 0%,rgba(233,69,96,0) 92.09%),radial-gradient(86.19% 101.84% at -17.13% -24.8%,rgba(0,162,254,.7) 0%,rgba(0,162,254,0) 92.09%),#1a1a2e;
+    font-family: 'applejuice', sans-serif;
 }
 
-body {
-    background: radial-gradient(66.5% 221.21% at 136.03% -61.44%,rgba(161,155,217,.4) 0%,rgba(161,155,217,0) 92.09%),radial-gradient(93.54% 126.91% at 29.15% -56.29%,rgba(233,69,96,.7) 0%,rgba(233,69,96,0) 92.09%),radial-gradient(86.19% 101.84% at -17.13% -24.8%,rgba(0,162,254,.7) 0%,rgba(0,162,254,0) 92.09%),#1a1a2e;
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .container-card {
-
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-
-}
-
-.card {
-
-    display:flex;
-    flex-direction: column;
-    text-align: center;
-    gap: 50px;
+    background-color: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
-    background-color: #FFFFFF;
-    heigth: 500px;
-    width: 600px;
-
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    padding: 40px;
+    width: 500px;
 }
+
+.card h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 40px;
+    font-family: 'applejuice', sans-serif;
+}
+
+.card p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-family: 'applejuice', sans-serif;
+}
+
+@media only screen and (max-width: 767px) {
+    .container-card {
+        width: 90%;
+    }
+}
+
 

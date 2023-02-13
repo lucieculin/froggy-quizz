@@ -1,72 +1,59 @@
 <?php
+
+error_reporting(E_ERROR | E_NOTICE | E_PARSE);
+session_start();
 use App\Repository\UserRepository;
 use App\Class\User;
 
-error_reporting(E_ERROR | E_NOTICE | E_PARSE);
-// Ouverture Session
-session_start();
 require_once '../vendor/autoload.php';
 $isPage = "login";
 include('../partials/header.php');
 
+
+
 $userRepository = new UserRepository();
-$data = new PDO("mysql:host=127.0.0.1:3306;dbname=froggy_quiz", 'root', password: '');
 
-if (isset($_SESSION["user"])) {
-    header("Location: mon_compte.php");
-    exit;
-}
+if (!empty($_POST)) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
-if (isset($_POST["submit"]) && !empty($_POST["userName"]) && !empty($_POST["password"])) {
-    $userName = $_POST["userName"];
-    $password = $_POST["password"];
+    $user = $userRepository->findByUserName($username);
 
-    $query = $data->query("SELECT * FROM users WHERE username = '$userName'");
-    $user = $query->fetch();
-
-    if ($user && password_verify($password, $user['password'])) {
-        $_SESSION["user"] = [
-            "userName" => $userName,
-            "email" => $user["email"],
-            "role" => ["ROLE_USER"]
-        ];
-
-        header("Location: mon_compte.php");
+    dump($user);
+    echo($username);
+    echo($password);
+    if ($user !== null && $user !== $username && password_verify($password, $user->getPassword())) {
+        $_SESSION['user'] = $user;
+        header('Location: index.php');
         exit;
-    } else {
-        $error = "Le nom d'utilisateur ou le mot de passe est incorrect";
     }
+
+    $error = 'Nom d\'utilisateur ou mot de passe incorrect';
 }
 
 ?>
 
-    <main>
-        <section class="contact">
-            <form class="contact-form" method="POST">
-                <h2>Connexion</h2>
-
-                <div class="userName">
-                    <label for="userName">Pseudo Frog:</label>
-                    <input type="text" id="userName" name="userName" placeholder="Saisissez votre pseudo...">
+    <div class="main">
+    <div class="card-glassmorphism">
+        <div class="card-content">
+            <h1>Connexion</h1>
+            <?php if (isset($error)): ?>
+                <p style="color: red;"><?php echo $error; ?></p>
+            <?php endif; ?>
+            <form action="" method="post">
+                <div class="form-group">
+                    <label for="username">Frog ID:</label>
+                    <input type="text" id="username" name="username" class="form-input-glassmorphism">
                 </div>
-
-                <div class="password">
+                <div class="form-group">
                     <label for="password">Froggy Pass:</label>
-                    <input type="password" id="password" name="password" placeholder="Saisissez votre mot de passe...">
-                </div>
+                    <input type="password" id="password" name="password" class="form-input-glassmorphism">
 
-                <div class="submit">
-                    <input type="submit" name="submit" value="SE CONNECTER">
                 </div>
-
-                <?php if (isset($error)) : ?>
-                    <p><?= $error ?></p>
-                <?php endif; ?>
+                <button type="submit" class="form-submit-glassmorphism">Connexion</button><br><br><br>
+                <a class="form-create-glassmorphism" href="register.php" style="color: #2b88e7;">Créer un compte</a>
             </form>
-            <a href="register.php">
-                <button>Créer un compte</button>
-            </a>
-        </section>
-    </main>
-
+        </div>
+    </div>
+</div>
 <?php include('../partials/footer.php'); ?>

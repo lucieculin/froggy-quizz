@@ -13,9 +13,9 @@ namespace App\Repository;
               ->fetchAll(PDO::FETCH_CLASS, User::class);
 
       }
-        public function findByEmail(string $email): ?User
+        public function findByUserName(string $userName): ?User
         {
-            $query = $this->pdo->prepare('SELECT * FROM users WHERE email = :email LIMIT 1');
+            $query = $this->pdo->prepare('SELECT * FROM users WHERE userName = : LIMIT 1');
             $query->bindParam("email", $email, PDO::PARAM_STR);
             $query->execute();
             $data = $query->fetch();

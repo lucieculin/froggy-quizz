@@ -1,18 +1,18 @@
 <?php
 
+error_reporting(E_ERROR | E_NOTICE | E_PARSE);
+session_start();
 use App\Repository\UserRepository;
 use App\Class\User;
 
-
-error_reporting(E_ERROR | E_NOTICE | E_PARSE);
-// Ouverture Session
-session_start();
 require_once '../vendor/autoload.php';
 $isPage = "register";
 include('../partials/header.php');
 
 
+
 $userRepository = new UserRepository();
+
 $data = new PDO("mysql:host=127.0.0.1:3306;dbname=froggy_quiz", 'root', password: '');
 
 
@@ -84,18 +84,18 @@ if (empty($_POST)) {
             </div>
 
             <div class="userName">
-                <label for="userName">Pseudo Frog:</label>
+                <label for="userName">Frog ID:</label>
                 <input type="text" id="userName" name="userName" placeholder="Saisissez votre pseudo...">
             </div>
 
             <div class="password">
                 <label for="password">Froggy Pass:</label>
-                <input type="text" id="password" name="password" placeholder="Saisissez un mot de pass...">
+                <input type="text" id="password" name="password" placeholder="Saisissez un mot de passe...">
             </div>
 
             <div class="password_retype">
                 <label for="password">Froggy Pass:</label>
-                <input type="text" id="password_retype" name="password_retype" placeholder="Confirmez le mot de pass...">
+                <input type="text" id="password_retype" name="password_retype" placeholder="Confirmez le mot de passe...">
             </div>
             <div class="submit">
                 <input type="submit" name="create" value="ENVOYER">
