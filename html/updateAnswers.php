@@ -34,7 +34,7 @@ foreach ($displayAnswer as $answer){
     <form method="get">
 
         <label for="answerName">Remplacer la réponse "<?php echo $result ?>" : </label><br>
-        <input type="text" id="answerName" name="answerName" placeholder="<?php echo $result ?>"><br>
+        <input type="text" id="answerName" name="answerName" value="<?php echo $result ?>"><br>
 
 
         <input type="radio" name ="answerNameBool" id="answerNameBool" value="True">
@@ -42,7 +42,7 @@ foreach ($displayAnswer as $answer){
         <input type="radio" name ="answerNameBool" id="answerNameBool" value="False">
         <label for="answerNameBool">Faux</label>
 
-
+        <input type="hidden" name="id" value="<?php echo $idAnswer?>"/>
 
         <input type="submit" name="Soumettre" value="Soumettre"/>
 
@@ -63,7 +63,7 @@ foreach ($displayAnswer as $answer){
 
             if($updateAnswer){
                 echo "Données importées avec succes";?>
-                <button><a href="DatabaseAnswer.php">Visualiser la nouvelle entrée</a></button>
+
             <?php }else{
                 die(mysqli_connect_error($bdd));
             }

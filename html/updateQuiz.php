@@ -34,10 +34,11 @@ foreach ($displayQuiz as $quiz){
 <div class="bodyUpdate">
 
 
-    <form method="get">
+    <form method="get" action="">
         <label for="quizName">Remplacer le Quiz "<?php echo $result ?>" :</label><br>
-        <input type="text" id="quizName" name="quizName" placeholder="<?php echo $result ?>"><br>
+        <input type="text" id="quizName" name="quizName" value="<?php echo $result ?>"><br>
 
+        <input type="hidden" name="id" value="<?php echo $idQuiz?>"/>
 
         <input type="submit" name="Soumettre" value="Soumettre"/>
 
@@ -49,11 +50,11 @@ foreach ($displayQuiz as $quiz){
 
             if($updateQuiz){
                 echo "Données importées avec succes";?>
-                <button><a href="DatabaseQuiz.php">Visualiser la nouvelle entrée</a></button>
             <?php }else{
                 die(mysqli_connect_error($bdd));
             }
-        }?>
+
+            }?>
 
 
 

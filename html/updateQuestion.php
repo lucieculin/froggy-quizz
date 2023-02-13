@@ -33,8 +33,9 @@ foreach ($displayQuestion as $question) {
     <form method="get">
 
         <label for="questionName">Remplacer la question "<?php echo $result ?>" : </label><br>
-        <input type="text" id="questionName" name="questionName" placeholder="<?php echo $result ?>"><br>
+        <input type="text" id="questionName" name="questionName" value="<?php echo $result ?>"><br>
 
+        <input type="hidden" name="id" value="<?php echo $idQuestion?>"/>
 
         <input type="submit" name="Soumettre" value="Soumettre"/>
 
@@ -47,7 +48,6 @@ foreach ($displayQuestion as $question) {
 
             if($updateQuestion){
                 echo "Données importées avec succes";?>
-                <button><a href="DatabaseTheme.php">Visualiser la nouvelle entrée</a></button>
             <?php }else{
                 die(mysqli_connect_error($bdd));
             }

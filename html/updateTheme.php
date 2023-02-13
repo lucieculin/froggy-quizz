@@ -31,12 +31,14 @@ foreach ($displayTheme as $item) {
 <div class="bodyUpdate" >
 
 
+
 <form method="get" action="">
 
     <label for="themeName">Remplacer le Theme "<?php echo $result ?>" : </label><br>
-    <input type="text" id="themeName" name="themeName" placeholder="<?php echo $result ?>"><br>
+    <input type="text" id="themeName" name="themeName" value="<?php echo $result ?>"><br>
 
 
+    <input type="hidden" name="id" value="<?php echo $idTheme?>"/>
 
 
     <input type="submit" name="Soumettre" value="Soumettre"/>
@@ -52,10 +54,10 @@ foreach ($displayTheme as $item) {
 
         if($updateTheme){
             echo "Données importées avec succes";?>
-            <button><a href="DatabaseTheme.php">Visualiser la nouvelle entrée</a></button>
         <?php }else{
             die(mysqli_connect_error($bdd));
         }
+
     }?>
 
 
