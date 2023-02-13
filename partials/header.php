@@ -45,7 +45,11 @@
     <div class="connexion">
       <a href="../html/login.php">Login</a>
     </div>
+    <button class="burger">
+            <span class="bar"></span>
+        </button>
   </div>
+  <div class="cloud-nav"></div>
 </nav>
 
 <nav class="nav2">
@@ -90,14 +94,6 @@
     </div>
     <div class="nav">
       <a href="#" id="no-drop" class="no-drop underline">Boutique</a>
-
-      <!-- <ul class="drop">
-            <li>random</li>
-            <li>random</li>
-            <li>random</li>
-            <li>random</li>
-            <li>random</li>
-          </ul> -->
 
     </div>
 

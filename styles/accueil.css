@@ -22,13 +22,6 @@
     text-decoration: none;
     list-style: none;
 
-    --color1: #f2f2f2;
-    --color2: #262626;
-    --color3: #f2f8fc;
-    --color4: #d0e2f0;
-    --font1: 'applejuice', sans-serif;
-    --font2: 'Indie Flower';
-    --font3: 'Poppins', sans-serif;
 }
 
 body {
@@ -36,9 +29,11 @@ body {
     margin: 0;
     padding: 0;
 }
+
 .burger {
     display: none;
 }
+
 .container-home-page {
     margin: 0 auto;
     display: flex;
@@ -62,15 +57,13 @@ nav {
 .nav1 {
     background-color: #f2f8fc;
     height: 4rem;
-    color: black;
+    color: var(--color-contrast);
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 2;
     box-shadow: 0px 5px 10px 2px #0000003d;
     top: 0;
-
-
 }
 
 
@@ -129,7 +122,7 @@ a {
 }
 
 .logospan {
-    color: black;
+    color: var(--color-contrast);
     font-family: var(--font1);
     font-size: 1.3rem;
 }
@@ -159,6 +152,7 @@ a {
     width: 50px;
     overflow: hidden;
 }
+h3{color:var(--color-contrast);}
 
 .contain-right {
     display: flex;
@@ -223,7 +217,7 @@ a {
 }
 
 .connexion a {
-    color: black;
+    color: var(--color-contrast);
 
     background-image: url(../assets/images/cloud-nav-dark.png);
     background-size: 0rem;
@@ -276,13 +270,13 @@ a {
 
 nav a {
     font-family: var(--font3);
-    color: var(--color2);
+    color: var(--color-contrast);
 }
 
 .underline {
     display: block;
     font-family: var(--font3);
-    color: var(--color2);
+    color: var(--color-contrast);
 
 }
 
@@ -291,7 +285,7 @@ nav a {
     content: "";
     width: 0;
     height: 2px;
-    background: var(--color2);
+    background: var(--color-contrast);
 
 }
 
@@ -324,7 +318,7 @@ nav a {
 
 .drop li {
     padding: 10px;
-    color: black;
+    color: var(--color-contrast);
     font-family: var(--font3);
     font-size: 0.7rem;
     width: 60px;
@@ -679,73 +673,86 @@ section img {
     left: -150px;
 
 }
+
 /***********froggyfly***********/
-#froggy-fly{
+#froggy-fly {
     width: 150px;
     position: absolute;
-    top:-200px;
-    left: 20px;
-    animation: froggyfall 20s ease-in-out  ;
-    
-}
-#froggy-fly-blue{
-    width: 150px;
-    position: absolute;
-    top:-200px;
-    left: 40%;
-    animation: froggyfall 25s 45s ease-in-out ;
-    
-}
-#froggy-fly-orange{
-    width: 150px;
-    position: absolute;
-    top:-200px;
-    left: 1200px;
-    animation: froggyfall 15s 25s ease-in-out ;
-
-}
-@keyframes froggyfall {
-0%{
     top: -200px;
-}
-10%{
-transform: rotate(20deg);
-}
-20%{
-    transform: rotate(-20deg);
-}
-30%{
-    transform: rotate(20deg);
-    
-}
-40%{
-    transform: rotate(-20deg);
-    
-}
-50%{
-    transform: rotate(20deg);
-    
-}
-60%{
-    transform: rotate(-20deg);
-    
-}
-70%{
-    transform: rotate(20deg);
-    
-}
-80%{
-    transform: rotate(-20deg);
-    
-}
-90%{
-    transform: rotate(20deg);
-    
+    left: 20px;
+    animation: froggyfall 20s ease-in-out;
+
 }
 
-100%{
-    top:1500px;
+#froggy-fly-blue {
+    width: 150px;
+    position: absolute;
+    top: -200px;
+    left: 40%;
+    animation: froggyfall 25s 45s ease-in-out;
+
 }
+
+#froggy-fly-orange {
+    width: 150px;
+    position: absolute;
+    top: -200px;
+    left: 1200px;
+    animation: froggyfall 15s 25s ease-in-out;
+
+}
+
+@keyframes froggyfall {
+    0% {
+        top: -200px;
+    }
+
+    10% {
+        transform: rotate(20deg);
+    }
+
+    20% {
+        transform: rotate(-20deg);
+    }
+
+    30% {
+        transform: rotate(20deg);
+
+    }
+
+    40% {
+        transform: rotate(-20deg);
+
+    }
+
+    50% {
+        transform: rotate(20deg);
+
+    }
+
+    60% {
+        transform: rotate(-20deg);
+
+    }
+
+    70% {
+        transform: rotate(20deg);
+
+    }
+
+    80% {
+        transform: rotate(-20deg);
+
+    }
+
+    90% {
+        transform: rotate(20deg);
+
+    }
+
+    100% {
+        top: 1500px;
+    }
 
 }
 
@@ -880,17 +887,6 @@ section span {
 
 }
 
-.cloud-nav {
-    width: 100%;
-    height: 50px;
-    background: white;
-    background: linear-gradient(180deg, rgb(255, 255, 255) 30%, rgba(255, 255, 255, 0) 100%);
-    position: absolute;
-    top: 40px;
-    z-index: 2;
-}
-
-
 
 
 
@@ -973,19 +969,22 @@ section span {
     background-size: contain;
 }
 
- .ff2{
+.ff2 {
     background: url(../assets/images/background-dark-pattoune.png);
     background-size: contain;
- }
- .ff3{
+}
+
+.ff3 {
     background: url(../assets/images/background-dark-pattoune.png);
     background-size: contain;
- }
- .ff4{
+}
+
+.ff4 {
     background: url(../assets/images/background-dark-pattoune.png);
     background-size: contain;
- }
- .ff5{
+}
+
+.ff5 {
     background: url(../assets/images/background-dark-pattoune.png);
     background-size: contain;
 }
@@ -1007,17 +1006,19 @@ section span {
     background-position: center;
 }
 
-.bf3{
+.bf3 {
     background: url(../assets/images/kaamelott.png);
     background-size: cover;
     background-position: center;
 }
-.bf4{
+
+.bf4 {
     background: url(../assets/images/one-piece.png);
     background-size: cover;
     background-position: center;
 }
-.bf5{
+
+.bf5 {
     background: url(../assets/images/capitale.png);
     background-size: cover;
     background-position: center;
@@ -1037,7 +1038,7 @@ section span {
 }
 
 .h2-title-section {
-    color: var(--color2);
+    color: var(--color-contrast);
     text-decoration: none;
     font-family: var(--font2);
     font-size: 44px;
@@ -1082,22 +1083,25 @@ section span {
 }
 
 
- .bbtn2 {
+.bbtn2 {
     background: url(../assets/images/background-dark-pattoune.png);
     background-size: contain;
     color: var(--color1);
- }
- .bbtn3 {
+}
+
+.bbtn3 {
     background: url(../assets/images/background-dark-pattoune.png);
     background-size: contain;
     color: var(--color1);
- }
- .bbtn4 {
+}
+
+.bbtn4 {
     background: url(../assets/images/background-dark-pattoune.png);
     background-size: contain;
     color: var(--color1);
- }
- .bbtn5 {
+}
+
+.bbtn5 {
     background: url(../assets/images/background-dark-pattoune.png);
     background-size: contain;
     color: var(--color1);
@@ -1151,7 +1155,7 @@ section span {
 }
 
 .h2-title-section {
-    color: var(--color2);
+    color: var(--color-contrast);
     text-decoration: none;
     font-family: var(--font2);
     font-size: 44px;
@@ -1236,11 +1240,11 @@ section span {
     color: white;
     text-align: center;
     font-family: var(--font3);
-display: flex;
-justify-content: center;
-align-items: center;
-width: 100%;
-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
 .card-quiz-by-theme:hover {
@@ -1248,7 +1252,7 @@ height: 100%;
 }
 
 .card-quiz-by-theme:hover a {
-    color: black;
+    color: var(--color-contrast);
 }
 
 
@@ -1304,17 +1308,17 @@ height: 100%;
 .gold {
     background: #EECE93;
     box-shadow: 0px 0px 59px 2px #eece93e6;
-    color: black;
+    color: var(--color-contrast);
 }
 
 .silver {
     background: silver;
-    color: black;
+    color: var(--color-contrast);
 }
 
 .bronze {
     background: rgb(184, 64, 64);
-    color: black;
+    color: var(--color-contrast);
 }
 
 
@@ -1329,173 +1333,66 @@ height: 100%;
     margin-top: 20px;
     gap: 10px;
     font-family: var(--font3);
+    color:var(--color-contrast);
 }
 
-.roseau{
+.roseau {
     width: 100%;
     position: relative;
 }
 
-.roseau img{
+.roseau img {
     width: 100%;
     margin: 0;
     position: absolute;
-    bottom:0;
+    bottom: 0;
 
 }
-#frog1{
+
+#frog1 {
     position: absolute;
     width: 100px;
     height: 100px;
     top: -25px;
     left: 200px;
-    animation: move-frog 25s ease-in-out infinite ;
+    animation: move-frog 25s ease-in-out infinite;
 }
-#frog2{
+
+#frog2 {
     position: absolute;
     width: 100px;
     height: 100px;
     top: 55px;
     left: 600px;
-    animation: move-frog 10s ease-in-out infinite ;
+    animation: move-frog 10s ease-in-out infinite;
 }
-#frog3{
+
+#frog3 {
     position: absolute;
     width: 100px;
     height: 100px;
     top: -55px;
     right: 200px;
-    animation: move-frog 30s ease-in-out infinite ;
+    animation: move-frog 30s ease-in-out infinite;
 }
 
 
 
 @keyframes move-frog {
     0% {
-		transform: translate(0px, 0px);
-	}
-	30% {
-		transform: translate(-20px, -10px);
-	}
-    70%{
-        
+        transform: translate(0px, 0px);
+    }
+
+    30% {
+        transform: translate(-20px, -10px);
+    }
+
+    70% {
+
         transform: translate(-25px, 5px);
     }
-	100% {
-		transform: translate(0px, 0px);
-	}
-}
 
-/*****************Tablette Mode**************************/
-
-@media screen and (max-width: 1200px) {
-    
-    .h2-title-section{
-        width: 600px;
+    100% {
+        transform: translate(0px, 0px);
     }
-    .none-tab{
-        display: none !important;
-    }
-    #nav2{
-     position : fixed !important;
-      top: 4rem;
-    }
-    .container-home-right{
-        display: none !important;
-    }
- .card-quiz-by-theme{
-    height: 60px;
-    width: 100px;
- }
- .container-home-page{
-    width: 100%;
- }
- .container-home-grid{
-    justify-content: center;
- }
- .card{
-    height: 100px;
-    min-width: 75px;
- }
-}
-  
-/***********************Mobile Mode***********************/
-
-@media screen and (max-width: 900px){
-.container-margin{
-    display: none !important;
-}
-.container-home-page{
-   padding-top: 200px;
- }
- 
- .burger {
-    display: block;
-    position: relative;
-    padding: 0px;
-    padding-right: 10px;
-    width: 45px;
-    height: 45px;
-    border: none;
-    background: transparent;
-    cursor: pointer;
-}
-
-.bar {
-    display: block;
-    width: 35px;
-    height: 2px;
-    background: var(--bluue);
-    border-radius: 3px;
-    transition: .4s ease-in-out;
-}
-
-.show-nav .bar {
-    width: 0;
-    background: transparent;
-}
-
-.bar::before,
-.bar::after {
-    content: "";
-    width: 35px;
-    height: 2px;
-    left: 0px;
-    position: absolute;
-    background: var(--bluue);
-    border-radius: 3px;
-    transition: .4s ease-in-out;
-}
-
-.bar::before {
-    transform: translatey(-12px);
-}
-
-.bar::after {
-    transform: translatey(12px);
-}
-
-.show-nav .bar::before {
-    transform: rotate(45deg);
-    background: red;
-}
-
-.show-nav .bar::after {
-    transform: rotate(-45deg);
-    background: red;
-}
-
-.show-nav .zero {
-    transition: 1s ease-out;
-
-}
-
-.show-nav .first {
-    transition: 1s .2s ease-out;
-}
-
-.show-nav .second {
-    transition: 1s .4s ease-out;
-}
-
 }

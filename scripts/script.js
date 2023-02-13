@@ -14,7 +14,7 @@ let fr = document.querySelector("#fr");
 let uk = document.querySelector("#uk");
 let light = document.querySelector("#light");
 let dark = document.querySelector("#dark");
-let noDrop = document.querySelector("#no-drop")
+let noDrop = document.querySelector("#no-drop");
 
 function active(a) {
   drop.forEach((item) => {
@@ -126,3 +126,16 @@ dark.addEventListener("mouseout", () =>{
   light.style.color = "black";
 })
 
+/*****dark mode****/
+
+dark.addEventListener("click", () => {
+  document.body.style.setProperty('background', 'var(--dark-background)');
+  document.documentElement.style.setProperty('--color1', '#000000');
+  document.documentElement.style.setProperty('--color3', '#1a1a2e');
+}) 
+
+light.addEventListener("click", () => {
+  document.body.style.setProperty('background', 'var(--light-background)');
+  document.documentElement.style.setProperty('--color', '#f2f2f2');
+  document.documentElement.style.setProperty('--color3', 'white');
+})

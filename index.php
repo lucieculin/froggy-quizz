@@ -155,9 +155,7 @@ $allThemes = $themes->findAll();
         </ul>
     <div class="cloud-nav"></div>
 
-    <button class="burger">
-            <span class="bar"></span>
-        </button>
+
         
   </nav>
   

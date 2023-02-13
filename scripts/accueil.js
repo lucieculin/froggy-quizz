@@ -26,14 +26,15 @@ document.addEventListener("scroll", () => {
   span2.style.top = value * 1 + 520 + "px";
   if (value < 10) {
     justQ.style.left = -80 + value * 1 + "px";
-  }
-  if (value >= 1040) {
-    nav2.style.position = "fixed";
-    nav2.style.top = "4rem";
-  } else {
-    nav2.style.position = "absolute";
-    nav2.style.top = "";
-  }
+  } 
+    if (value >= 1040) {
+      nav2.style.position = "fixed";
+      nav2.style.top = "4rem";
+    } else {
+      nav2.style.position = "absolute";
+      nav2.style.top = "";
+    }
+  
 
 
   // let header = document.querySelector('#header');
