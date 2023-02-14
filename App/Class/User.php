@@ -15,10 +15,11 @@ class User
 
     private string $password;
 
+    private string $email;
+
     private string $role;
 
-
-
+    private int $baniere_id;
 
     /**
      * @return string
@@ -35,10 +36,6 @@ class User
     {
         $this->email = $email;
     }
-
-    private string $email;
-
-    private int $baniere_id;
 
 
 

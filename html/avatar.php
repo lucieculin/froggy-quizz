@@ -3,10 +3,11 @@ error_reporting( E_ERROR | E_NOTICE | E_PARSE );
 $isPage = "avatar";
 include('../partials/header.php');
 include('./partials/script.php');
+include('./scripts/avatar.js')
 ?>
 
 
-<main>
+<div class="main">
 
 
     <div class="title">
@@ -456,7 +457,7 @@ include('./partials/script.php');
 
 
 
-</main>
+</div>
 
 
 
