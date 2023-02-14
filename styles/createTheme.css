@@ -86,4 +86,8 @@ h2{
     padding: 0.5rem;
     gap:1rem;
 }
-
+.btnFI{
+    font-size: large;
+    height: 40px;
+    background-color: #FFFFFF;
+}

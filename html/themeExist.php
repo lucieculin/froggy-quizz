@@ -2,6 +2,7 @@
 $isPage="themeExist";
 require_once '../vendor/autoload.php';
 
+error_reporting(E_ERROR | E_NOTICE | E_PARSE);
 
 use App\Repository\ThemeRepository;
 use App\Repository\QuizRepository;
@@ -58,6 +59,7 @@ $displayQuiz = $newsQuiz->findAllById(intval($result));
                             <option id="option" name="newQuiz" value="<?= $newQuiz ?>" selected="selected" ><?= $newQuiz ?></option>
 
                 </select>
+                <input type="hidden" name="idTheme" value="<?php echo $result ?>" />
 
                  <input type="submit" name="selectionner" value="selectionner" />
 
@@ -66,13 +68,13 @@ $displayQuiz = $newsQuiz->findAllById(intval($result));
 
           if ($_GET['option'] === $newQuiz) { ?>
 
-                <button><a href="createQuiz.php?">Valider la création d'un nouveau Quiz</a></button>
+                <button class="btnFI"><a href="createQuiz.php?idTheme=<?=$_GET['idTheme']?>"">Valider la création d'un nouveau Quiz</a></button>
 
 
             <?php }
 
             else{ ?>
-                <button><a href="quizExist.php?quiz=<?=$_GET['option']?>">Vous souhaitez ajouter des données sur le Quiz <?= $_GET['option'] ?></a></button>
+                <button class="btnFI"><a href="quizExist.php?quiz=<?=$_GET['option']?>">Vous souhaitez ajouter des données sur le Quiz <?= $_GET['option'] ?></a></button>
 
 
             <?php }

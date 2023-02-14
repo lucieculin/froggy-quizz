@@ -71,41 +71,6 @@ class QuestionRepository extends AbstractRepository
 
 
 
-    public function getDatabase()
-    {
-        try{
-            $pdo = new PDO();
-            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            return $pdo;
-
-        } catch (\PDOException $exception){
-            print "Erreur !:".$exception->getMessage(). "<br/>";
-            die();
-        }
-    }
-
-
-    public function createQuestion(string $question){
-        $query = $this->pdo
-            ->prepare("INSERT INTO questions (question) VALUE ('$question');");
-        $query->execute();
-
-    }
-
-    public function updateQuestion(int $id, string $question){
-        $query = $this->pdo
-            ->prepare("UPDATE questions WHERE id = '$id' SET name = '$question';");
-        $query->execute();
-
-
-    }
-
-    public function deleteQuestion(int $id)
-        {
-            $query = $this->pdo
-                ->prepare("DELETE FROM questions WHERE id = '$id';");
-            $query->execute();
-        }
 
 
 }

@@ -44,44 +44,9 @@ class AnswerRepository extends AbstractRepository
         }
     }
 
-    public function getDatabase()
-    {
-        try{
-            $pdo = new PDO();
-            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            return $pdo;
-
-        } catch (\PDOException $exception){
-            print "Erreur !:".$exception->getMessage(). "<br/>";
-            die();
-        }
-    }
-
-
-       public function createAnswer(string $answer, bool $isTrue ){
-        $query = $this->pdo
-            ->prepare("INSERT INTO answer (answer, is_True) VALUE ('$answer, $isTrue');");
-        $query->execute();
-
-    }
-
-    public function updateAnswer(int $id, string $answer, bool $isTrue )
-        {
-            $query = $this->pdo
-                ->prepare("UPDATE answer WHERE id = '$id' SET name = '$answer' SET name = '$isTrue';");
-            $query->execute();
-
-
-        }
 
 
 
-    public function deleteAnswer($id)
-        {
-            $query = $this->pdo
-                ->prepare("DELETE FROM answer WHERE id = '$id';");
-            $query->execute();
-        }
 
 
 }

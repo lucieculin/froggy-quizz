@@ -54,13 +54,13 @@ $newTheme = "nouveau Theme";
 
          if($_GET['option'] === $newTheme) { ?>
 
-             <button><a href="createTheme.php">Valider la création d'un nouveau thème</a></button>
+             <button class="btnFI"><a href="createTheme.php">Valider la création d'un nouveau thème</a></button>
 
 
             <?php }
 
               else{ ?>
-                      <button><a href="themeExist.php?theme=<?=$_GET['option']?>">Vous souhaitez ajouter des données sur le theme <?= $_GET['option'] ?></a></button>
+                      <button class="btnFI"><a href="themeExist.php?theme=<?=$_GET['option']?>">Vous souhaitez ajouter des données sur le theme <?= $_GET['option'] ?></a></button>
 
 
                  <?php }

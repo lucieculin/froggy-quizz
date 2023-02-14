@@ -20,20 +20,21 @@ $newsQuiz = new QuizRepository();
 $displayTheme = $newsQuiz->findAll();
 
 $newsQuiz = "nouveau Quiz";
-
+$idTheme = $_GET['idTheme'];
 
 ?>
 <div class="bodyCreate">
+    <div class="containerCreate">
 
     <h1>Quel est le nom de votre nouveau Quiz</h1>
-
-    <form method="GET" action="">
+        <fieldset class="fieldsetCreate">
+    <form method="GET" action="" class="formCreate">
 
         <label for="quiz"  >Entrer un nouveau Quiz :</label>
 
-        <input type="text" name="quiz" id="quiz" value=""/>
+        <input type="text" class="inputCreate" name="quiz" id="quiz" value=""/>
 
-        <input type="hidden" name="idTheme" value=""/>
+        <input type="hidden" name="idTheme" value="<?php echo $idTheme ?>"/>
 
         <input type="submit" name="soumettre" value="soumettre"/>
 
@@ -42,16 +43,11 @@ $newsQuiz = "nouveau Quiz";
 
             $quiz = $_GET['quiz'];
 
-            $newTheme = new ThemeRepository();
-            $idTheme = $newTheme->findIdByName('Culture');
-
-            echo $idTheme;
-
             $addQuiz = $bdd->query("INSERT INTO quiz (quiz.name, quiz.theme_id) VALUES ('$quiz', '$idTheme');");
 
             if($addQuiz){
                 echo "Données importées avec succes";?>
-                <button><a href="formulaireIndex.php">Passer Au Quiz</a></button>
+                <button><a href="formulaireIndex.php">Passer Au Questions</a></button>
             <?php }else{
                 die(mysqli_connect_error($bdd));
             }
@@ -61,5 +57,6 @@ $newsQuiz = "nouveau Quiz";
 
 
     </form>
-
+        </fieldset>
+    </div>
 </div>

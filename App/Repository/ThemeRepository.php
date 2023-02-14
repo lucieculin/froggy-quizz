@@ -47,26 +47,4 @@ class ThemeRepository extends AbstractRepository
 
 
 
-    public function createTheme(string $name){
-        $query = $this->pdo
-        ->prepare("INSERT INTO themes (name) VALUE ('$name');");
-         $query->execute();
-
-    }
-
-    public function updateTheme(int $id, string $name){
-        $query = $this->pdo
-            ->prepare("UPDATE themes WHERE id = '$id' SET name = '$name';");
-        $query->execute();
-
-
-    }
-
-    public function deleteTheme(int $id){
-        $query = $this->pdo
-            ->prepare("DELETE FROM themes WHERE id = '$id';");
-        $query->execute();
-    }
-    
-
 }

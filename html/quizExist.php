@@ -68,7 +68,7 @@ foreach ($displayQuiz as $quiz) {
 
     if($addQuestion){
         echo "Données importées avec succes";?>
-        <button><a href="createAnswer.php?idQuiz=<?= $_GET['id']?>&nameQuestion=<?= $_GET['question']?>">Aller aux réponses</a></button>
+        <button class="btnFI"><a href="createAnswer.php?idQuiz=<?= $_GET['id']?>&nameQuestion=<?= $_GET['question']?>">Aller aux réponses</a></button>
 
     <?php }else{
         die(mysqli_connect_error($bdd));

@@ -23,20 +23,22 @@ $newTheme = "nouveau Theme";
 ?>
 
 <div class="bodyCreate">
+    <div class="containerCreate">
 
     <h1>Quel est le nom de votre nouveau thème</h1>
 
-    <form method="GET" action="">
+        <fieldset class="fieldsetCreate">
+    <form method="GET" action="" class="formCreate">
 
         <label for="theme"  >Entrer un nouveau thème :</label>
 
-        <input type="text" name="theme" id="theme" value=""/>
+        <input type="text" class="inputCreate" name="theme" id="theme" value=""/>
 
 
         <input type="submit" name="soumettre" value="soumettre"/>
 
         <?php if((isset($_GET['soumettre'])) && (isset($_GET['theme']) )){
-        var_dump($_GET);
+
 
         $theme = $_GET['theme'];
 
@@ -45,7 +47,7 @@ $newTheme = "nouveau Theme";
 
         if($addTheme){
         echo "Données importées avec succes";?>
-        <button><a href="formulaireIndex.php">Passer Au Quiz</a></button>
+        <button class="btnFI"><a href="formulaireIndex.php">Passer Au Quiz</a></button>
        <?php }else{
         die(mysqli_connect_error($bdd));
         }
@@ -56,3 +58,7 @@ $newTheme = "nouveau Theme";
 
     </form>
 
+        </fieldset>
+
+    </div>
+</div>
