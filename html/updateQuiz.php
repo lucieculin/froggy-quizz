@@ -33,39 +33,45 @@ foreach ($displayQuiz as $quiz){
 ?>
 <div class="bodyUpdate">
 
-
-    <form method="get" action="">
-        <label for="quizName">Remplacer le Quiz "<?php echo $result ?>" :</label><br>
-        <input type="text" id="quizName" name="quizName" value="<?php echo $result ?>"><br>
-
-        <input type="hidden" name="id" value="<?php echo $idQuiz?>"/>
-
-        <input type="submit" name="Soumettre" value="Soumettre"/>
-
-        <?php if((!empty($_GET['Soumettre'])) && (!empty($_GET['quizName']))  ){
-
-            $quizName = $_GET['quizName'];
-
-            $updateQuiz = $bdd->query("UPDATE quiz SET name = '$quizName' WHERE id = '$idQuiz' ;");
-
-            if($updateQuiz){
-                echo "Données importées avec succes";?>
-            <?php }else{
-                die(mysqli_connect_error($bdd));
-            }
-
-            }?>
+    <div class="containerUpdate">
 
 
 
-    </form>
+             <form method="get" class="dataUpdate" action="">
+                 <div class="dataUpdate">
+                        <label for="quizName">Remplacer le Quiz "<?php echo $result ?>" :</label><br>
+                        <input type="text" id="quizName" name="quizName" value="<?php echo $result ?>"><br>
 
-    <button><a href="DatabaseQuiz.php">Retour à la base de donnée</a></button>
+                        <input type="hidden" name="id" value="<?php echo $idQuiz?>"/>
 
-    <button><a href="AdminQuiz.php">Retour à l'accueil Admin</a></button>
+                 </div>
+                <input type="submit" name="Soumettre" value="Soumettre"/>
+
+                    <?php if((!empty($_GET['Soumettre'])) && (!empty($_GET['quizName']))  ){
+
+                     $quizName = $_GET['quizName'];
+
+                    $updateQuiz = $bdd->query("UPDATE quiz SET name = '$quizName' WHERE id = '$idQuiz' ;");
+
+                    if($updateQuiz){
+                        echo "Données importées avec succes";?>
+                    <?php }else{
+                        die(mysqli_connect_error($bdd));
+                        }
+
+                        }?>
+
+
+
+            </form>
+
+
+        <div class="btnUpdate">
+            <button><a href="DatabaseQuiz.php">Retour à la base de donnée</a></button>
+
+            <button><a href="AdminQuiz.php">Retour à l'accueil Admin</a></button>
+        </div>
+    </div>
 
 </div>
 
-<?php
-include('../partials/footer.php');
-?>

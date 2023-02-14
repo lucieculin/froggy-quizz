@@ -30,40 +30,43 @@ foreach ($displayQuestion as $question) {
 ?>
 <div class="bodyUpdate">
 
-    <form method="get">
-
-        <label for="questionName">Remplacer la question "<?php echo $result ?>" : </label><br>
-        <input type="text" id="questionName" name="questionName" value="<?php echo $result ?>"><br>
-
-        <input type="hidden" name="id" value="<?php echo $idQuestion?>"/>
-
-        <input type="submit" name="Soumettre" value="Soumettre"/>
-
-        <?php if((!empty($_GET['Soumettre'])) && (!empty($_GET['questionName']))  ){
-
-            $questionName = $_GET['questionName'];
-
-
-            $updateQuestion = $bdd->query("UPDATE questions SET question = '$questionName' WHERE id = '$idQuestion' ;");
-
-            if($updateQuestion){
-                echo "Données importées avec succes";?>
-            <?php }else{
-                die(mysqli_connect_error($bdd));
-            }
-        }?>
+    <div class="containerUpdate" class="dataUpdate">
 
 
 
-    </form>
+            <form method="get">
+                <div class="dataUpdate">
+                    <label for="questionName">Remplacer la question "<?php echo $result ?>" : </label><br>
+                    <input type="text" id="questionName" name="questionName" value="<?php echo $result ?>"><br>
 
-    <button><a href="DatabaseQuestion.php">Retour à la base de donnée</a></button>
+                    <input type="hidden" name="id" value="<?php echo $idQuestion?>"/>
+                </div>
+                <input type="submit" name="Soumettre" value="Soumettre"/>
 
-    <button><a href="AdminQuiz.php">Retour à l'accueil Admin</a></button>
+                <?php if((!empty($_GET['Soumettre'])) && (!empty($_GET['questionName']))  ){
 
+                $questionName = $_GET['questionName'];
+
+
+                $updateQuestion = $bdd->query("UPDATE questions SET question = '$questionName' WHERE id = '$idQuestion' ;");
+
+                if($updateQuestion){
+                     echo "Données importées avec succes";?>
+                <?php }else{
+                     die(mysqli_connect_error($bdd));
+                    }
+                }?>
+
+
+
+            </form>
+
+
+        <div class="btnUpdate">
+            <button><a href="DatabaseQuestion.php">Retour à la base de donnée</a></button>
+
+            <button><a href="AdminQuiz.php">Retour à l'accueil Admin</a></button>
+        </div>
+    </div>
 
 </div>
-
-<?php
-include('../partials/footer.php');
-?>

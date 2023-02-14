@@ -30,50 +30,50 @@ foreach ($displayTheme as $item) {
 ?>
 <div class="bodyUpdate" >
 
+    <div class="containerUpdate">
 
 
-<form method="get" action="">
+            <form method="get" class="dataUpdate">
 
-    <label for="themeName">Remplacer le Theme "<?php echo $result ?>" : </label><br>
-    <input type="text" id="themeName" name="themeName" value="<?php echo $result ?>"><br>
+                <div class="dataUpdate">
 
-
-    <input type="hidden" name="id" value="<?php echo $idTheme?>"/>
-
-
-    <input type="submit" name="Soumettre" value="Soumettre"/>
+                    <label for="themeName">Remplacer le Theme "<?php echo $result ?>" : </label><br>
+                    <input type="text" class="inputUpdate"  id="themeName" name="themeName" value="<?php echo $result ?>"><br>
 
 
+                    <input type="hidden" name="id" value="<?php echo $idTheme?>"/>
 
-    <?php if((!empty($_GET['Soumettre'])) && (!empty($_GET['themeName']))  ){
+                </div>
 
-        $themeName = $_GET['themeName'];
-
-
-        $updateTheme = $bdd->query("UPDATE themes SET name = '$themeName' WHERE id = '$idTheme' ;");
-
-        if($updateTheme){
-            echo "Données importées avec succes";?>
-        <?php }else{
-            die(mysqli_connect_error($bdd));
-        }
-
-    }?>
+            <input type="submit" name="Soumettre" value="Soumettre"/>
 
 
 
+            <?php if((!empty($_GET['Soumettre'])) && (!empty($_GET['themeName']))  ){
+
+                $themeName = $_GET['themeName'];
 
 
+                $updateTheme = $bdd->query("UPDATE themes SET name = '$themeName' WHERE id = '$idTheme' ;");
+
+                if($updateTheme){
+                 echo "Données importées avec succes";?>
+                <?php }else{
+                die(mysqli_connect_error($bdd));
+                    }
+
+                }?>
 
 
-</form>
+            </form>
 
-    <button><a href="DatabaseTheme.php">Retour à la base de donnée</a></button>
 
-    <button><a href="AdminQuiz.php">Retour à l'accueil Admin</a></button>
+        <div class="btnUpdate">
+            <button><a href="DatabaseTheme.php">Retour à la base de donnée</a></button>
+
+            <button><a href="AdminQuiz.php">Retour à l'accueil Admin</a></button>
+        </div>
+    </div>
 
 </div>
 
-<?php
-include('../partials/footer.php');
-?>
