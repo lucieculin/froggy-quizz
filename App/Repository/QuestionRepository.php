@@ -12,6 +12,19 @@ class QuestionRepository extends AbstractRepository
             ->query('SELECT * FROM `questions`')
             ->fetchAll(PDO::FETCH_CLASS, Question::class);
     }
+
+
+    public function findTheLastId():array
+    {
+        return $this->pdo
+            ->query('SELECT * FROM `questions` ORDER BY questions.id DESC LIMIT 1;')
+            ->fetchAll(PDO::FETCH_CLASS, Question::class);
+    }
+
+
+
+
+
     public function findAllLimit():array
     {
         return $this->pdo
@@ -28,6 +41,15 @@ class QuestionRepository extends AbstractRepository
         $query->execute();
         return $query->fetchObject(Question::class);
     }
+
+    public function findByName(string $name){
+        $query = $this->pdo
+            ->prepare('SELECT * FROM `questions`WHERE questions.question = ? ;');
+        $query->bindValue(1, $name ,PDO::PARAM_STR_CHAR);
+        $query->execute();
+        return $query->fetchColumn(0);
+    }
+
 
 
 

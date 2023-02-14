@@ -2,7 +2,7 @@
 $isPage="createAnswer";
 require_once '../vendor/autoload.php';
 
-
+error_reporting(E_ERROR | E_NOTICE | E_PARSE);
 
 use App\Repository\QuestionRepository;
 use App\Repository\AnswerRepository;
@@ -19,64 +19,75 @@ if($bdd){
 
 
 $newQuestion = new QuestionRepository();
-$displayQuestion = $newQuestion->findAll();
+
 
 
 $idQuiz = $_GET['idQuiz'];
 $getQuestion = $_GET['nameQuestion'];
 
+$displayQuestion = $newQuestion->findTheLastId();
+
 
 foreach ($displayQuestion as $question){
-    if ($question->getQuestion() === $getQuestion){
-        $result = $question->getId();
+    $result = $question->getId();
     }
-}
-$idQuestion = intval($result);
+
 
 ?>
 
 
 <div class="bodyCreate">
-
-
-    <h1>Indiquer les réponses à la question : "<?php echo $getQuestion; ?>"</h1>
-
-    <form method="get">
-
-        <input type="text" name="newAnswer1" id="newAnswer1" placeholder="Réponse 1"/>
-        <input type="radio" name="AnswerTrue1" id="AnswerTrue1">
-        <label for="AnswerTrue1">Vrai</label>
+    <div class="containerCreate">
 
 
 
-        <input type="text" name="newAnswer2" id="newAnswer2" placeholder="Réponse 2"/>
-        <input type="radio" name="AnswerTrue2" id="AnswerTrue2">
-        <label for="AnswerTrue2">Vrai</label>
+        <h1 class="answer">Indiquer les réponses à la question : "<?php echo $getQuestion; ?>"</h1>
 
-        <input type="text" name="newAnswer3" id="newAnswer3" placeholder="Réponse 3"/>
-        <input type="radio" name="AnswerTrue3" id="AnswerTrue3">
-        <label for="AnswerTrue3">Vrai</label>
+        <fieldset class="fieldsetCreateAnswer">
+            <legend><strong>Entrez Vos Données</strong></legend>
 
-        <input type="text" name="newAnswer4" id="newAnswer4" placeholder="Réponse 4"/>
-        <input type="radio" name="AnswerTrue4" id="AnswerTrue4">
-        <label for="AnswerTrue4">Vrai</label>
+        <form method="get" class="formCreate">
+            <div class="intoTheForm">
+                <input type="text" class="inputCreate" name="newAnswer1" id="newAnswer1" placeholder="Réponse 1"/>
+                 <input type="radio" name="AnswerTrue1" id="AnswerTrue1">
+                 <label for="AnswerTrue1">Vrai</label>
+            </div>
 
-        <input type="hidden" name="idQuestion" value="<?php echo $idQuestion?>"/>
+            <div class="intoTheForm">
+                <input type="text" class="inputCreate" name="newAnswer2" id="newAnswer2" placeholder="Réponse 2"/>
+                <input type="radio" name="AnswerTrue2" id="AnswerTrue2">
+                <label for="AnswerTrue2">Vrai</label>
+            </div>
+
+            <div class="intoTheForm">
+                <input type="text" class="inputCreate" name="newAnswer3" id="newAnswer3" placeholder="Réponse 3"/>
+                <input type="radio" name="AnswerTrue3" id="AnswerTrue3">
+                <label for="AnswerTrue3">Vrai</label>
+            </div>
 
 
-        <input type="submit" name="soumettre" value="soumettre">
+            <div class="intoTheForm">
+                <input type="text" class="inputCreate" name="newAnswer4" id="newAnswer4" placeholder="Réponse 4"/>
+                <input type="radio" name="AnswerTrue4" id="AnswerTrue4">
+                <label for="AnswerTrue4">Vrai</label>
+            </div>
+
+            <input type="hidden" name="idQuestion" value="<?php echo $result ?>"/>
 
 
+            <input type="submit" name="soumettre" value="soumettre"/>
 
 
-    </form>
+        </form>
     <?php
-    if((!empty($_GET['newAnswer1'])) && (!empty($_GET['newAnswer2'])) && (!empty($_GET['newAnswer3'])) && (!empty($_GET['newAnswer4'])) && (!empty($_GET['soumettre'])) && ((!empty($_GET['AnswerTrue1'])) || (!empty($_GET['AnswerTrue2'])) || (!empty($_GET['AnswerTrue3'])) || (!empty($_GET['AnswerTrue4'])))){
+    if((!empty($_GET['newAnswer1'])) && (!empty($_GET['newAnswer2'])) && (!empty($_GET['newAnswer3'])) &&
+        (!empty($_GET['newAnswer4'])) && (!empty($_GET['soumettre'])) && ((!empty($_GET['AnswerTrue1']))
+            || (!empty($_GET['AnswerTrue2'])) || (!empty($_GET['AnswerTrue3'])) || (!empty($_GET['AnswerTrue4'])))){
     $newAnswer1 = htmlentities($_GET['newAnswer1']);
     $newAnswer2 = htmlentities($_GET['newAnswer2']);
     $newAnswer3 = htmlentities($_GET['newAnswer3']);
     $newAnswer4 = htmlentities($_GET['newAnswer4']);
-    $questionId = intval($_GET['idQuestion']);
+    $questionId = intval($result);
 
 
     if($_GET['AnswerTrue1'] == "on"){
@@ -93,20 +104,18 @@ $idQuestion = intval($result);
     }else{$is_True4 = 0;}
 
 
-    var_dump($newAnswer1);
-    var_dump($_GET);
-    var_dump($_GET['idQuestion']);
-    var_dump($questionId);
-    var_dump($is_True1);
-    var_dump($is_True2);
-    var_dump($is_True3);
-    var_dump($is_True4);
-
-    $addAnswer = $bdd->query("INSERT INTO answer (answer, question_id, is_true) VALUES ('$newAnswer1', '$questionId', '$is_True1'), ('$newAnswer2', '$questionId', '$is_True2'), ('$newAnswer3', '$questionId', '$is_True3'), ('$newAnswer4', '$questionId', '$is_True4');");
+    $addAnswer = $bdd->query("INSERT INTO answer (answer, question_id, is_true) 
+VALUES ('$newAnswer1', '$questionId', '$is_True1'), 
+       ('$newAnswer2', '$questionId', '$is_True2'), 
+       ('$newAnswer3', '$questionId', '$is_True3'), 
+       ('$newAnswer4', '$questionId', '$is_True4');");
 
         if($addAnswer){
             echo "Données importées avec succes";?>
-            <button><a href="DatabaseAnswer.php">Les questions</a></button>
+                <div class="btnReturn">
+            <button class="databaseBtn"><a href="DatabaseAnswer.php">Consulter les réponses</a></button>
+            <button class="AdminBtnCA"><a href="AdminQuiz.php">retour A l'accueil Admin</a></button>
+                </div>
         <?php }else{
             die(mysqli_connect_error($bdd));
         }
@@ -121,16 +130,9 @@ $idQuestion = intval($result);
         echo "c'est à vous !";
     }?>
 
+        </fieldset>
 
-
-
-
-
-
-
-
-
-
+</div>
 
 
 </div>

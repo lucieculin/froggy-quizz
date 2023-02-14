@@ -33,47 +33,38 @@ $newsQuiz = new QuizRepository();
 $displayQuiz = $newsQuiz->findAllById(intval($result));
 
 ?>
-
 <div class="bodyCreate">
-
-    <?php var_dump($result); ?>
-
-    <h1>Modification sur le thème <?= $getTheme ?></h1>
-
-    <h2>Créer un nouveau Quiz</h2>
+<div class="containerCreate">
 
 
+         <h1>Modification sur le thème <?= $getTheme ?></h1>
+
+            <h2>Créer un nouveau Quiz</h2>
 
 
-
-    <form method="GET" action="">
-
-        <select class="" id="quiz" name="option" required>
-
-            <option id="option" name="vide" value="vide" selected="selected">----Select Quiz----</option>
-
-            <?php foreach ($displayQuiz as $quiz){ ?>
-
-                <option id="option" name="QuizChoice" value="<?= $quiz->getName()?>"><?= $quiz->getName()?></option>
-            <?php } ?>
-
-            <option id="option" name="newQuiz" value="<?= $newQuiz ?>" ><?= $newQuiz ?></option>
-
-        </select>
-
-        <input type="submit" name="selectionner" value="selectionner" />
-
-        <?php if(isset($_GET['selectionner'] ) && ($_GET['selectionner']=== 'selectionner')){
-            var_dump($_GET['option']);
-
-            if($_GET['option'] === 'vide'){
-
-                echo 'Selectionner un Quiz existant ou créer un nouveau Quiz';
-
-            }
+        <fieldset class="fieldsetCreate">
+            <legend><strong>---SELECTION---</strong></legend>
 
 
-            elseif ($_GET['option'] === $newQuiz) { ?>
+            <form method="GET" class="formCreate"  action="">
+
+                <select class="selectOptionCreate" id="quiz" name="option" required>
+
+
+                        <?php foreach ($displayQuiz as $quiz){ ?>
+                            <option id="option" name="QuizChoice" value="<?= $quiz->getName()?>"><?= $quiz->getName()?></option>
+                        <?php } ?>
+
+                            <option id="option" name="newQuiz" value="<?= $newQuiz ?>" selected="selected" ><?= $newQuiz ?></option>
+
+                </select>
+
+                 <input type="submit" name="selectionner" value="selectionner" />
+
+                <?php if(isset($_GET['selectionner'] ) && ($_GET['selectionner']=== 'selectionner')){
+
+
+          if ($_GET['option'] === $newQuiz) { ?>
 
                 <button><a href="createQuiz.php?">Valider la création d'un nouveau Quiz</a></button>
 
@@ -82,7 +73,7 @@ $displayQuiz = $newsQuiz->findAllById(intval($result));
 
             else{ ?>
                 <button><a href="quizExist.php?quiz=<?=$_GET['option']?>">Vous souhaitez ajouter des données sur le Quiz <?= $_GET['option'] ?></a></button>
-                <?php var_dump($_GET) ?>
+
 
             <?php }
         }else{
@@ -92,8 +83,10 @@ $displayQuiz = $newsQuiz->findAllById(intval($result));
         ?>
 
 
-    </form>
+            </form>
+        </fieldset>
 
 
+</div>
 
 </div>

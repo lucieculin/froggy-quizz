@@ -23,20 +23,20 @@ $newTheme = "nouveau Theme";
 
 ?>
 
-
 <div class="bodyCreate">
+<div class="containerCreate">
 
     <h1>Bienvenue sur votre page de création</h1>
 
          <h2>Créer un nouveau thème</h2>
 
-    <fieldset>
-        <legend>---SELECTION---</legend>
+    <fieldset class="fieldsetCreate">
+        <legend><strong>---SELECTION---</strong></legend>
 
 
-    <form method="GET" action="">
+    <form method="GET" class="formCreate" action="">
 
-        <select class="" id="theme" name="option" required>
+        <select class="selectOptionCreate" id="theme" name="option" required>
 
             <?php foreach ($displayTheme as $theme){ ?>
                 <option id="option" name="themeChoice" value="<?= $theme->getName() ?>"><?= $theme->getName()?></option>
@@ -61,7 +61,7 @@ $newTheme = "nouveau Theme";
 
               else{ ?>
                       <button><a href="themeExist.php?theme=<?=$_GET['option']?>">Vous souhaitez ajouter des données sur le theme <?= $_GET['option'] ?></a></button>
-                  <?php var_dump($_GET) ?>
+
 
                  <?php }
 }else{
@@ -80,9 +80,8 @@ $newTheme = "nouveau Theme";
 
 
 </div>
-    <?php
-    include('../partials/footer.php');
-    ?>
+</div>
+
 
 
 

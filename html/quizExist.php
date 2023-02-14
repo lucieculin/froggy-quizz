@@ -36,24 +36,27 @@ foreach ($displayQuiz as $quiz) {
 ?>
 
 <div class="bodyCreate">
-
-    <?php var_dump($result); ?>
+    <div class="containerCreate">
 
 
     <h1>Modification sur le Quiz "<?= $getQuiz ?>"</h1>
 
-    <h2>Créer les Questions </h2>
+        <h2>Créer les Questions </h2>
 
-<form method="get" action="">
 
-    <label for="question" >Entrer la nouvelle question pour le Quiz : "<?= $getQuiz ?>"</label>
-    <input type="text" name="question" placeholder="Entrer la question"/>
+        <fieldset class="fieldsetCreate">
+            <legend><strong>Entrez Vos Données</strong></legend>
 
-    <?php echo $result?>
-    <input type="hidden" name="id" value="<?php echo $result?>"/>
-    <input type="hidden" name="name" value="<?php echo $getQuiz?>"/>
+            <form method="get" class="formCreate" action="">
 
-    <input type="submit" name="soumettre" value="soumettre"/>
+                <label for="question" >Entrer la nouvelle question pour le Quiz : "<?= $getQuiz ?>"</label>
+                <input type="text" class="inputCreate" name="question" placeholder="Entrer la question"/>
+
+
+                <input type="hidden" name="id" value="<?php echo $result?>"/>
+                <input type="hidden" name="name" value="<?php echo $getQuiz?>"/>
+
+                <input type="submit" name="soumettre" value="soumettre"/>
 
 
 <?php if((!empty($_GET['question'])) && (!empty($_GET['soumettre']))){
@@ -73,4 +76,8 @@ foreach ($displayQuiz as $quiz) {
 }?>
 
 
-</form>
+            </form>
+        </fieldset>
+
+    </div>
+</div>
