@@ -13,7 +13,6 @@ class User
 
     private string $role;
 
-    private int $baniere_id;
 
     private DateTime $created_at;
 
