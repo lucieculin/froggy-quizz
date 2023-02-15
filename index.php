@@ -1,7 +1,6 @@
 <?php
-error_reporting(E_ERROR | E_NOTICE | E_PARSE);
+error_reporting( E_ERROR | E_NOTICE | E_PARSE );
 $isPage = "home";
-
 require_once 'vendor/autoload.php';
 
 
@@ -164,12 +163,8 @@ $allThemes = $themes->findAll();
 
 
 
-  <div class="container-home-page main ">
- 
-  
-  <?php
-  include('./partials/animBackground.php');
-  ?>
+  <div class="container-home-page">
+
 
     <div class=" quiz-vedette">
       <div class="container-margin">
@@ -357,7 +352,11 @@ $allThemes = $themes->findAll();
 
 
   </div>
-
-  <?php
-  include('./partials/footer.php')
-  ?>
+  <div class="roseau"><img src="./assets/images/Roseaux.png" alt="">
+    <img id="frog1" src="./assets/images/frog1.png" alt="">
+    <img id="frog2" src="./assets/images/frog2.png" alt="">
+    <img id="frog3" src="./assets/images/frog3.png" alt="">
+  </div>
+            <?php
+            include('./partials/footer.php')
+            ?>

@@ -8,7 +8,7 @@ class AnswerQcm
 
     private string $answer;
 
-    private int $check_id;
+    private int $is_true;
 
     private int $question_id;
 
@@ -49,15 +49,15 @@ class AnswerQcm
      */
     public function getCheckId(): int
     {
-        return $this->check_id;
+        return $this->is_true;
     }
 
     /**
-     * @param int $check_id
+     * @param int $is_true
      */
-    public function setCheckId(int $check_id): void
+    public function setCheckId(int $is_true): void
     {
-        $this->check_id = $check_id;
+        $this->is_true = $is_true;
     }
 
     /**
