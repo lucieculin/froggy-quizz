@@ -18,32 +18,34 @@ include('../partials/header.php');
 
 // Instanciation de la classe UserRepository
 $userData = new UserRepository();
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    if (!empty($_POST)) {
+        $userName = $_POST['userName'] ?? '';
+        $password = $_POST['password'] ?? '';
+        // Vérifier que le champ userName n'est pas vide avant de chercher l'utilisateur
+        if (!empty($userName)) {
+            $user = $userData->findByUserName($userName);
+        } else {
+            $user = null;
+        }
 
-if (!empty($_POST)) {
-    $userName = $_POST['userName'] ?? '';
-    $password = $_POST['password'] ?? '';
+        // Vérification des informations d'authentification
+        if ($user !== null && $user->getUserName() === $userName && password_verify($password, $user->getPassword())) {
+            // Authentification réussie, sauvegarde de l'utilisateur dans la session
+            $_SESSION['user'] = $user;
 
-    // Vérifier que le champ userName n'est pas vide avant de chercher l'utilisateur
-    if (!empty($userName)) {
-        $user = $userData->findByUserName($userName);
-    } else {
-        $user = null;
+            // Redirection vers la page du compte de l'utilisateur
+            header('Location: mon_compte.php');
+            exit;
+        }
+
+
     }
-
-    // Vérification des informations d'authentification
-    if ($user !== null && $user->getUserName() === $userName && password_verify($password, $user->getPassword())) {
-        // Authentification réussie, sauvegarde de l'utilisateur dans la session
-        $_SESSION['user'] = $user;
-        // Redirection vers la page du compte de l'utilisateur
-        header('Location: mon_compte.php');
-        exit;
-    }
-
 
 }
 
-    // Authentification échouée, affichage d'un message d'erreur
-    $error = 'Nom d\'utilisateur ou mot de passe incorrect';
+
+
 
 ?>
 

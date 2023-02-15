@@ -5,6 +5,14 @@ session_start();
 require_once '../vendor/autoload.php';
 $isPage = "mon_compte";
 include('../partials/header.php');
+$user = $_SESSION["USER"];
+if(!empty($user)){
+    $userName= $user["userName"] ;
+    $userMail= $user["email"];
+}else{
+    $userName = "user 1";
+    $userMail ="user@lamda.com";
+}
 ?>
 
 <div class="main">
@@ -14,11 +22,10 @@ include('../partials/header.php');
         <div class="card">
 
 
-            <h1>Froggy Card de <?= $_SESSION["user"]["userName"] ?></h1>
+            <h1>Froggy Card de <?=$userName?></h1>
 
-            <p>PseudoFrog : <?= $_SESSION["user"]["userName"] ?></p>
-            <p>Email : <?= $_SESSION["user"]["email"] ?></p>
-
+            <p>PseudoFrog : <?= $userName?></p>
+            <p>Email : <?= $userMail?></p>
         </div>
     </div>
 </div>
