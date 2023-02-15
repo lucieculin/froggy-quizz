@@ -39,7 +39,7 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: 1200px;
+    width: 85%;
     overflow: visible;
 
 }
@@ -697,19 +697,6 @@ section span {
 
 
 
-
-
-
-
-
-
-.main {
-    height: 500px;
-}
-
-
-
-
 /************************* vip cards*******************************/
 
 .quiz-vedette {
@@ -1198,5 +1185,25 @@ section span {
 
     100% {
         transform: translate(0px, 0px);
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+
+    .container-home-page{
+    width: 80%;
+    }
+    .main{
+    height: 2800px !important;
+    }
+}
+@media screen and (max-width: 900px) {
+
+    .container-home-page{
+    width: 80%;
+    }
+    .main{
+    height: 2800px !important;
     }
 }

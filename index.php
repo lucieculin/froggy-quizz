@@ -165,17 +165,9 @@ $allThemes = $themes->findAll();
   <!-- /*******************page******************************/ -->
 
 
-
-
-
-
-
   <div class="container-home-page main ">
 
 
-    <?php
-    include('./partials/animBackground.php');
-    ?>
 
     <div class=" quiz-vedette">
       <div class="container-margin">
@@ -233,8 +225,6 @@ $allThemes = $themes->findAll();
             </div>
           </div>
 
-
-
         </div>
       </div>
     </div>
@@ -284,9 +274,6 @@ $allThemes = $themes->findAll();
           <?php
           }
           ?>
-
-
-
 
         </div>
       </div>
@@ -341,8 +328,6 @@ $allThemes = $themes->findAll();
               </div>
               <div class="place">5</div>
             </div>
-
-
           </div>
         </div>
         <div id="stats" class="container-stats">
@@ -356,16 +341,17 @@ $allThemes = $themes->findAll();
               <span>Votre classement : 897</span>
             </p>
           </div>
-
         </div>
       </div>
     </div>
-
-
+  </div>
+  <div class="roseau"><img src="./assets/images/Roseaux.png" alt="">
+    <img id="frog1" src="./assets/images/frog1.png" alt="">
+    <img id="frog2" src="./assets/images/frog2.png" alt="">
+    <img id="frog3" src="./assets/images/frog3.png" alt="">
   </div>
 
 
-</body>
 <?php
 include('./partials/footer.php')
 ?>

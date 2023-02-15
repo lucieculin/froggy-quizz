@@ -69,6 +69,7 @@ nav {
 
 
 }
+
 .cloud-nav {
     width: 100%;
     height: 50px;
@@ -752,6 +753,7 @@ nav a {
 
     .footer {
         justify-content: space-around !important;
+        width: auto;
     }
 
     .bi {
@@ -769,88 +771,24 @@ nav a {
         display: none !important;
     }
 
-    .container-home-page {
-        padding-top: 200px;
-    }
+}
+@media (min-width: 768px) {
+  .navbar-toggler {
+    display: none;
+  }
 
-    .burger {
-        display: block;
-        position: relative;
-        padding: 0px;
-        padding-right: 10px;
-        width: 45px;
-        height: 45px;
-        border: none;
-        background: transparent;
-        cursor: pointer;
-    }
+  .navbar-nav {
+    position: static;
+    transform: none;
+  }
 
-    .bar {
-        display: block;
-        width: 35px;
-        height: 2px;
-        background: var(--bluue);
-        border-radius: 3px;
-        transition: .4s ease-in-out;
-    }
+  .nav-item {
+    display: inline-block;
+  }
 
-    .show-nav .bar {
-        width: 0;
-        background: transparent;
-    }
-
-    .bar::before,
-    .bar::after {
-        content: "";
-        width: 35px;
-        height: 2px;
-        left: 0px;
-        position: absolute;
-        background: var(--bluue);
-        border-radius: 3px;
-        transition: .4s ease-in-out;
-    }
-
-    .bar::before {
-        transform: translatey(-12px);
-    }
-
-    .bar::after {
-        transform: translatey(12px);
-    }
-
-    .show-nav .bar::before {
-        transform: rotate(45deg);
-        background: red;
-    }
-
-    .show-nav .bar::after {
-        transform: rotate(-45deg);
-        background: red;
-    }
-
-    .show-nav .zero {
-        transition: 1s ease-out;
-
-    }
-
-    .show-nav .first {
-        transition: 1s .2s ease-out;
-    }
-
-    .show-nav .second {
-        transition: 1s .4s ease-out;
-    }
-
-    .list-nav2 {
-        flex-direction: column;
-        height: calc(100vh - 4rem);
-        position: absolute;
-        top: 4rem;
-        background: blue;
-        width: 100%;
-        display: block;
-    }
+  .nav-link {
+    padding: 0.5rem 1rem;
+  }
 
 }
 

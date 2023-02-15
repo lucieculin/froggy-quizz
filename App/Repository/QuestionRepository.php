@@ -35,4 +35,4 @@ class QuestionRepository extends AbstractRepository
         $query->execute();
         return $query->fetchAll(PDO::FETCH_CLASS, QuestionRepository::class);
     }
-}0
+}
