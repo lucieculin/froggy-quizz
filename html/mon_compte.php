@@ -14,7 +14,7 @@ include('../partials/header.php');
         <div class="card">
 
 
-            <h1>Profil de <?= $_SESSION["user"]["userName"] ?></h1>
+            <h1>Froggy Card de <?= $_SESSION["user"]["userName"] ?></h1>
 
             <p>PseudoFrog : <?= $_SESSION["user"]["userName"] ?></p>
             <p>Email : <?= $_SESSION["user"]["email"] ?></p>

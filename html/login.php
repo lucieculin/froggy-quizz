@@ -1,3 +1,4 @@
+
 <?php
 
 // Configuration d'affichage des erreurs
@@ -8,7 +9,7 @@ session_start();
 
 // Import des classes et fonctions nécessaires
 use App\Repository\UserRepository;
-use App\Class\User;
+
 
 // Inclusion du header de la page
 require_once '../vendor/autoload.php';
@@ -16,24 +17,21 @@ $isPage = "login";
 include('../partials/header.php');
 
 // Instanciation de la classe UserRepository
-$userRepository = new UserRepository();
+$userData = new UserRepository();
 
-// Si le formulaire est soumis
 if (!empty($_POST)) {
-    // Récupération des données du formulaire
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+    $userName = $_POST['userName'] ?? '';
+    $password = $_POST['password'] ?? '';
 
-    // Recherche de l'utilisateur dans la base de données
-    $user = $userRepository->findByUserName($username);
-
-    // Affichage pour débogage
-    dump($user);
-    echo($username);
-    echo($password);
+    // Vérifier que le champ userName n'est pas vide avant de chercher l'utilisateur
+    if (!empty($userName)) {
+        $user = $userData->findByUserName($userName);
+    } else {
+        $user = null;
+    }
 
     // Vérification des informations d'authentification
-    if ($user !== null && $user !== $username && password_verify($password, $user->getPassword())) {
+    if ($user !== null && $user->getUserName() === $userName && password_verify($password, $user->getPassword())) {
         // Authentification réussie, sauvegarde de l'utilisateur dans la session
         $_SESSION['user'] = $user;
         // Redirection vers la page du compte de l'utilisateur
@@ -41,11 +39,15 @@ if (!empty($_POST)) {
         exit;
     }
 
-    // Authentification échouée, affichage d'un message d'erreur
-    $error = 'Nom d\'utilisateur ou mot de passe incorrect';
+
 }
 
+    // Authentification échouée, affichage d'un message d'erreur
+    $error = 'Nom d\'utilisateur ou mot de passe incorrect';
+
 ?>
+
+
 
     <!-- Affichage du formulaire de connexion -->
     <div class="main">
