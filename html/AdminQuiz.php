@@ -3,7 +3,7 @@ $isPage="AdminQuiz";
 include('../partials/header.php');
 
 ?>
-<body class="bodyAdminQuiz">
+<div class="bodyAdminQuiz">
 
     <h1 class="h1AdminQuiz">GEREZ VOTRE BASE DE DONNEES</h1>
 
@@ -55,4 +55,5 @@ include('../partials/header.php');
 
 </div>
 
+</div>
 </body>

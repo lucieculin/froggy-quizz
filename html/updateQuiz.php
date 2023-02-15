@@ -74,4 +74,5 @@ foreach ($displayQuiz as $quiz){
     </div>
 
 </div>
+</body>
 

@@ -95,6 +95,8 @@ $pages = ceil($countIdTheme / PER_PAGE);
 
 </div>
 
+</body>
+
 
 
 

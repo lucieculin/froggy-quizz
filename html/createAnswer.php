@@ -136,3 +136,5 @@ VALUES ('$newAnswer1', '$questionId', '$is_True1'),
 
 
 </div>
+
+</body>

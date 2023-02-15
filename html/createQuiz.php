@@ -60,3 +60,5 @@ $idTheme = $_GET['idTheme'];
         </fieldset>
     </div>
 </div>
+
+</body>

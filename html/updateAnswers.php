@@ -86,4 +86,5 @@ foreach ($displayAnswer as $answer){
         </div>
     </div>
 </div>
+</body>
 

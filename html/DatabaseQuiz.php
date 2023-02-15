@@ -100,6 +100,7 @@ $pages = ceil($countIdQuiz / PER_PAGE);
     </div>
 
 </div>
+</body>
 
 
 

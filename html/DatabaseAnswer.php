@@ -113,4 +113,6 @@ $pages = ceil($countIdAnswer / PER_PAGE);
 
 </div>
 
+</body>
+
 

@@ -70,3 +70,4 @@ foreach ($displayQuestion as $question) {
     </div>
 
 </div>
+</body>

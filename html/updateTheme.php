@@ -76,4 +76,5 @@ foreach ($displayTheme as $item) {
     </div>
 
 </div>
+</body>
 

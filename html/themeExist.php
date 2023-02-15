@@ -92,3 +92,5 @@ $displayQuiz = $newsQuiz->findAllById(intval($result));
 </div>
 
 </div>
+
+</body>
