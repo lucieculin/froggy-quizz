@@ -49,7 +49,7 @@
             <span class="bar"></span>
         </button>
   </div>
-  <div class="cloud-nav"></div>
+
 </nav>
 
 <nav class="nav2">
@@ -100,7 +100,8 @@
     <div class="indicator" id="indicator">
       <div id="indicator-sousmenu">
       </div>
-  </ul>
+    </ul>
+    <div class="cloud-nav"></div>
 </nav>
 
 <body>

@@ -307,23 +307,30 @@ nav a {
 
 /******************menu déroulant********************************/
 
+
 .drop {
     display: flex;
     flex-direction: column;
     justify-content: top;
     align-items: center;
     position: absolute;
-    top: -350px;
+    top: 39px;
     width: 80px;
     transition: .1s linear;
     transition-delay: .2s;
-    z-index: 3;
-
+    z-index: 4;
+    height: auto;
+    transform: scale(0);
 }
+
 
 .active {
+    transform: scale(1);
     top: 39px;
 }
+
+
+
 
 .drop li {
     padding: 10px;
@@ -336,12 +343,27 @@ nav a {
 
 
 
+
+
 .drop li:hover {
     letter-spacing: 1px;
 }
 
 
 
+
+
+.under-indicator {
+    height: 200px;
+    width: 200px;
+    background: white;
+    position: absolute;
+    left: 50%;
+    top: -80%;
+    z-index: -1;
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
 
 
 .indicator {
@@ -353,7 +375,11 @@ nav a {
     border-radius: 0 0 10px 10px;
     left: -1200px;
     transition: .2s ease-out;
+    z-index: 3;
+    border: 5px solid white;
+    border-top: 0;
 }
+
 
 
 .indicator::before {
@@ -368,6 +394,8 @@ nav a {
     box-shadow: 3px -3px 0 0 #d0e2f0;
 }
 
+
+
 .indicator::after {
     content: "";
     position: absolute;
@@ -380,14 +408,22 @@ nav a {
     box-shadow: -3px -3px 0 0 #d0e2f0;
 }
 
+
+
+
+
 #container-sousmenu-language {
     height: 0px;
     padding: 0px;
 }
 
+
+
 .space-sousmenu {
     height: 30px !important;
 }
+
+
 
 #indicator-sousmenu {
     position: absolute;
@@ -404,6 +440,8 @@ nav a {
 
 }
 
+
+
 #indicator-sousmenu::before {
     content: "";
     position: absolute;
@@ -416,6 +454,11 @@ nav a {
     box-shadow: 2px 2px 0 0 white;
 }
 
+
+
+
+
+
 #indicator-sousmenu::after {
     content: "";
     position: absolute;
@@ -427,6 +470,7 @@ nav a {
     border-radius: 0 10px 0 0;
     box-shadow: 2px -2px 0 0 white;
 }
+
 
 .size-indicator {
     width: 150px !important;
@@ -460,10 +504,6 @@ nav a {
 
 
 
-
-
-
-
 #container-sousmenu-theme {
     height: 0px;
     padding: 0px;
@@ -480,13 +520,30 @@ nav a {
     transition: .2s linear;
 }
 
+
 .size-indicator-theme {
     width: 150px !important;
     top: 50px !important;
     right: -52% !important;
 }
+#box-language:hover {
+
+    letter-spacing: 0px;
+}
+
+.box-size-up {
+    height: 80px !important;
+}
 
 
+
+
+
+.size-indicator-theme {
+    width: 150px !important;
+    top: 50px !important;
+    right: -52% !important;
+}
 
 
 /********************FOOTER*****************************/
@@ -611,7 +668,7 @@ nav a {
 
 .main {
     overflow: hidden;
-    padding-top: 120px;
+    padding-top: 200px;
     padding-bottom: 120px;
 }
 
@@ -625,7 +682,7 @@ nav a {
 
 @media screen and (max-width: 1200px) {
 
-    .h2-title-section {
+     .h2-title-section {
         width: 600px;
     }
 
@@ -669,7 +726,7 @@ nav a {
     }
 
 
-    .progress img {
+   .progress img {
         height: 30px;
         width: 50%;
 
@@ -699,7 +756,7 @@ nav a {
 
     .bi {
         height: 70%;
-    }
+    } 
 
 
 
@@ -796,3 +853,4 @@ nav a {
     }
 
 }
+

@@ -41,141 +41,141 @@ $allThemes = $themes->findAll();
           </a>
           <div class="sp1 logospan">
             <span class="spsp">ROGGY</span>
+          </div>
         </div>
-      </div>
-      
-      <div class="logoContainer">
-        <a class="imgLogo2">
-          <img src="/assets/images/q-logo.png" alt="logo_froggy_quiz" class="logo" />
-        </a>
-        <div class="sp2 logospan">
-          <span class="spsp">UIZ</span>
-        </div>
-      </div>
-    </div>
-    <div class="contain-right">
-      <div class="container-search">
-        <input type="search" class="search" placeholder="Rechercher" />
-        <button class="loupe" type="submit">
-          <img src="../assets/images/loupe.png" alt="image de loupe" />
-        </button>
-      </div>
-      
-      <div class="connexion">
-        <a href="./html/login.php">Login</a>
-      </div>
-    </div>
-  </nav>
 
-  <section id="section" class="none-tab">
-    <img src="../assets/images/cloud-back2.png" id="cloud-back" class="clouds" alt="" />
-    <img src="../assets/images/sun.png" id="astre" alt="" />
-    <div id="title">
-      <div class="img-fq" id="img-f">
-        <img src="../assets/images/F-logo-title.png" alt="" />
-      </div>
-      <div class="title-d-span" id="tds1">
-        <span class="tsp" id="tsp1">ROGGY</span>
-      </div>
-      <div class="img-fq" id="img-q">
-        <img id="just-q" src="../assets/images/q-logo-title.png" alt="" />
-        <div class="title-d-span" id="tds2">
-          <span class="tsp" id="tsp2">UIZ</span>
+        <div class="logoContainer">
+          <a class="imgLogo2">
+            <img src="/assets/images/q-logo.png" alt="logo_froggy_quiz" class="logo" />
+          </a>
+          <div class="sp2 logospan">
+            <span class="spsp">UIZ</span>
+          </div>
         </div>
       </div>
-    </div>
-    <span id="span1">Bienvenue sur</span>
-    <span id="span2">Le meilleur quiz du monde</span>
-    <img id="froggy-fly" src="../assets/images/froggy-fly.png" alt="">
-    <img id="froggy-fly-blue" src="../assets/images/froggy-fly-blue.png" alt="">
-    <img id="froggy-fly-orange" src="../assets/images/froggy-fly-orange.png" alt="">
-    <img src="../assets/images/cloud-mid.png" id="cloud" class="clouds" alt="" />
-    <img src="../assets/images/cloud-contact.png" id="cloud-contact" class="clouds" alt="" />
-  </section>
-  
-  <nav id="nav2" class="nav2">
-    <ul class="list-nav2">
-      <div class="nav navdrop" id="nav2nav1">
-        <div class="underline">Jouer</div>
-        <ul class="drop">
-          <li>Themes</li>
-          <li><a href="./defie_tes_amis.php">Mode de jeu</a> </li>
-          <li>Partie rapide</li>
-        </ul>
+      <div class="contain-right">
+        <div class="container-search">
+          <input type="search" class="search" placeholder="Rechercher" />
+          <button class="loupe" type="submit">
+            <img src="../assets/images/loupe.png" alt="image de loupe" />
+          </button>
+        </div>
+
+        <div class="connexion">
+          <a href="./html/login.php">Login</a>
+        </div>
       </div>
-      <div class="nav navdrop">
-        <div class="underline">Profil</div>
-        
-        <ul class="drop">
-          <li>Mon compte</li>
-          <li>Mon identité</li>
-          
-        </ul>
+    </nav>
+
+    <section id="section" class="none-tab">
+      <img src="../assets/images/cloud-back2.png" id="cloud-back" class="clouds" alt="" />
+      <img src="../assets/images/sun.png" id="astre" alt="" />
+      <div id="title">
+        <div class="img-fq" id="img-f">
+          <img src="../assets/images/F-logo-title.png" alt="" />
+        </div>
+        <div class="title-d-span" id="tds1">
+          <span class="tsp" id="tsp1">ROGGY</span>
+        </div>
+        <div class="img-fq" id="img-q">
+          <img id="just-q" src="../assets/images/q-logo-title.png" alt="" />
+          <div class="title-d-span" id="tds2">
+            <span class="tsp" id="tsp2">UIZ</span>
+          </div>
+        </div>
       </div>
-      
-      <div class="nav navdrop">
-        <div class="underline">Règlages</div>
-        
-        <ul class="drop">
-          <li id="language">Languages</li>
-          <li id="container-sousmenu-language">
-            <ul id="box-language">
-              <li id="fr">Francais</li>
-              <li id="uk">English</li>
-            </ul>
-            
-          </li>
-          <li id="theme">Thèmes</li>
-          <li id="container-sousmenu-theme">
-            
-            <ul id="box-theme">
-              <li id="light">Light</li>
-              <li id="dark">Dark</li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <div class="nav">
-        <div id="no-drop" class="no-drop underline">Boutique</div>
-        
-        <!-- <ul class="drop">
+      <span id="span1">Bienvenue sur</span>
+      <span id="span2">Le meilleur quiz du monde</span>
+      <img id="froggy-fly" src="../assets/images/froggy-fly.png" alt="">
+      <img id="froggy-fly-blue" src="../assets/images/froggy-fly-blue.png" alt="">
+      <img id="froggy-fly-orange" src="../assets/images/froggy-fly-orange.png" alt="">
+      <img src="../assets/images/cloud-mid.png" id="cloud" class="clouds" alt="" />
+      <img src="../assets/images/cloud-contact.png" id="cloud-contact" class="clouds" alt="" />
+    </section>
+
+    <nav id="nav2" class="nav2">
+      <ul class="list-nav2">
+        <div class="nav navdrop" id="nav2nav1">
+          <div class="underline">Jouer</div>
+          <ul class="drop">
+            <li>Themes</li>
+            <li><a href="./defie_tes_amis.php">Mode de jeu</a> </li>
+            <li>Partie rapide</li>
+          </ul>
+        </div>
+        <div class="nav navdrop">
+          <div class="underline">Profil</div>
+
+          <ul class="drop">
+            <li>Mon compte</li>
+            <li>Mon identité</li>
+
+          </ul>
+        </div>
+
+        <div class="nav navdrop">
+          <div class="underline">Règlages</div>
+
+          <ul class="drop">
+            <li id="language">Languages</li>
+            <li id="container-sousmenu-language">
+              <ul id="box-language">
+                <li id="fr">Francais</li>
+                <li id="uk">English</li>
+              </ul>
+
+            </li>
+            <li id="theme">Thèmes</li>
+            <li id="container-sousmenu-theme">
+
+              <ul id="box-theme">
+                <li id="light">Light</li>
+                <li id="dark">Dark</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="nav">
+          <div id="no-drop" class="no-drop underline">Boutique</div>
+
+          <!-- <ul class="drop">
           <li>random</li>
           <li>random</li>
           <li>random</li>
           <li>random</li>
           <li>random</li>
         </ul> -->
-        
-      </div>
-      
-      <div class="indicator" id="indicator">
-        <!-- <div class="under-indicator"></div> -->
-        <div id="indicator-sousmenu">
+
+        </div>
+
+        <div class="indicator" id="indicator">
+          <!-- <div class="under-indicator"></div> -->
+          <div id="indicator-sousmenu">
           </div>
-        </ul>
-    <div class="cloud-nav"></div>
+      </ul>
+      <div class="cloud-nav"></div>
 
 
-        
-  </nav>
-  
-</div>
-  
-  
+
+    </nav>
+
+  </div>
+
+
   <!-- /*******************page******************************/ -->
-  
-  
-  
-  
+
+
+
+
 
 
 
   <div class="container-home-page main ">
- 
-  
-  <?php
-  include('./partials/animBackground.php');
-  ?>
+
+
+    <?php
+    include('./partials/animBackground.php');
+    ?>
 
     <div class=" quiz-vedette">
       <div class="container-margin">
@@ -268,16 +268,16 @@ $allThemes = $themes->findAll();
               <h3 class="title-quiz-by-theme"><?= $theme->getName() ?></h3>
               <div class="container-quiz-quiz-by-theme">
                 <div class="card-quiz-by-theme">
-                 <a href="./html/questions.php?id=<?= $quizsByTheme[0]->id ?>"><?= $quizsByTheme[0]->name; ?></a>
+                  <a href="./html/questions.php?id=<?= $quizsByTheme[0]->id ?>"><?= $quizsByTheme[0]->name; ?></a>
                 </div>
                 <div class="card-quiz-by-theme">
-                 <a href="./html/questions.php?id=<?= $quizsByTheme[1]->id ?>"><?= $quizsByTheme[1]->name; ?></a>
+                  <a href="./html/questions.php?id=<?= $quizsByTheme[1]->id ?>"><?= $quizsByTheme[1]->name; ?></a>
                 </div>
                 <div class="card-quiz-by-theme">
-                <a href="./html/questions.php?id=<?= $quizsByTheme[2]->id ?>"><?= $quizsByTheme[2]->name; ?></a>
+                  <a href="./html/questions.php?id=<?= $quizsByTheme[2]->id ?>"><?= $quizsByTheme[2]->name; ?></a>
                 </div>
                 <div class="card-quiz-by-theme">
-                 <a href="">Plus de <?= $theme->getName() ?></a>
+                  <a href="">Plus de <?= $theme->getName() ?></a>
                 </div>
               </div>
             </div>
@@ -364,6 +364,8 @@ $allThemes = $themes->findAll();
 
   </div>
 
-  <?php
-  include('./partials/footer.php')
-  ?>
+
+</body>
+<?php
+include('./partials/footer.php')
+?>
