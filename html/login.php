@@ -37,6 +37,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // Redirection vers la page du compte de l'utilisateur
             header('Location: mon_compte.php');
             exit;
+        }else {
+            // Informations d'authentification incorrectes
+            $error = 'Frog ID ou Froggy Pass incorrect';
         }
 
 
@@ -61,8 +64,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <?php endif; ?>
                 <form  method="post" action="login.php">
                     <div class="form-group">
-                        <label for="username">Frog ID:</label>
-                        <input type="text" id="username" name="username" class="form-input-glassmorphism">
+                        <label for="userName">Frog ID:</label>
+                        <input type="text" id="userName" name="userName" class="form-input-glassmorphism">
                     </div>
                     <div class="form-group">
                         <label for="password">Froggy Pass:</label>
