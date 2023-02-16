@@ -39,7 +39,6 @@ for ($i = 0; $i < 10; $i++) {
 }
 ?>
 <ul class="circles">
-  <li>?</li>  
   <li>?</li>
   <li>?</li>
   <li>?</li>
@@ -48,8 +47,9 @@ for ($i = 0; $i < 10; $i++) {
   <li>?</li>
   <li>?</li>
   <li>?</li>
-  <li>?</li> 
-  <div class="main">
+  <li>?</li>
+  <li>?</li>
+  <div class="main"> 
     <div class="margin-container">
       <form action="../html/result.php" method="post">
         <div class="question-container submit-container">

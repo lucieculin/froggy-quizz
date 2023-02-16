@@ -26,17 +26,35 @@ document.addEventListener("scroll", () => {
   span2.style.top = value * 1 + 520 + "px";
   if (value < 10) {
     justQ.style.left = -80 + value * 1 + "px";
-  }
-  if (value >= 1040) {
-    nav2.style.position = "fixed";
-    nav2.style.top = "4rem";
-  } else {
-    nav2.style.position = "absolute";
-    nav2.style.top = "";
-  }
+  } 
+    if (value >= 1040) {
+      nav2.style.position = "fixed";
+      nav2.style.top = "4rem";
+    } else {
+      nav2.style.position = "absolute";
+      nav2.style.top = "";
+    }
+  
+
+
+  // let header = document.querySelector('#header');
+  // let headerHeight = header.offsetHeight;
+  // let footer = document.querySelector('#footer');
+  // let footerTop = footer.offsetTop;
+  // let statsHeight = stats.offsetHeight;
+
+  // if (value >= headerHeight && value <= footerTop - statsHeight) {
+  //   stats.style.position = "fixed";
+  //   stats.style.top = `${headerHeight}px`;
+  // } else {
+  //   stats.style.position = "relative";
+  //   stats.style.top = "";
+  // }
+
+  
   if (value >= 2043) {
     stats.style.position = "fixed";
-    stats.style.top = "10rem";
+    stats.style.top = "190px";
   } else {
     stats.style.position = "sticky";
     stats.style.top = "";
@@ -48,6 +66,7 @@ document.addEventListener("scroll", () => {
   } else {
     stats.style.marginTop = "0px";
   }
+
 
   astre.style.top = value * 1.1 - 400 + "px";
   astre.style.left = value * -0.1 - 150 + "px";

@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" />
   <?php
   include('../partials/css.php');
   include('../partials/script.php');
@@ -45,7 +45,11 @@
     <div class="connexion">
       <a href="../html/login.php">Login</a>
     </div>
+    <button class="burger">
+            <span class="bar"></span>
+        </button>
   </div>
+
 </nav>
 
 <nav class="nav2">
@@ -91,20 +95,13 @@
     <div class="nav">
       <a href="#" id="no-drop" class="no-drop underline">Boutique</a>
 
-      <!-- <ul class="drop">
-            <li>random</li>
-            <li>random</li>
-            <li>random</li>
-            <li>random</li>
-            <li>random</li>
-          </ul> -->
-
     </div>
 
     <div class="indicator" id="indicator">
       <div id="indicator-sousmenu">
       </div>
-  </ul>
+    </ul>
+    <div class="cloud-nav"></div>
 </nav>
 
 <body>
