@@ -24,7 +24,6 @@ foreach ($results as $result) {
 
 foreach ($allAnswer as $currentAnswer) {
     $currentQuestion = $question->findById($currentAnswer->question_id);
-
     if ($currentAnswer->is_true) {
         $score++;
     } else {
