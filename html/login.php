@@ -2,7 +2,7 @@
 <?php
 
 // Configuration d'affichage des erreurs
-error_reporting(E_ERROR | E_NOTICE | E_PARSE);
+error_reportingE_ERROR | E_NOTICE | E_PARSE);
 
 // Démarrage de la session
 session_start();
