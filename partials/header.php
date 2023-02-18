@@ -45,9 +45,7 @@
     <div class="connexion">
       <a href="../html/login.php">Login</a>
     </div>
-    <button class="burger">
-            <span class="bar"></span>
-        </button>
+
   </div>
 
 </nav>

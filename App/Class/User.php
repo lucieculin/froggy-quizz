@@ -7,15 +7,37 @@ class User
 {
     private int $id;
 
-    private string $nickname;
+    private string $userName;
+
+    private string $firstName;
+
+    private string $lastName;
 
     private string $password;
+
+    private string $email;
 
     private string $role;
 
     private int $baniere_id;
 
-    private DateTime $created_at;
+    /**
+     * @return string
+     */
+    public function getEmail(): string
+    {
+        return $this->email;
+    }
+
+    /**
+     * @param string $email
+     */
+    public function setEmail(string $email): void
+    {
+        $this->email = $email;
+    }
+
+
 
     /**
      * @return int
@@ -36,17 +58,49 @@ class User
     /**
      * @return string
      */
-    public function getNickname(): string
+    public function getUserName(): string
     {
-        return $this->nickname;
+        return $this->userName;
     }
 
     /**
-     * @param string $nickname
+     * @param string $userName
      */
-    public function setNickname(string $nickname): void
+    public function setUserName(string $userName): void
     {
-        $this->nickname = $nickname;
+        $this->userName = $userName;
+    }
+
+    /**
+     * @param string $firstName
+     */
+    public function setFirstName(string $firstName): void
+    {
+        $this->firstName = $firstName;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFirstName(): string
+    {
+        return $this->firstName;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLastName(): string
+    {
+        return $this->lastName;
+    }
+
+    /**
+     * @param string $lastName
+     */
+    public function setLastName(string $lastName): void
+    {
+        $this->lastName = $lastName;
     }
 
     /**
@@ -98,20 +152,21 @@ class User
     }
 
     /**
-     * @return Date
+     * @return DateTime
      */
-    public function getCreatedAt(): Date
+    public function getCreatedAt(): DateTime
     {
         return $this->created_at;
     }
 
     /**
-     * @param Date $created_at
+     * @param DateTime $created_at
      */
-    public function setCreatedAt(Date $created_at): void
+    public function setCreatedAt(DateTime $created_at): void
     {
         $this->created_at = $created_at;
     }
+
 
 
 

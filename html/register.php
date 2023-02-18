@@ -1,69 +1,112 @@
 <?php
-$isPage="register";
+
+error_reporting(E_ERROR | E_NOTICE | E_PARSE);
+session_start();
+use App\Repository\UserRepository;
+use App\Class\User;
+require_once '../vendor/autoload.php';
+$isPage = "register";
 include('../partials/header.php');
+
+// On initialise l'objet UserRepository
+$userData = new UserRepository();
+
+
+// Si le formulaire a été soumis
+
+    // Récupération des données
+    $userName = $_POST['userName'];
+    $firstName = $_POST['firstName'];
+    $lastName = $_POST['lastName'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+
+
+
+    // Vérification que tous les champs sont remplis
+    if (empty($userName) || empty($firstName) || empty($lastName) || empty( $email) || empty( $password)) {
+        $errorMessage = "Veuillez remplir tous les champs du formulaire.";
+        echo "ça marche pas";
+    } else {
+        // Vérification que l'email n'est pas déjà utilisé
+        $user = $userData->findByEmail($email);
+        if ($user) {
+            $errors[] = "Cet email est déjà utilisé. Veuillez en choisir un autre.";
+
+        }else {
+            // Création d'un nouvel utilisateur
+            $newUser = new User();
+            $newUser->setUserName($userName);
+            $newUser->setFirstName($firstName);
+            $newUser->setLastName($lastName);
+            $newUser->setEmail($email);
+            $newUser->setPassword(password_hash($password, PASSWORD_ARGON2I));
+            // Enregistrement de l'utilisateur dans la base de données
+            $newUser = $userData->createUser($userName, $firstName, $lastName, $email, $password);
+
+            // Redirection vers la page de mon compte
+            header('Location: mon_compte.php');
+            exit;
+        }
+    }
+
+
 ?>
 
 
+    <main>
+        <div class="container-card">
+            <section class="contact">
 
-<main>
+                <form class="contact-form" method="POST" action="register.php">
 
-<section class="contact">
+                    <h2>Inscription</h2>
 
-    <form class="contact-form">
-
-        <h2>Inscription</h2>
-
-            <div class="firstName">
-                <label for="firstName">Nom:</label>
-                <input type="text" id="firstName" name="firstName" placeholder="Saisissez votre nom...">
-            </div>
-
+                    <div class="firstName">
+                        <label for="firstName">Nom:</label>
+                        <input type="text" id="firstName" name="firstName" placeholder="Saisissez votre nom...">
+                    </div>
 
 
-            <div class="lastName">
-                <label for="lastName">Prénom:</label>
-                <input type="text" id="lastName" name="lastname" placeholder="Saisissez votre prénom...">
-            </div>
+                    <div class="lastName">
+                        <label for="lastName">Prénom:</label>
+                        <input type="text" id="lastName" name="lastName" placeholder="Saisissez votre prénom...">
+                    </div>
 
 
-            <div class="dateOfBirth">
-                <label for="dateOfBirth">Date de naissance:</label>
-                <input type="date" id="dateOfBirth" name="dateOfBirth" placeholder="Saisissez votre date de naissance...">
-            </div>
+                    <div class="email">
+                        <label for="email">Email:</label>
+                        <input type="text" id="email" name="email" placeholder="Saisissez votre email...">
+                    </div>
 
-            <div class="email">
-                <label for="email">Email:</label>
-                <input type="text" id="email" name="email" placeholder="Saisissez votre email...">
-            </div>
+                    <div class="userName">
+                        <label for="userName">Frog ID:</label>
+                        <input type="text" id="userName" name="userName" placeholder="Saisissez votre pseudo...">
+                    </div>
 
-            <div class="nickName">
-                <label for="nickName">Pseudo Frog:</label>
-                <input type="text" id="nickName" name="nickName" placeholder="Saisissez votre pseudo...">
-            </div>
+                    <div class="password">
+                        <label for="password">Froggy Pass:</label>
+                        <input type="password" id="password" name="password" placeholder="Saisissez un mot de passe...">
+                    </div>
 
-            <div class="password">
-                <label for="password">Froggy Pass:</label>
-                <input type="text" id="password" name="password" placeholder="Saisissez un mot de pass...">
-            </div>
-            <div class="submit">
-            <input type="submit" value="ENVOYER">
-            </div>
+                    <div class="password_retype">
+                        <label for="password">Froggy Pass:</label>
+                        <input type="password" id="password_retype" name="password_retype" placeholder="Confirmez le mot de passe...">
+                    </div>
+                    <div class="submit">
+                        <input type="submit" name="create" value="ENVOYER">
+                    </div>
 
-    </form>
-</section>
-
-
-
-
-</main>
+        </form>
+        </section>
+        </div>
 
 
-
-
-
-
+    </main>
 
 
 <?php
 include('../partials/footer.php')
 ?>
+

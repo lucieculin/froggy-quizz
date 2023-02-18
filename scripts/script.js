@@ -130,12 +130,12 @@ dark.addEventListener("mouseout", () =>{
 
 dark.addEventListener("click", () => {
   document.body.style.setProperty('background', 'var(--dark-background)');
-  document.documentElement.style.setProperty('--color1', '#000000');
+  document.documentElement.style.setProperty('--color-contrast', '#f2f2f2');
   document.documentElement.style.setProperty('--color3', '#1a1a2e');
 }) 
 
 light.addEventListener("click", () => {
   document.body.style.setProperty('background', 'var(--light-background)');
-  document.documentElement.style.setProperty('--color', '#f2f2f2');
+  document.documentElement.style.setProperty('--color-contrast', '#000000');
   document.documentElement.style.setProperty('--color3', 'white');
 })

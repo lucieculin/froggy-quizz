@@ -3,38 +3,57 @@ $isPage="AdminQuiz";
 include('../partials/header.php');
 
 ?>
+<div class="bodyAdminQuiz">
 
-<div class="containerAdminQuiz">
     <h1 class="h1AdminQuiz">GEREZ VOTRE BASE DE DONNEES</h1>
 
-    <h2 class="h2AdminQuiz">Vous souhaitez :</h2>
+<div class="centerCarteAdmin">
 
-    <div class="btnAdminQuiz">
+    <div class="carteAdminQuiz">
 
-        <form action="./CreateQuiz.php" method="get" target="_blank">
+        <div class="btnAdminQuiz">
 
-            <button class="bAdminQuiz" type="submit" name="create">CREER DES DONNEES</button>
+            <form action="DatabaseTheme.php" method="get" target="_blank">
 
-        </form>
+                <button class="bAdminQuiz" type="submit" name="create">VOIR LES THEMES</button>
 
-        <form action="./UpdateQuiz.php" method="get" target="_blank">
+            </form>
 
-            <button class="bAdminQuiz" type="submit" name="udpdate">MODIFFIER DES DONNEES</button>
+            <form action="DatabaseQuiz.php" method="get" target="_blank">
 
-        </form>
+                <button class="bAdminQuiz" type="submit" name="create">VOIR LES QUIZ</button>
 
-        <form action="./DeleteQuiz.php" method="get" target="_blank">
+            </form>
 
-            <button class="bAdminQuiz" type="submit" name="delete">SUPPRIMER DES DONNEES</button>
+            <form action="DatabaseQuestion.php" method="get" target="_blank">
 
-        </form>
+                <button class="bAdminQuiz" type="submit" name="create">VOIR LES QUESTIONS</button>
 
+            </form>
+
+            <form action="DatabaseAnswer.php" method="get" target="_blank">
+
+                <button class="bAdminQuiz" type="submit" name="create">VOIR LES REPONSES</button>
+
+            </form>
+
+            <form action="formulaireIndex.php" target="_blank">
+
+                <button class="bAdminQuiz" type="submit" name="udpdate">CREER DU CONTENU</button>
+
+            </form>
+
+            <form action="../../index.php" target="_blank">
+
+                <button class="bAdminQuiz" type="submit" name="udpdate">RETOURNER SUR LA PAGE D'ACCUEIL DU SITE</button>
+
+            </form>
+
+        </div>
 
     </div>
 
 </div>
 
-
-<?php
-include('../partials/footer.php');
-?>
+</div>
+</body>

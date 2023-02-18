@@ -1,161 +1,78 @@
 <?php
-$isPage="UpdateQuiz";
+$isPage = "updateQuiz";
+include('../partials/header.php');
 require_once '../vendor/autoload.php';
 
-use App\Repository\AnswerRepository;
-use App\Repository\QuestionRepository;
-use App\Repository\QuizRepository;
 use App\Repository\ThemeRepository;
+use App\Class\Theme;
+use App\Repository\QuizRepository;
+use App\Class\Quiz;
 
-include('../partials/header.php');
+$bdd= new PDO("mysql:host=127.0.0.1:3306;dbname=froggy_quiz", 'root', password:null);
 
-
-
-$themes = new ThemeRepository();
-$displayThemes = $themes->findAll();
-
-$quizs = new QuizRepository();
-$displayQuizs = $quizs->findAll();
-
-$questions = new QuestionRepository();
-$displayQuestions = $questions->findAll();
+if($bdd){
+    echo "Connection successfull";
+}else{
+    die(mysqli_connect_error($bdd));
+}
 
 
-$answers = new AnswerRepository();
-$displayAnswers = $answers->findAll();
+$newQuiz = new QuizRepository();
+$displayQuiz = $newQuiz->findAll();
+
+$idQuiz = intval($_GET['id']);
+
+foreach ($displayQuiz as $quiz){
+    if($quiz->getId() === $idQuiz){
+        echo $result = $quiz->getName();
+    }
+}
+
 
 
 ?>
-
 <div class="bodyUpdate">
 
-    <div class="btnAdminQuiz">
-
-        <form action="./AdminQuiz.php" method="get" target="_blank">
-
-            <button class="bAdminQuiz" type="submit" name="Retour">GEREZ VOTRE BASE DE DONNEES</button>
-
-        </form>
-
-    </div>
-
-    <h1>MODIFIER LA BASE DE DONNEES</h1>
+    <div class="containerUpdate">
 
 
 
-<div class="complete">
-    <div class="themeUpdate">
-                <label>Quel theme voulez-vous modifier :</label>
-        <div class="SelectTheme">
-            <form method="POST" >
-                <select name="nameTheme1" required>
-                    <?php foreach ($displayThemes as $theme) { ?>
-                    <option><?=$theme->getName() ?></option>
-                    <?php } ?>
+             <form method="get" class="dataUpdate" action="">
+                 <div class="dataUpdate">
+                        <label for="quizName">Remplacer le Quiz "<?php echo $result ?>" :</label><br>
+                        <input type="text" id="quizName" name="quizName" value="<?php echo $result ?>"><br>
 
-                </select>
+                        <input type="hidden" name="id" value="<?php echo $idQuiz?>"/>
+
+                 </div>
+                <input type="submit" name="Soumettre" value="Soumettre"/>
+
+                    <?php if((!empty($_GET['Soumettre'])) && (!empty($_GET['quizName']))  ){
+
+                     $quizName = $_GET['quizName'];
+
+                    $updateQuiz = $bdd->query("UPDATE quiz SET name = '$quizName' WHERE id = '$idQuiz' ;");
+
+                    if($updateQuiz){
+                        echo "Données importées avec succes";?>
+                    <?php }else{
+                        die(mysqli_connect_error($bdd));
+                        }
+
+                        }?>
+
+
 
             </form>
 
-                <form method="post">
-                    <input type="text" name="nameTheme2" placeholder="modifier le theme"/>
-                </form>
-        </div>
 
-        <form method="post" action="modifier_fichier.php" enctype="multiârt/form-data">
-            <input type="file" name="fichier"> <br/>
-            <input type="submit" name="upload" value="Envoyer"
+        <div class="btnUpdate">
+            <button><a href="DatabaseQuiz.php">Retour à la base de donnée</a></button>
 
-        </form>
-
-        <div class="btnModifier">
-                <button type="submit">Modifier</button>
+            <button><a href="AdminQuiz.php">Retour à l'accueil Admin</a></button>
         </div>
     </div>
-
-
-
-
-
-
-
-    <div class="themeUpdate">
-        <label>Quel Quiz voulez-vous modifier :</label>
-        <div class="SelectTheme">
-
-            <select  name="nameQuiz1" required>
-                  <?php foreach ($displayQuizs as $quiz) { ?>
-                    <option><?=$quiz->name ?></option>
-                <?php } ?>
-            </select>
-
-            <form method="post">
-                <input type="text" name="nameQuiz2" placeholder="modifier le Quiz"/>
-            </form>
-        </div>
-
-        <form method="post" action="modifier_fichier.php" enctype="multiârt/form-data">
-            <input type="file" name="fichier"> <br/>
-            <input type="submit" name="upload" value="Envoyer"
-
-        </form>
-
-        <div class="btnModifier">
-            <button type="submit">Modifier</button>
-        </div>
-    </div>
-
-
-
-    <div class="themeUpdate">
-        <label>Quelle Question voulez-vous modifier :</label>
-        <div class="SelectTheme">
-            <select  name="nameQuestion1" required>
-                <?php foreach ($displayQuestions as $question) { ?>
-                    <option><?=$question->question ?></option>
-                <?php } ?>
-            </select>
-
-            <form method="post">
-                <input type="text" name="nameQuestion2" placeholder="modifier la question"/>
-            </form>
-        </div>
-
-        <form method="post" action="modifier_fichier.php" enctype="multiârt/form-data">
-            <input type="file" name="fichier"> <br/>
-            <input type="submit" name="upload" value="Envoyer"
-
-        </form>
-
-        <div class="btnModifier">
-            <button type="submit">Modifier</button>
-        </div>
-    </div>
-
-
-    <div class="themeUpdate">
-        <label>Quelle Réponse voulez-vous modifier :</label>
-        <div class="SelectTheme">
-            <select  name="nameAnswer1" required>
-                <?php foreach ($displayAnswers as $answer) { ?>
-                    <option><?=$answer->answer ?></option>
-                <?php } ?>
-            </select>
-
-            <form method="post">
-                <input type="text" name="nameAnswer2" placeholder="modifier le Quiz"/>
-            </form>
-        </div>
-        <div class="btnModifier">
-            <button type="submit">Modifier</button>
-        </div>
-    </div>
-
 
 </div>
-</div>
-
-<?php
-include('../partials/footer.php');
-?>
+</body>
 

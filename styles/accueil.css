@@ -57,7 +57,7 @@ nav {
 .nav1 {
     background-color: #f2f8fc;
     height: 4rem;
-    color: var(--color-contrast);
+    color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -217,7 +217,7 @@ h3{color:var(--color-contrast);}
 }
 
 .connexion a {
-    color: var(--color-contrast);
+    color: black;
 
     background-image: url(../assets/images/cloud-nav-dark.png);
     background-size: 0rem;
@@ -270,13 +270,13 @@ h3{color:var(--color-contrast);}
 
 nav a {
     font-family: var(--font3);
-    color: var(--color-contrast);
+    color: black;
 }
 
 .underline {
     display: block;
     font-family: var(--font3);
-    color: var(--color-contrast);
+    color: black;
 
 }
 
@@ -285,7 +285,7 @@ nav a {
     content: "";
     width: 0;
     height: 2px;
-    background: var(--color-contrast);
+    background: black;
 
 }
 
